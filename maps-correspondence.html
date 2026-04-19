@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Correspondence Map — Phantastic Gifts</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#0e0d0b;--bg2:#161412;--bg3:#1e1b17;--parchment:#f0e4cc;--parchment-dk:#d9c9a3;
+  --gold:#c9a55a;--gold-lt:#e0c97f;--gold-dm:#8a7340;--red:#8b3a3a;--red-lt:#b85050;
+  --green:#4a6b4a;--green-lt:#6a8f6a;--blue:#4a5a8b;--blue-lt:#6a7faf;
+  --txt:#e8e0d4;--txt2:#a89e8e;--txt3:#6e6458;--ink:#2a2520;
+  --ff-d:'Playfair Display',Georgia,serif;--ff-b:'Cormorant Garamond',serif;--ff-m:'JetBrains Mono',monospace;
+}
+html{font-size:15px;}
+body{background:var(--bg);color:var(--txt);font-family:var(--ff-b);line-height:1.65;overflow:hidden;height:100vh;display:flex;flex-direction:column;}
+
+/* HEADER */
+.page-header{background:var(--bg2);border-bottom:1px solid rgba(201,165,90,0.15);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
+.page-header h1{font-family:var(--ff-d);font-size:1.2rem;font-weight:700;color:var(--gold);}
+.page-header h1 em{font-style:italic;color:var(--txt);}
+.header-meta{font-family:var(--ff-m);font-size:0.6rem;color:var(--txt3);letter-spacing:0.1em;text-align:right;}
+.header-link{font-family:var(--ff-m);font-size:0.6rem;color:var(--gold-dm);text-decoration:none;letter-spacing:0.08em;}
+.header-link:hover{color:var(--gold);}
+
+/* MAIN LAYOUT */
+.main-layout{display:flex;flex:1;overflow:hidden;}
+
+/* SIDEBAR */
+.sidebar{width:380px;background:var(--bg2);border-right:1px solid rgba(201,165,90,0.1);display:flex;flex-direction:column;overflow:hidden;flex-shrink:0;}
+.sidebar-header{padding:1.25rem 1.5rem 1rem;border-bottom:1px solid rgba(201,165,90,0.08);}
+.sidebar-header h2{font-family:var(--ff-d);font-size:1rem;color:var(--txt);margin-bottom:0.5rem;}
+.sidebar-header p{font-size:0.85rem;color:var(--txt2);}
+.filter-section{padding:1rem 1.5rem;border-bottom:1px solid rgba(201,165,90,0.08);}
+.filter-label{font-family:var(--ff-m);font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold-dm);margin-bottom:0.75rem;}
+.filter-chips{display:flex;flex-wrap:wrap;gap:0.4rem;}
+.filter-chip{font-family:var(--ff-m);font-size:0.65rem;padding:0.3rem 0.7rem;border:1px solid rgba(201,165,90,0.2);color:var(--txt2);cursor:pointer;transition:all 0.2s;background:transparent;border-radius:2px;}
+.filter-chip:hover{border-color:var(--gold);color:var(--gold);}
+.filter-chip.active{background:var(--gold);color:var(--bg);border-color:var(--gold);}
+.filter-chip[data-cat="all"]{border-color:var(--gold-dm);}
+.stats-row{display:flex;gap:1.5rem;margin-top:0.75rem;}
+.stat{font-family:var(--ff-m);font-size:0.6rem;color:var(--txt3);}
+.stat strong{color:var(--gold);font-size:0.75rem;}
+
+/* CORRESPONDENT LIST */
+.corr-list{flex:1;overflow-y:auto;padding:0.5rem 0;}
+.corr-list::-webkit-scrollbar{width:4px;}
+.corr-list::-webkit-scrollbar-thumb{background:var(--gold-dm);border-radius:2px;}
+.corr-item{padding:0.75rem 1.5rem;border-bottom:1px solid rgba(255,255,255,0.03);cursor:pointer;transition:background 0.15s;}
+.corr-item:hover{background:rgba(201,165,90,0.06);}
+.corr-item.active{background:rgba(201,165,90,0.12);border-left:2px solid var(--gold);}
+.corr-name{font-family:var(--ff-d);font-size:0.9rem;color:var(--txt);font-weight:600;}
+.corr-role{font-family:var(--ff-m);font-size:0.6rem;color:var(--gold-dm);margin-top:0.15rem;}
+.corr-detail{font-size:0.78rem;color:var(--txt3);margin-top:0.25rem;}
+.corr-cat-dot{display:inline-block;width:6px;height:6px;border-radius:50%;margin-right:0.4rem;vertical-align:middle;}
+
+/* MAP */
+.map-wrap{flex:1;position:relative;}
+#map{width:100%;height:100%;}
+
+/* DETAIL PANEL (overlay on map) */
+.detail-panel{position:absolute;top:1rem;right:1rem;width:360px;max-height:calc(100% - 2rem);background:rgba(14,13,11,0.95);border:1px solid rgba(201,165,90,0.2);backdrop-filter:blur(8px);overflow-y:auto;z-index:1000;display:none;padding:1.75rem;}
+.detail-panel.open{display:block;}
+.detail-close{position:absolute;top:0.75rem;right:0.75rem;background:none;border:none;color:var(--txt3);cursor:pointer;font-family:var(--ff-m);font-size:0.7rem;}
+.detail-close:hover{color:var(--gold);}
+.detail-name{font-family:var(--ff-d);font-size:1.3rem;color:var(--txt);font-weight:700;margin-bottom:0.25rem;}
+.detail-dates{font-family:var(--ff-m);font-size:0.7rem;color:var(--gold);letter-spacing:0.1em;margin-bottom:0.75rem;}
+.detail-role{font-size:0.9rem;color:var(--txt2);margin-bottom:0.75rem;font-style:italic;}
+.detail-section{margin-top:1rem;}
+.detail-section-label{font-family:var(--ff-m);font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold-dm);margin-bottom:0.5rem;}
+.detail-text{font-size:0.88rem;color:var(--txt2);line-height:1.7;}
+.detail-exchange{font-family:var(--ff-m);font-size:0.72rem;color:var(--txt3);margin-top:0.5rem;}
+.detail-img-placeholder{width:100%;aspect-ratio:4/3;background:var(--bg3);border:1px dashed rgba(201,165,90,0.15);display:flex;align-items:center;justify-content:center;margin-top:0.75rem;}
+.detail-img-placeholder span{font-family:var(--ff-m);font-size:0.65rem;color:var(--txt3);}
+.detail-transcription{margin-top:0.75rem;padding:1rem;background:var(--bg3);border-left:2px solid var(--gold-dm);font-style:italic;font-size:0.85rem;color:var(--txt2);}
+.detail-gallery{display:flex;flex-direction:column;gap:0.75rem;margin-top:0.75rem;}
+.gallery-item{border:1px solid rgba(201,165,90,0.1);background:var(--bg3);overflow:hidden;}
+.gallery-item img{width:100%;display:block;cursor:zoom-in;}
+.gallery-caption{padding:0.5rem 0.75rem;font-family:var(--ff-m);font-size:0.6rem;color:var(--txt3);}
+
+/* LEAFLET OVERRIDES */
+.leaflet-popup-content-wrapper{background:rgba(14,13,11,0.95);color:var(--txt);border:1px solid rgba(201,165,90,0.2);border-radius:2px;font-family:var(--ff-b);}
+.leaflet-popup-tip{background:rgba(14,13,11,0.95);}
+.leaflet-popup-content{font-size:0.85rem;margin:0.75rem 1rem;}
+.leaflet-control-zoom a{background:var(--bg2)!important;color:var(--gold)!important;border-color:rgba(201,165,90,0.2)!important;}
+
+/* CATEGORY COLORS */
+.cat-phantastica{background:var(--green-lt);}
+.cat-narcotics{background:var(--red-lt);}
+.cat-pfeilgifte{background:#d4a574;}
+.cat-industrial{background:var(--blue-lt);}
+.cat-pharma{background:var(--gold);}
+.cat-colonial{background:#9b6b9b;}
+
+@media(max-width:900px){
+  .sidebar{width:100%;max-height:40vh;border-right:none;border-bottom:1px solid rgba(201,165,90,0.1);}
+  .main-layout{flex-direction:column;}
+  .detail-panel{width:calc(100% - 2rem);max-height:50vh;}
+}
+</style>
+</head>
+<body>
+
+<header class="page-header">
+  <div>
+    <h1><em>Phantastic</em> Gifts &mdash; Correspondence Map</h1>
+    <a href="exhibition.html" class="header-link">&larr; Return to Exhibition</a>
+  </div>
+  <div class="header-meta">
+    Sammlung Darmstaedter &middot; Nachlass Lewin<br>
+    Staatsbibliothek zu Berlin &middot; Abigail Trozenski &middot; Vanderbilt 2026
+  </div>
+</header>
+
+<div class="main-layout">
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <h2>A Transnational Archive</h2>
+      <p>Louis Lewin&rsquo;s surviving correspondence spans pharmacology, toxicology, botany, colonial science, industrial health, and narcotics regulation across four decades and five continents.</p>
+      <div class="stats-row">
+        <div class="stat"><strong id="visible-count">0</strong> shown</div>
+        <div class="stat"><strong id="total-count">0</strong> total</div>
+        <div class="stat"><strong id="city-count">0</strong> cities</div>
+      </div>
+    </div>
+    <div class="filter-section">
+      <div class="filter-label">Filter by theme</div>
+      <div class="filter-chips" id="filters">
+        <button class="filter-chip active" data-cat="all">All</button>
+        <button class="filter-chip" data-cat="phantastica"><span class="corr-cat-dot cat-phantastica"></span>Phantastica &amp; Plants</button>
+        <button class="filter-chip" data-cat="narcotics"><span class="corr-cat-dot cat-narcotics"></span>Narcotics &amp; Addiction</button>
+        <button class="filter-chip" data-cat="pfeilgifte"><span class="corr-cat-dot cat-pfeilgifte"></span>Pfeilgifte &amp; Ouabain</button>
+        <button class="filter-chip" data-cat="industrial"><span class="corr-cat-dot cat-industrial"></span>Industrial Poisoning</button>
+        <button class="filter-chip" data-cat="pharma"><span class="corr-cat-dot cat-pharma"></span>Pharmaceutical Firms</button>
+        <button class="filter-chip" data-cat="colonial"><span class="corr-cat-dot cat-colonial"></span>Colonial &amp; International</button>
+      </div>
+    </div>
+    <div class="corr-list" id="corrList"></div>
+  </aside>
+  <div class="map-wrap">
+    <div id="map"></div>
+    <div class="detail-panel" id="detailPanel">
+      <button class="detail-close" id="detailClose">&times; Close</button>
+      <div id="detailContent"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── CORRESPONDENT DATA ──────────────────────────────────────────────────────
+// Curated from: LLPDF.xlsx, LLcorrespondence.xlsx, lewin_louis.pdf (Sammlung Darmstaedter),
+// TrozenskiDissertation.pdf Appendix E, and the author's thematic research notes.
+var DATA = [
+// PHANTASTICA & PSYCHOACTIVE PLANTS
+{n:"Albert Florence",r:"Mediziner",loc:"Lyon, France",lat:45.764,lng:4.836,d:"1902–1908",cat:"phantastica",ex:"Letters",subj:"A. Lewinii, cocaine, opium derivatives. Cross-border exchange on hallucinogenic classification.",lang:"French"},
+{n:"Gabriel Pouchet",r:"Mediziner",loc:"Paris, France",lat:48.857,lng:2.352,d:"1899–1906",cat:"phantastica",ex:"Letters",subj:"Anhalonium Lewinii; peyote; hallucinogenic classification.",lang:"French"},
+{n:"Louis T. Planchon",r:"Botaniker",loc:"Montpellier, France",lat:43.611,lng:3.877,d:"1897–1914",cat:"phantastica",ex:"Postcards, Letters",subj:"Peyote; A. Lewinii; botanical classification; pharmacological effects.",lang:"French"},
+{n:"Ferdinand Gidon",r:"Mediziner",loc:"Caen, France",lat:49.183,lng:-0.370,d:"1927–1928",cat:"phantastica",ex:"Letters",subj:"Phantastica; peyote; hallucinogenic research.",lang:"French"},
+{n:"A. Rouhier",r:"Pharmacist",loc:"Lyon, France",lat:45.764,lng:4.836,d:"1913",cat:"phantastica",ex:"Letter",subj:"A. Lewinii; discussing Planchon in Montpellier and Prof in Lyon; French pharmaceutical network.",lang:"French"},
+{n:"Paul Michaelis",r:"Botaniker",loc:"Marburg, Germany",lat:50.802,lng:8.767,d:"1896",cat:"phantastica",ex:"Letters",subj:"A. Lewinii; Marburg botanical studies."},
+{n:"C. Vidal",r:"Mediziner",loc:"Paris, France",lat:48.850,lng:2.342,d:"1892",cat:"phantastica",ex:"Letter",subj:"A. Lewinii; early French clinical interest.",lang:"French"},
+{n:"Emil Kraepelin",r:"Psychiater",loc:"Heidelberg, Germany",lat:49.399,lng:8.672,d:"1895",cat:"phantastica",ex:"Letter",subj:"Psychopharmacological classification; psychiatric effects of mescaline."},
+{n:"R. Karsten",r:"Ethnographer",loc:"Helsinki, Finland",lat:60.170,lng:24.938,d:"1927",cat:"phantastica",ex:"Letter",subj:"Banisteria caapi; Ecuador field trip; ayahuasca; ethnographic observation."},
+{n:"Theodor Koch-Gr\u00fcnberg",r:"Anthropologe, Forschungsreisender",loc:"Stuttgart, Germany",lat:48.776,lng:9.183,d:"1921\u20131924",cat:"phantastica",ex:"Postcard, Letter",subj:"Zaubertrank (magic drink); Caapi (ayahuasca); Amazonian ethnobotany. Sent from Linden-Museum Stuttgart. References Raf. Karsten\u2019s \u2018Beitr\u00e4ge zur Sittengeschichte der s\u00fcdamerikanischen Indianer\u2019 and Dr. P. Reoburg\u2019s article in Journal de la Soci\u00e9t\u00e9 des Am\u00e9ricanistes de Paris.",imgs:[{file:"IMG_4807.jpeg",caption:"Postcard front: Linden-Museum Stuttgart stationery, addressed to Prof. Dr. L. Lewin, Berlin, Hindersinstr. 2"},{file:"IMG_4806.jpeg",caption:"Letter: Stuttgart, 23 April 1924. On the Trank Caapi, referencing Karsten and Reoburg"},{file:"IMG_4805.jpeg",caption:"Nachlass signature: Theodor Koch-Gr\u00fcnberg, 1872\u2013, Forschungsreisender"}]},
+{n:"Theodor Herzog",r:"Botaniker",loc:"Jena, Germany",lat:50.927,lng:11.589,d:"1928",cat:"phantastica",ex:"Letter",subj:"B. Caapi; Bolivia; ayahuasca research."},
+{n:"Franz Niedenzu",r:"Botaniker, Mathematiker",loc:"Braunsberg, Germany",lat:54.381,lng:19.829,d:"1929",cat:"phantastica",ex:"Letters",subj:"B. Caapi; Banisteriopsis; late botanical correspondence."},
+{n:"Arthur William Hill",r:"Botaniker",loc:"Kew, England",lat:51.478,lng:-0.296,d:"1927",cat:"phantastica",ex:"Letter",subj:"B. Caapi; Kew Royal Botanical Gardens.",lang:"English"},
+{n:"Kurt Beringer",r:"Psychiater",loc:"Heidelberg, Germany",lat:49.405,lng:8.680,d:"1920s",cat:"phantastica",ex:"Letters",subj:"Mescaline experiments; Der Meskalinrausch (1927)."},
+{n:"Albert Behr",r:"Mediziner",loc:"Stackeln, Livland",lat:57.54,lng:25.42,d:"1912",cat:"phantastica",ex:"Letters",subj:"A. Lewinii (peyote); psychiatric interest."},
+{n:"Joseph Nevinny",r:"Mediziner",loc:"Vienna, Austria",lat:48.208,lng:16.374,d:"1886",cat:"phantastica",ex:"Letters",subj:"Kawa-kawa; early psychoactive plant studies."},
+{n:"James Mann",r:"Mediziner",loc:"Rewa River, Fiji",lat:-18.14,lng:178.44,d:"1887",cat:"phantastica",ex:"Letter",subj:"Kava-kava; Fiji; ethnographic intoxication.",lang:"English"},
+{n:"H. Danne",r:"Correspondent",loc:"Malaysia",lat:3.139,lng:101.687,d:"1890",cat:"phantastica",ex:"Letters",subj:"Betel; hallucinogens; Malaysian drug use."},
+{n:"Otto Warburg",r:"Botaniker",loc:"Buitenzorg, Java",lat:-6.594,lng:106.789,d:"1886–1892",cat:"phantastica",ex:"Letters, Postcard",subj:"Kawata; betel; Java; Batavia botanical research."},
+{n:"Federico G. von Buchwald",r:"Naturalist",loc:"Guayaquil, Ecuador",lat:-2.189,lng:-79.889,d:"1890s",cat:"phantastica",ex:"Letter",subj:"Banisteria; Ecuador; ethnobotanical specimens."},
+
+// NARCOTICS & ADDICTION
+{n:"Karl Eduard Theodor Baatz",r:"Mediziner",loc:"Elbing, Germany",lat:54.152,lng:19.401,d:"1920",cat:"narcotics",ex:"Letter",subj:"Opium; morphine dosing; dependency monitoring."},
+{n:"Eugen Karl Heinrich Bilfinger",r:"Mediziner",loc:"Radebeul, Germany",lat:51.107,lng:13.652,d:"1919",cat:"narcotics",ex:"Letter",subj:"Morphine injections; dependency; clinical protocol."},
+{n:"Karl Blumensaat",r:"Mediziner",loc:"Paderborn, Germany",lat:51.719,lng:8.754,d:"1926",cat:"narcotics",ex:"Letters",subj:"Morphiumsrausch; Eukodal; synthetic opioids."},
+{n:"Theodor Husemann",r:"Pharmacologe",loc:"G\u00f6ttingen, Germany",lat:51.533,lng:9.936,d:"1888–1898",cat:"narcotics",ex:"Letters",subj:"Morphinsucht; cocaine; compulsive use; adverse effects."},
+{n:"Karl Anton Ewald",r:"Mediziner",loc:"Berlin, Germany",lat:52.520,lng:13.405,d:"1885",cat:"narcotics",ex:"Letters",subj:"Morphine; cocaine; early clinical monitoring of dependency."},
+{n:"Oskar Vulpius",r:"Mediziner",loc:"Heidelberg, Germany",lat:49.399,lng:8.672,d:"1888–1895",cat:"narcotics",ex:"Letters",subj:"Morphine; narcotics; dependency; professional exposure."},
+{n:"Heinrich Citron",r:"Mediziner",loc:"Berlin, Germany",lat:52.525,lng:13.395,d:"1894",cat:"narcotics",ex:"Letters",subj:"Cocaine; eucaine; anesthetic substitution."},
+{n:"Hugo Falkenheim",r:"Mediziner",loc:"K\u00f6nigsberg, Germany",lat:54.710,lng:20.452,d:"1907",cat:"narcotics",ex:"Letter",subj:"Morphine injections; dependency risk."},
+{n:"Max Margulies",r:"Mediziner",loc:"Berlin, Germany",lat:52.515,lng:13.410,d:"1904",cat:"narcotics",ex:"Letters",subj:"Cocaine psychoactivity; symptom profiles."},
+{n:"Enrique A. Frimont",r:"Mediziner",loc:"Ozuluama, Mexico",lat:21.053,lng:-97.851,d:"1886",cat:"narcotics",ex:"Letter",subj:"Cocaine; clinical use; comparative perspectives.",lang:"Spanish"},
+
+// PFEILGIFTE & OUABAIN
+{n:"Georg Schweinfurth",r:"Afrikaforscher",loc:"Cairo, Egypt",lat:30.044,lng:31.236,d:"1888–1922",cat:"pfeilgifte",ex:"6 Mappen (folders)",subj:"Pfeilgifte (arrow poisons); African botany; ouabain; decades-long collaboration. 6 folders of correspondence."},
+{n:"Erich Harnack",r:"Pharmacologe",loc:"Halle, Germany",lat:51.497,lng:11.969,d:"1895–1906",cat:"pfeilgifte",ex:"Letters, Postcards",subj:"Ouabain; Pfeilgift; cardiac glycoside research."},
+{n:"Paul Staudinger",r:"Forschungsreisender",loc:"Berlin, Germany",lat:52.530,lng:13.398,d:"1903–1908",cat:"pfeilgifte",ex:"Letters, Postcards, Billett",subj:"Ipoh (arrow poison); Pfeilgifte; field collection."},
+{n:"Otto Thilo",r:"Mediziner, Zoologe",loc:"Riga, Latvia",lat:56.950,lng:24.105,d:"1897–1909",cat:"pfeilgifte",ex:"Letters, Postcard",subj:"Heffter; Pfeilgift; arrow poison pharmacology."},
+{n:"Hermann Julius Kolbe",r:"Zoologe, Entomologe",loc:"Berlin, Germany",lat:52.518,lng:13.408,d:"1894",cat:"pfeilgifte",ex:"Letter",subj:"Pfeilgiftk\u00e4fer (arrow-poison beetle); Kalahari; entomological specimens."},
+{n:"Karl von den Steinen",r:"Ethnologist",loc:"Berlin, Germany",lat:52.522,lng:13.402,d:"1896",cat:"pfeilgifte",ex:"Postcard",subj:"New Guinea; indigenous arrow poisons."},
+{n:"Henry Nicholas Ridley",r:"Botaniker",loc:"Singapore",lat:1.352,lng:103.820,d:"1894–1905",cat:"pfeilgifte",ex:"Letters",subj:"Poison darts; Southeast Asian ethnobotany.",lang:"English"},
+{n:"Ernst Stadelmann",r:"Mediziner",loc:"Berlin, Germany",lat:52.516,lng:13.412,d:"1905–1908",cat:"pfeilgifte",ex:"Letters",subj:"Ouabain; cardiac glycoside testing."},
+{n:"F. Hoffmann-La Roche",r:"Pharmaceutical firm",loc:"Basel, Switzerland",lat:47.560,lng:7.589,d:"1906",cat:"pfeilgifte",ex:"Letters",subj:"Ouabain; commercial pharmaceutical interest."},
+{n:"Walther Horn",r:"Entomologe",loc:"Berlin, Germany",lat:52.524,lng:13.400,d:"1925",cat:"pfeilgifte",ex:"Letters",subj:"Pfeilgift (arrow poison); entomological specimens."},
+{n:"Henry de Varigny",r:"Mediziner",loc:"Paris, France",lat:48.862,lng:2.339,d:"1888",cat:"pfeilgifte",ex:"Letter",subj:"Ouabain; French interest in cardiac glycosides.",lang:"French"},
+{n:"Heinrich Kiliani",r:"Chemiker",loc:"M\u00fcnchen, Germany",lat:48.135,lng:11.582,d:"1896",cat:"pfeilgifte",ex:"Postkarte",subj:"K\u00f6nigreich Bayern Postkarte. On Antiaris and Digitalis; cardiac glycoside chemistry. Addressed to Hindersinstra\u00dfe 2.",imgs:[{file:"IMG_4736.jpeg",caption:"Front: K\u00f6nigreich Bayern Postkarte to Prof. Dr. L. Lewin, Berlin, Hindersinstrasse 2. Postmarked 28/6/96."},{file:"IMG_4737.jpeg",caption:"Back: Handwritten message from H. Kiliani, M\u00fcnchen 22.6.96, on Antiaris and Digitalis. PR.ST.-BIBL. 31.21, acc. DARMST."}]},
+
+// INDUSTRIAL POISONING / GIFTARBEIT
+{n:"Friedrich Brauer",r:"Berufsgenossenschaft",loc:"Berlin, Germany",lat:52.528,lng:13.390,d:"1910–1917",cat:"industrial",ex:"6 Letters",subj:"Chemical industry workers' rights; benzene; death from industrial soap exposure."},
+{n:"Karl Schmatolla",r:"Bergbeamter (mining official)",loc:"Tsumeb, German SW Africa",lat:-19.233,lng:17.717,d:"1907–1913",cat:"industrial",ex:"Letters with PHOTOGRAPHS",subj:"PICTURES included. Über die Erkrankung auf den Kupferminen in Thumeb (Tsumeb copper mines, DSW Afrika); miners' poisoning; colonial industrial health. Photographs of mine conditions."},
+{n:"Georges Pannier",r:"Jurist",loc:"Paris, France",lat:48.854,lng:2.348,d:"1902–1906",cat:"industrial",ex:"Visitenkarte, Letters",subj:"Giftarbeiter (poison workers); French industrial regulation.",lang:"French"},
+{n:"Ludwig Teleky",r:"Mediziner",loc:"Vienna, Austria",lat:48.210,lng:16.370,d:"1911–1927",cat:"industrial",ex:"Letters",subj:"Gewerbekrankheiten (occupational diseases); lead poisoning."},
+{n:"William H. Heisen",r:"Mediziner",loc:"Denver, USA",lat:39.739,lng:-104.990,d:"1904",cat:"industrial",ex:"Letters",subj:"Fruchtabtreibung (abortifacients); Parke Davis connection.",lang:"English"},
+{n:"Charles Lee Reese",r:"Chemiker",loc:"Wilmington, USA",lat:39.739,lng:-75.540,d:"1909–1911",cat:"industrial",ex:"Letters",subj:"Poppenberg; nitrous gas; industrial chemistry.",lang:"English"},
+{n:"Merker",r:"Hauptmann",loc:"Moschi, Tanzania",lat:-3.340,lng:37.340,d:"1900–1907",cat:"industrial",ex:"10 Letters, Postcard",subj:"Deutsch-Ostafrika; Pfeilgift; Ethiopian arrow poisons."},
+{n:"Paul Singer",r:"Politiker (SPD)",loc:"Berlin, Germany",lat:52.519,lng:13.407,d:"1887–1904",cat:"industrial",ex:"5 Postcards, Letters",subj:"Letters from the Reichstag; Asyl für Obdachlose in Berlin (asylum for the homeless); worker protection; labor rights. Horrible handwriting."},
+{n:"Ernst Francke",r:"Jurist",loc:"Berlin, Germany",lat:52.521,lng:13.399,d:"1904–1908",cat:"industrial",ex:"15 Letters, Postcard",subj:"Blei (lead); industrial poisoning; legal frameworks."},
+
+// PHARMACEUTICAL FIRMS
+{n:"E. Merck",r:"Chemische Fabrik",loc:"Darmstadt, Germany",lat:49.873,lng:8.651,d:"1888–1929",cat:"pharma",ex:"11 Letters",subj:"Morphine; cocaine; heroin; ouabain; standardization; laboratory supply. Four decades of correspondence with Germany's leading pharmaceutical producer."},
+{n:"C.F. Boehringer & S\u00f6hne",r:"Fabrik Chemischer Produkte",loc:"Mannheim, Germany",lat:49.488,lng:8.466,d:"1909–1911",cat:"pharma",ex:"5 Letters",subj:"Alkaloids; ouabain; pharmaceutical testing; India connection."},
+{n:"Friedrich Bayer & Co.",r:"Farbenfabriken",loc:"Berlin (offices), Germany",lat:52.526,lng:13.393,d:"1904",cat:"pharma",ex:"2 Letters",subj:"Heroin synthesis; pharmaceutical marketing; clinical circulation."},
+{n:"Parke-Davis",r:"Pharmaceutical firm",loc:"Detroit, USA",lat:42.331,lng:-83.046,d:"1890s–1920s",cat:"pharma",ex:"Letters",subj:"Narcotic preparations; dosing standards; international supply.",lang:"English"},
+{n:"Oswald Schmiedeberg",r:"Pharmacologe",loc:"Stra\u00dfburg, Germany",lat:48.573,lng:7.752,d:"1885–1909",cat:"pharma",ex:"Letters",subj:"A. Lewinii; kawa; Baden-Baden; Fruchtabtreibung. Leading pharmacologist of the era."},
+{n:"Hermann Thoms",r:"Pharmacologe",loc:"Berlin, Germany",lat:52.523,lng:13.404,d:"1893–1916",cat:"pharma",ex:"9 Letters",subj:"Kawa-kawa; pharmaceutical chemistry; Berlin collaboration."},
+{n:"Julius Pohl",r:"Pharmacologe",loc:"Prague, Czech Republic",lat:50.076,lng:14.438,d:"1911",cat:"pharma",ex:"Letter",subj:"Pharmaceutical exchange; Central European network."},
+
+// COLONIAL & INTERNATIONAL
+{n:"John Jacob Abel",r:"Pharmacologe",loc:"Baltimore, USA",lat:39.290,lng:-76.612,d:"1894",cat:"colonial",ex:"Letter",subj:"Comparative pharmacology; U.S. drug regulation; pioneer of American pharmacology.",lang:"English"},
+{n:"Cyrus Adler",r:"Archeologe, Bibliothekar",loc:"Washington, D.C., USA",lat:38.907,lng:-77.037,d:"1908",cat:"colonial",ex:"Letter",subj:"Smithsonian Institution; Bureau of Ethnology; American institutional science.",lang:"English"},
+{n:"John Shaw Billings",r:"Mediziner",loc:"Washington, D.C., USA",lat:38.900,lng:-77.030,d:"1892",cat:"colonial",ex:"Letter",subj:"U.S. Army Medical Museum; medical statistics; institutional medicine.",lang:"English"},
+{n:"Victor King Chesnut",r:"Botaniker",loc:"Washington, D.C., USA",lat:38.895,lng:-77.025,d:"1903",cat:"colonial",ex:"Letter",subj:"U.S. Department of Agriculture; plant toxicology.",lang:"English"},
+{n:"David Hooper",r:"Chemiker, Pharmazeut",loc:"Calcutta, India",lat:22.573,lng:88.364,d:"1893–1912",cat:"colonial",ex:"3 Letters",subj:"Betel; opium; Indian colonial drug circulation; dosing.",lang:"English"},
+{n:"Humphrey Gilbert Carter",r:"Botaniker",loc:"Calcutta, India",lat:22.565,lng:88.370,d:"1914",cat:"colonial",ex:"Letter",subj:"Indian botany; colonial science networks.",lang:"English"},
+{n:"Albert Gr\u00fcnwedel",r:"Orientalist",loc:"Berlin, Germany",lat:52.517,lng:13.397,d:"1880–1894",cat:"colonial",ex:"Letters",subj:"Central Asian ethnography; colonial knowledge networks."},
+{n:"Max Freiherr von Oppenheim",r:"Orientalist, Arch\u00e4ologe",loc:"Cairo, Egypt",lat:30.050,lng:31.240,d:"1897–1925",cat:"colonial",ex:"Letters",subj:"Archaeological research; colonial networks; Middle Eastern science."},
+{n:"Felix von Luschan",r:"Ethnograph",loc:"Berlin, Germany",lat:52.521,lng:13.396,d:"1892–1902",cat:"colonial",ex:"Letters, Postcards",subj:"Museum f\u00fcr V\u00f6lkerkunde; ethnographic collections; colonial material culture."},
+{n:"Adolf Bastian",r:"Ethnologe",loc:"Berlin, Germany",lat:52.519,lng:13.401,d:"1887–1900",cat:"colonial",ex:"17 Letters",subj:"Kawa; ethnographic intoxication; Museum f\u00fcr V\u00f6lkerkunde. 17 letters over 13 years."},
+{n:"Paul Camille Hippolyte Brouardel",r:"Mediziner, Hygieniker",loc:"Paris, France",lat:48.845,lng:2.355,d:"1894–1906",cat:"colonial",ex:"10 Letters, Visitenkarte",subj:"France's leading hygienist; toxicological exchange; international public health.",lang:"French"},
+{n:"Slatin Pascha, Rudolf von",r:"General",loc:"Khartoum, Sudan",lat:15.501,lng:32.560,d:"1910",cat:"colonial",ex:"Letter",subj:"Colonial Sudan; ethnographic observation."},
+{n:"George Watt",r:"Botaniker",loc:"Calcutta, India",lat:22.580,lng:88.358,d:"1896",cat:"colonial",ex:"2 Letters",subj:"Indian economic botany; colonial plant science.",lang:"English"},
+{n:"Mary K. Polk",r:"Bibliothekarin",loc:"Manila, Philippines",lat:14.600,lng:120.984,d:"1909",cat:"colonial",ex:"Letter",subj:"Philippine colonial science; library networks.",lang:"English"},
+{n:"Agostinho Antonio da Rocha",r:"Mediziner",loc:"Coimbra, Portugal",lat:40.203,lng:-8.410,d:"1892",cat:"colonial",ex:"7 Letters, Protestation",subj:"Portuguese medical science; colonial pharmaceutical networks.",lang:"French"},
+{n:"Traill Green",r:"Mediziner",loc:"Easton, Pennsylvania, USA",lat:40.691,lng:-75.221,d:"1887",cat:"colonial",ex:"2 Letters",subj:"International Medical Congress 1887; transatlantic medical networks.",lang:"English"},
+{n:"Karl Gustav Santesson",r:"Mediziner",loc:"Stockholm, Sweden",lat:59.329,lng:18.069,d:"1905–1917",cat:"colonial",ex:"10 Letters, Postcard",subj:"Bier factories; Scandinavian pharmaceutical regulation; long-term collaboration."},
+{n:"Wilhelm Arning",r:"Mediziner, Kolonialpolitiker",loc:"Hannover, Germany",lat:52.376,lng:9.732,d:"1894",cat:"colonial",ex:"Letter",subj:"Colonial medicine; tropical diseases."},
+{n:"Bernhard Ankermann",r:"Ethnologe",loc:"Berlin, Germany",lat:52.520,lng:13.403,d:"1914",cat:"colonial",ex:"Letters",subj:"African ethnography; Museum f\u00fcr V\u00f6lkerkunde."},
+
+// ── NEW ENTRIES FROM UPDATED SPREADSHEET (2026) ─────────────────────────────
+
+// MENTORS & MAJOR FIGURES
+{n:"Rudolf Virchow",r:"Mediziner (former mentor)",loc:"Berlin, Germany",lat:52.525,lng:13.378,d:"1879\u20131894",cat:"colonial",ex:"Postcards, Letters",subj:"Concepts, postcards, and letters from a former mentor. One of the most important scientific figures in 19th-century Germany."},
+{n:"Karl von Voit",r:"Physiologe (former mentor)",loc:"M\u00fcnchen, Germany",lat:48.135,lng:11.582,d:"1874\u20131902",cat:"pharma",ex:"7 items",subj:"Concepts, postcards, and letters from a former mentor. Nearly three decades of correspondence."},
+
+// PHANTASTICA & PLANTS (new)
+{n:"Henry Hurd Rusby",r:"Botaniker",loc:"New York, USA",lat:40.713,lng:-74.006,d:"1896",cat:"phantastica",ex:"Postcard",subj:"When Dr. Michaelis published article on anatomy of A. Lewinii, Rusby responded from New York.",lang:"English"},
+{n:"Hugo Schulz",r:"Pharmacologe",loc:"Greifswald, Germany",lat:54.087,lng:13.392,d:"1886\u20131888",cat:"phantastica",ex:"5 items",subj:"Early psychopharmacological exchange; Greifswald connection."},
+{n:"Karl Schumann",r:"Botaniker",loc:"Berlin, Germany",lat:52.457,lng:13.307,d:"1894",cat:"phantastica",ex:"Postcard",subj:"Cacteen (cacti); botanical classification at Berlin Botanical Garden."},
+{n:"Max Reess",r:"Botaniker",loc:"Erlangen, Germany",lat:49.590,lng:11.008,d:"1894",cat:"phantastica",ex:"2 Briefkarten",subj:"Botanischer Garten Erlangen; requesting and thanking for plant specimens."},
+{n:"Henry Ling Roth",r:"Ethnologe",loc:"Halifax, England",lat:53.722,lng:-1.858,d:"1895",cat:"phantastica",ex:"Letter",subj:"Natives of Sarawak, Borneo; poisons: Derris elliptica; Upas tree; ethnobotanical exchange.",lang:"English"},
+
+// NARCOTICS & ADDICTION (new)
+{n:"Martin Pfeng",r:"Mediziner",loc:"Magdeburg, Germany",lat:52.121,lng:11.628,d:"1910\u20131911",cat:"narcotics",ex:"Letters",subj:"Cocaine; Kokainismus; clinical addiction cases."},
+{n:"Felix von Roy",r:"Mediziner",loc:"Freystadt, Schlesien",lat:51.467,lng:15.583,d:"1894\u20131895",cat:"narcotics",ex:"Letters",subj:"Morphiumvergiftung; materials; publication on \u00dcber Morphium."},
+{n:"Karl Wilmanns",r:"Psychiater",loc:"Heidelberg, Germany",lat:49.412,lng:8.685,d:"1921\u20131922",cat:"narcotics",ex:"6 items",subj:"Direktion der Psychiatrischen Klinik der Universit\u00e4t Heidelberg; articles and Konzepte."},
+
+// INDUSTRIAL POISONING (new)
+{n:"Walther Rimarski",r:"Chemisch-Technische Reichsanstalt",loc:"Berlin, Germany",lat:52.543,lng:13.322,d:"1916",cat:"industrial",ex:"Letter",subj:"Pl\u00f6tzensee; Chemisch-Technische Reichsanstalt; Giftigkeit von Blaus\u00e4ure (cyanide toxicity)."},
+{n:"Georg Schlesinger",r:"Technische Hochschule Berlin",loc:"Charlottenburg, Germany",lat:52.513,lng:13.327,d:"1910",cat:"industrial",ex:"2 Letters",subj:"Technische Hochschule Berlin; Unfallverh\u00fctung in Gummifabriken (accident prevention in rubber factories)."},
+{n:"Richard Roesicke",r:"Generaldirektor, Schultheiss-Brauerei",loc:"Berlin, Germany",lat:52.530,lng:13.415,d:"1900",cat:"industrial",ex:"Letter",subj:"Generaldirektor des Schultheiss Brauerei Actien-Gesellschaft; industrial brewing and worker health."},
+{n:"Ottendorff",r:"Correspondent",loc:"Memel, Lithuania",lat:55.703,lng:21.144,d:"1899",cat:"industrial",ex:"Letters",subj:"Quecksilbervergiftung (mercury poisoning); industrial health in the Baltic."},
+{n:"Bruno Cohnberg",r:"Jurist",loc:"Grudzi\u0105dz, Poland",lat:53.484,lng:18.754,d:"1912\u20131917",cat:"industrial",ex:"Letters",subj:"Die Giftmordsache Kieper \u2014 transcriptions and copies of a poisoning murder case."},
+{n:"Helene St\u00f6cker",r:"Schriftstellerin, Feministin",loc:"Berlin-Friedenau, Germany",lat:52.468,lng:13.330,d:"c. 1908",cat:"industrial",ex:"Letter",subj:"Die Neue Generation; Deutscher Bund f\u00fcr Mutterschutz (League for the Protection of Mothers); feminist advocacy and reproductive rights."},
+{n:"Johannes Rutgers",r:"Mediziner",loc:"Rotterdam, Netherlands",lat:51.924,lng:4.477,d:"1899",cat:"industrial",ex:"2 Letters",subj:"About women and abortions; reproductive rights; Dutch medical exchange."},
+
+// PHARMACEUTICAL FIRMS (new)
+{n:"J.D. Riedel",r:"Chemische Fabriken",loc:"Berlin, Germany",lat:52.536,lng:13.388,d:"1903",cat:"pharma",ex:"Letter",subj:"Chemische Fabriken; Drogen-Grosshandlung; Kawawurzel (kava root) supply and testing."},
+{n:"Heinrich Alfred Ammelburg",r:"Farbwerke Hoechst",loc:"H\u00f6chst am Main, Germany",lat:50.099,lng:8.548,d:"1910",cat:"pharma",ex:"Letters",subj:"Farbwerke Hoechst am Main; pharmaceutical-industrial interface."},
+{n:"Ludwig Diels",r:"Botaniker",loc:"Berlin, Germany",lat:52.456,lng:13.310,d:"1921\u20131928",cat:"pharma",ex:"3 Letters",subj:"Chinesische Drogen; Botanisches Museum Berlin; late botanical-pharmaceutical exchange."},
+
+// COLONIAL & INTERNATIONAL (new)
+{n:"Fritz Rathenau",r:"Jurist, Industrieller",loc:"Berlin, Germany",lat:52.508,lng:13.380,d:"1906\u20131912",cat:"colonial",ex:"Letters",subj:"Heilmitteln in Russland; Recht & Wissenschaft; international pharmaceutical law."},
+{n:"Joseph Saile",r:"Chemiker",loc:"Philadelphia, USA",lat:39.953,lng:-75.165,d:"1893",cat:"colonial",ex:"Letter",subj:"American pharmaceutical chemistry; transatlantic exchange.",lang:"English"},
+{n:"Oskar Rosenthal",r:"Deutsche Gesellschaft zur Bek\u00e4mpfung der Geschlechtskrankheiten",loc:"Berlin, Germany",lat:52.512,lng:13.395,d:"1907\u20131908",cat:"colonial",ex:"Letters",subj:"Deutsche Gesellschaft zur Bek\u00e4mpfung der Geschlechtskrankheiten (German Society for Combating Venereal Diseases); arsenic; public health."},
+{n:"Birger Pedersen",r:"Ingenieur",loc:"Paris, France",lat:48.865,lng:2.335,d:"1910",cat:"colonial",ex:"Letter",subj:"Article with Poppenberg; Gesamte Schie\u00df- und Sprengstoff; explosives research.",lang:"French"},
+{n:"Charles Douglas Ferguson Phillips",r:"Mediziner",loc:"London, England",lat:51.507,lng:-0.128,d:"1889",cat:"colonial",ex:"Letter",subj:"Response to English Konzept; German hospital systems; transatlantic medical comparison.",lang:"English"},
+{n:"Heinrich Sch\u00e4fer",r:"\u00c4gyptologe",loc:"Berlin, Germany",lat:52.521,lng:13.397,d:"1912",cat:"colonial",ex:"Letter",subj:"Materialenuntersuchung von K\u00f6rper und Bronze-Gegenst\u00e4nden; Egyptian archaeological materials."},
+{n:"Ludwig Vogel",r:"Mediziner",loc:"Berlin, Germany",lat:52.532,lng:13.382,d:"1914\u20131916",cat:"pharma",ex:"Letters, Article",subj:"Neurokardin: seine Entstehung, Wirkung und Anwendung; Dr. H. Beck & Co., Frankfurt am Main; article in Der Praktische Arzt."},
+{n:"Michael Joseph Rossbach",r:"Mediziner",loc:"W\u00fcrzburg, Germany",lat:49.791,lng:9.953,d:"1882\u20131883",cat:"pharma",ex:"Letters",subj:"Heilmittellehre; referat \u00fcber Buch; early pharmacological exchange."},
+{n:"Johannes D.E. Schmeltz",r:"Internationale Archiv f. Ethnographie",loc:"Leiden, Netherlands",lat:52.160,lng:4.497,d:"1894\u20131899",cat:"colonial",ex:"Letters",subj:"Internationale Archiv f\u00fcr Ethnographie; ethnographic archival exchange; museum networks."}
+];
+
+// ── CATEGORY COLORS ─────────────────────────────────────────────────────────
+var CAT_COLORS = {
+  phantastica: '#6a8f6a', narcotics: '#b85050', pfeilgifte: '#d4a574',
+  industrial: '#6a7faf', pharma: '#c9a55a', colonial: '#9b6b9b'
+};
+var CAT_LABELS = {
+  phantastica: 'Phantastica & Plants', narcotics: 'Narcotics & Addiction',
+  pfeilgifte: 'Pfeilgifte & Ouabain', industrial: 'Industrial Poisoning',
+  pharma: 'Pharmaceutical Firms', colonial: 'Colonial & International'
+};
+
+// ── INIT MAP (wait for Leaflet to load) ─────────────────────────────────────
+window.addEventListener('load', function(){
+if(typeof L === 'undefined'){
+  document.getElementById('map').innerHTML = '<div style="padding:3rem;color:#c9a55a;font-family:monospace;">Error: Leaflet library could not load. Please check your internet connection and reload.</div>';
+  return;
+}
+
+var map = L.map('map',{zoomControl:true,attributionControl:true}).setView([35, 15], 3);
+
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{
+  attribution:'&copy; OpenStreetMap &copy; CARTO',
+  subdomains:'abcd', maxZoom:19
+}).addTo(map);
+
+var markers = [];
+var activeFilter = 'all';
+
+function makeIcon(cat){
+  var c = CAT_COLORS[cat] || '#c9a55a';
+  return L.divIcon({
+    className:'',
+    html:'<div style="width:12px;height:12px;border-radius:50%;background:'+c+';border:2px solid rgba(255,255,255,0.7);box-shadow:0 0 6px rgba(0,0,0,0.5);"></div>',
+    iconSize:[12,12], iconAnchor:[6,6]
+  });
+}
+
+function buildList(){
+  var list = document.getElementById('corrList');
+  list.innerHTML = '';
+  var filtered = activeFilter === 'all' ? DATA : DATA.filter(function(d){return d.cat === activeFilter;});
+  filtered.sort(function(a,b){return a.n.localeCompare(b.n);});
+  filtered.forEach(function(d,i){
+    var el = document.createElement('div');
+    el.className = 'corr-item';
+    el.innerHTML = '<div class="corr-name"><span class="corr-cat-dot cat-'+d.cat+'"></span>'+d.n+'</div>'
+      +'<div class="corr-role">'+d.r+' &middot; '+d.loc+'</div>'
+      +'<div class="corr-detail">'+d.d+(d.lang?' &middot; '+d.lang:'')+'</div>';
+    el.addEventListener('click',function(){openDetail(d);});
+    list.appendChild(el);
+  });
+  document.getElementById('visible-count').textContent = filtered.length;
+}
+
+function buildMarkers(){
+  markers.forEach(function(m){map.removeLayer(m);});
+  markers = [];
+  var filtered = activeFilter === 'all' ? DATA : DATA.filter(function(d){return d.cat === activeFilter;});
+  filtered.forEach(function(d){
+    var m = L.marker([d.lat,d.lng],{icon:makeIcon(d.cat)}).addTo(map);
+    m.bindPopup('<strong>'+d.n+'</strong><br><em>'+d.r+'</em><br>'+d.loc+', '+d.d);
+    m.on('click',function(){openDetail(d);});
+    markers.push(m);
+  });
+}
+
+function openDetail(d){
+  var panel = document.getElementById('detailPanel');
+  var content = document.getElementById('detailContent');
+
+  // Build image gallery (supports multiple images per correspondent)
+  var imgHtml = '';
+  if(d.imgs && d.imgs.length > 0){
+    imgHtml = '<div class="detail-gallery">';
+    d.imgs.forEach(function(img, idx){
+      imgHtml += '<div class="gallery-item">'
+        +'<img src="images/correspondence/'+img.file+'" alt="'+d.n+' - Document '+(idx+1)+'" style="width:100%;border:1px solid rgba(201,165,90,0.15);">'
+        +'<div class="gallery-caption">'+img.caption+'</div>'
+        +'</div>';
+    });
+    imgHtml += '</div>';
+  } else {
+    imgHtml = '<div class="detail-img-placeholder"><span>To add images: place scans in images/correspondence/ and add an <strong>imgs</strong> array to this entry in the DATA.<br><br>Example:<br>imgs:[{file:"schweinfurth_01.jpg",caption:"Letter from Cairo, 1892"}]</span></div>';
+  }
+
+  // Build transcription section
+  var transHtml = '';
+  if(d.trans){
+    transHtml = '<div class="detail-transcription">'+d.trans+'</div>';
+  } else {
+    transHtml = '<div class="detail-transcription" style="opacity:0.4;">To add a transcription: add a <strong>trans</strong> field to this entry in the DATA array.<br>Example: trans:"Sehr geehrter Herr Professor..."</div>';
+  }
+
+  content.innerHTML = '<div class="detail-name">'+d.n+'</div>'
+    +'<div class="detail-dates">'+d.d+'</div>'
+    +'<div class="detail-role">'+d.r+' &middot; '+d.loc+'</div>'
+    +'<div class="detail-section"><div class="detail-section-label">Subject Matter</div><div class="detail-text">'+d.subj+'</div></div>'
+    +'<div class="detail-exchange">Exchange: '+d.ex+(d.lang?' &middot; Language: '+d.lang:'')+'</div>'
+    +'<div class="detail-section"><div class="detail-section-label">Category</div><div class="detail-text"><span class="corr-cat-dot cat-'+d.cat+'" style="display:inline-block;"></span> '+CAT_LABELS[d.cat]+'</div></div>'
+    +'<div class="detail-section"><div class="detail-section-label">Documents &amp; Images'+(d.imgs?' ('+d.imgs.length+')':'')+'</div>'+imgHtml+'</div>'
+    +'<div class="detail-section"><div class="detail-section-label">Transcription / Translation</div>'+transHtml+'</div>';
+  panel.classList.add('open');
+  map.setView([d.lat,d.lng],6,{animate:true});
+  document.querySelectorAll('.corr-item').forEach(function(el){el.classList.remove('active');});
+}
+
+document.getElementById('detailClose').addEventListener('click',function(){
+  document.getElementById('detailPanel').classList.remove('open');
+});
+
+// FILTERS
+document.getElementById('filters').addEventListener('click',function(e){
+  var chip = e.target.closest('.filter-chip');
+  if(!chip) return;
+  document.querySelectorAll('.filter-chip').forEach(function(c){c.classList.remove('active');});
+  chip.classList.add('active');
+  activeFilter = chip.getAttribute('data-cat');
+  buildList();
+  buildMarkers();
+});
+
+// STATS
+document.getElementById('total-count').textContent = DATA.length;
+var cities = {};
+DATA.forEach(function(d){cities[d.loc]=1;});
+document.getElementById('city-count').textContent = Object.keys(cities).length;
+
+// INIT
+buildList();
+buildMarkers();
+}); // end window.onload
+</script>
+</body>
+</html>

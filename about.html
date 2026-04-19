@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Phantastic Gifts</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg-deep:#060606;--bg-primary:#0e0d0b;--bg-card:#161412;--bg-elevated:#1e1b17;
+  --gold:#c9a55a;--gold-light:#e0c97f;--gold-dim:#8a7340;
+  --poison-red:#8b3a3a;
+  --text-primary:#e8e0d4;--text-secondary:#a89e8e;--text-muted:#6e6458;
+  --font-display:'Playfair Display',Georgia,serif;
+  --font-body:'Cormorant Garamond','Times New Roman',serif;
+  --font-mono:'JetBrains Mono','Courier New',monospace;
+  --content-max:780px;
+}
+html,body{background:var(--bg-primary);color:var(--text-primary);font-family:var(--font-body);font-size:1.08rem;line-height:1.75;min-height:100vh;}
+a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(201,165,90,0.3);transition:all 0.2s;}
+a:hover{color:var(--gold-light);border-bottom-color:var(--gold-light);}
+
+.site-header{border-bottom:1px solid rgba(201,165,90,0.12);background:rgba(14,13,11,0.92);backdrop-filter:blur(6px);padding:1.25rem 2rem;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;}
+.site-header .brand{font-family:var(--font-display);font-size:1.15rem;font-weight:700;color:var(--gold);}
+.site-header .brand em{font-style:italic;color:var(--text-primary);}
+.site-header nav{display:flex;gap:2rem;font-family:var(--font-mono);font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;}
+.site-header nav a{color:var(--text-secondary);border:none;padding-bottom:2px;border-bottom:1px solid transparent;}
+.site-header nav a:hover,.site-header nav a.current{color:var(--gold);border-bottom-color:var(--gold-dim);}
+@media(max-width:700px){.site-header{flex-direction:column;gap:1rem;}.site-header nav{gap:1.2rem;flex-wrap:wrap;justify-content:center;}}
+
+.content{max-width:var(--content-max);margin:0 auto;padding:4rem 2rem 5rem;}
+.content .preamble{font-family:var(--font-mono);font-size:0.72rem;color:var(--gold-dim);letter-spacing:0.25em;text-transform:uppercase;margin-bottom:1.5rem;}
+.content h1{font-family:var(--font-display);font-size:clamp(2.2rem,5vw,3.2rem);font-weight:700;margin-bottom:1rem;}
+.content h1 em{font-style:italic;color:var(--gold);}
+.content .lede{font-family:var(--font-display);font-style:italic;font-size:1.3rem;color:var(--text-secondary);margin-bottom:3rem;line-height:1.5;}
+
+.content h2{font-family:var(--font-display);font-size:1.6rem;font-weight:700;color:var(--gold);margin:3rem 0 1rem;letter-spacing:-0.01em;}
+.content h2 em{font-style:italic;}
+.content p{margin-bottom:1.25rem;color:var(--text-primary);}
+.content p.dim{color:var(--text-secondary);font-size:0.98rem;}
+
+.label-block{background:var(--bg-card);border-left:3px solid var(--gold-dim);padding:1.5rem 1.75rem;margin:2rem 0;}
+.label-block .label{font-family:var(--font-mono);font-size:0.7rem;color:var(--gold-dim);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:0.75rem;}
+.label-block p{margin-bottom:0.5rem;font-size:0.98rem;}
+
+.site-footer{border-top:1px solid rgba(201,165,90,0.12);background:var(--bg-deep);padding:2rem;text-align:center;font-family:var(--font-mono);font-size:0.72rem;color:var(--text-muted);letter-spacing:0.08em;}
+.site-footer a{color:var(--text-secondary);border:none;}
+.site-footer a:hover{color:var(--gold);}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="brand"><em>Phantastic</em> Gifts</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="exhibition.html">Exhibition</a>
+    <a href="correspondence.html">Correspondents</a>
+    <a href="maps-berlin.html">Berlin</a>
+    <a href="maps-correspondence.html">World</a>
+    <a href="about.html" class="current">About</a>
+  </nav>
+</header>
+
+<div class="content">
+  <div class="preamble">About the project</div>
+  <h1>On <em>Phantastic Gifts</em></h1>
+  <p class="lede">A digital project on Louis Lewin — and the archive that remembers him unevenly.</p>
+
+  <h2>The Project</h2>
+  <p><em>Phantastic Gifts</em> is a digital research project on the life, correspondence, and scientific legacy of Louis Lewin (1850–1929): German-Jewish pharmacologist, toxicologist, ethnobotanist, and one of modernity's earliest systematic readers of intoxication. It functions as a companion to an in-progress doctoral dissertation and as a standing archive in its own right.</p>
+  <p>The site gathers four related streams of research: an interpretive exhibition built from archival objects; a searchable directory of Lewin's correspondents; a map of his Berlin; and a world map of his international network. Each builds on work conducted in the Nachlass Louis Lewin at the Staatsbibliothek zu Berlin and supplementary collections in Germany and abroad.</p>
+
+  <h2>The Author</h2>
+  <p><strong style="color:var(--gold-light);font-weight:600;">Abigail Trozenski</strong> is a doctoral candidate at Vanderbilt University, where she is completing a dissertation on Louis Lewin and the formation of modern toxicology.</p>
+
+  <h2>Principal Archive</h2>
+  <p>The core source is the <em>Nachlass Louis Lewin</em> held at the Staatsbibliothek zu Berlin – Preußischer Kulturbesitz (SBB-PK). The collection includes Lewin's incoming correspondence, manuscripts, photographs, and family papers. His outgoing correspondence does not survive as a collection, which shapes both the methodological approach of this project and the interpretive work of reading against archival silence.</p>
+  <p class="dim">Additional materials consulted include the Beringer family archive; the Pressemappe 20. Jahrhundert (PM20) of the Hamburgisches Welt-Wirtschafts-Archiv, now held by the ZBW – Leibniz-Informationszentrum Wirtschaft in Hamburg and Kiel; and records at the Jüdischer Friedhof Weißensee.</p>
+
+  <h2>Method</h2>
+  <p>The project reads Lewin's archive as what Jacques Derrida called a <em>pharmakon</em>: a body of knowledge that is simultaneously remedy and poison, preservation and corruption. Lewin's Nachlass survives through decades of family curation, institutional transfer, Nazi-era destruction and calibrated sparing, wartime loss, and postwar reassembly. The silences in the archive are themselves historical evidence — and reading them as such is one of the project's central methodological commitments.</p>
+
+  <h2>How to <em>Cite</em></h2>
+  <div class="label-block">
+    <div class="label">Suggested citation</div>
+    <p>Trozenski, Abigail. <em>Phantastic Gifts: A Digital Project on Louis Lewin (1850–1929)</em>. [URL, accessed date].</p>
+  </div>
+  <p class="dim">Materials from the Nachlass Louis Lewin at the SBB-PK should always be cited with their original archival designation in addition to any reference to this site (e.g., <em>Nachl. Louis Lewin, Briefe [folder], SBB-PK, Berlin</em>). Image rights for Nachlass materials remain with the Staatsbibliothek.</p>
+
+  <h2>Contact</h2>
+  <p>Inquiries about the dissertation, the site, or the Lewin archive more broadly are welcome. [Add contact mechanism — email, ORCID, or department page — before publication.]</p>
+
+  <h2>Acknowledgments</h2>
+  <p class="dim">This project has been shaped by many readers, archivists, and interlocutors. The dissertation's full acknowledgments page will list them individually. Particular thanks are due to the staff of the Staatsbibliothek zu Berlin; to the Beringer family; and to the colleagues, mentors, and friends who have read drafts with care.</p>
+
+</div>
+
+<footer class="site-footer">
+  <em>Phantastic Gifts</em> · Abigail Trozenski · 2026 · <a href="index.html">Home</a>
+</footer>
+
+</body>
+</html>

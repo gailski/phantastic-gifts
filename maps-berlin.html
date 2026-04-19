@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lewin's Berlin — Phantastic Gifts</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#0e0d0b;--bg2:#161412;--bg3:#1e1b17;
+  --gold:#c9a55a;--gold-lt:#e0c97f;--gold-dm:#8a7340;--red:#8b3a3a;--red-lt:#b85050;
+  --txt:#e8e0d4;--txt2:#a89e8e;--txt3:#6e6458;--ink:#2a2520;
+  --ff-d:'Playfair Display',Georgia,serif;--ff-b:'Cormorant Garamond',serif;--ff-m:'JetBrains Mono',monospace;
+}
+body{background:var(--bg);color:var(--txt);font-family:var(--ff-b);font-size:1.05rem;line-height:1.65;overflow:hidden;height:100vh;display:flex;flex-direction:column;}
+
+.page-header{background:var(--bg2);border-bottom:1px solid rgba(201,165,90,0.15);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
+.page-header h1{font-family:var(--ff-d);font-size:1.15rem;font-weight:700;color:var(--gold);}
+.page-header h1 em{font-style:italic;color:var(--txt);}
+.header-link{font-family:var(--ff-m);font-size:0.6rem;color:var(--gold-dm);text-decoration:none;letter-spacing:0.08em;}
+.header-link:hover{color:var(--gold);}
+.header-meta{font-family:var(--ff-m);font-size:0.6rem;color:var(--txt3);text-align:right;}
+
+.main-layout{display:flex;flex:1;overflow:hidden;}
+
+.sidebar{width:400px;background:var(--bg2);border-right:1px solid rgba(201,165,90,0.1);overflow-y:auto;flex-shrink:0;}
+.sidebar::-webkit-scrollbar{width:4px;}
+.sidebar::-webkit-scrollbar-thumb{background:var(--gold-dm);border-radius:2px;}
+.sidebar-header{padding:1.5rem 1.75rem 1.25rem;border-bottom:1px solid rgba(201,165,90,0.08);}
+.sidebar-header h2{font-family:var(--ff-d);font-size:1.1rem;color:var(--txt);margin-bottom:0.5rem;}
+.sidebar-header p{font-size:0.9rem;color:var(--txt2);line-height:1.65;}
+
+.site-item{padding:1.25rem 1.75rem;border-bottom:1px solid rgba(255,255,255,0.03);cursor:pointer;transition:background 0.15s;}
+.site-item:hover{background:rgba(201,165,90,0.06);}
+.site-item.active{background:rgba(201,165,90,0.12);border-left:3px solid var(--gold);}
+.site-num{font-family:var(--ff-m);font-size:0.6rem;color:var(--gold-dm);letter-spacing:0.15em;margin-bottom:0.3rem;}
+.site-name{font-family:var(--ff-d);font-size:1rem;color:var(--txt);font-weight:600;margin-bottom:0.2rem;}
+.site-addr{font-family:var(--ff-m);font-size:0.7rem;color:var(--gold-dm);margin-bottom:0.4rem;}
+.site-desc{font-size:0.88rem;color:var(--txt2);line-height:1.6;}
+.site-status{font-family:var(--ff-m);font-size:0.65rem;margin-top:0.5rem;padding:0.25rem 0.6rem;display:inline-block;border-radius:2px;}
+.status-destroyed{background:rgba(139,58,58,0.2);color:var(--red-lt);border:1px solid rgba(139,58,58,0.3);}
+.status-extant{background:rgba(74,107,74,0.2);color:#6a8f6a;border:1px solid rgba(74,107,74,0.3);}
+.status-memorial{background:rgba(201,165,90,0.15);color:var(--gold);border:1px solid rgba(201,165,90,0.25);}
+.status-renamed{background:rgba(106,127,175,0.2);color:#6a7faf;border:1px solid rgba(106,127,175,0.3);}
+
+.map-wrap{flex:1;position:relative;}
+#map{width:100%;height:100%;}
+
+.leaflet-popup-content-wrapper{background:rgba(14,13,11,0.95);color:var(--txt);border:1px solid rgba(201,165,90,0.25);border-radius:2px;font-family:var(--ff-b);}
+.leaflet-popup-tip{background:rgba(14,13,11,0.95);}
+.leaflet-popup-content{font-size:0.88rem;margin:0.75rem 1rem;line-height:1.6;}
+.leaflet-control-zoom a{background:var(--bg2)!important;color:var(--gold)!important;border-color:rgba(201,165,90,0.2)!important;}
+
+.img-placeholder{width:100%;aspect-ratio:16/9;background:var(--bg3);border:1px dashed rgba(201,165,90,0.15);display:flex;align-items:center;justify-content:center;margin-top:0.75rem;}
+.img-placeholder span{font-family:var(--ff-m);font-size:0.6rem;color:var(--txt3);}
+
+@media(max-width:900px){
+  .sidebar{width:100%;max-height:40vh;border-right:none;border-bottom:1px solid rgba(201,165,90,0.1);}
+  .main-layout{flex-direction:column;}
+}
+</style>
+</head>
+<body>
+
+<header class="page-header">
+  <div>
+    <h1><em>Phantastic</em> Gifts &mdash; Lewin's Berlin</h1>
+    <a href="exhibition.html" class="header-link">&larr; Return to Exhibition</a>
+  </div>
+  <div class="header-meta">
+    Chapter 1: Memory, Space, and the Making of a Mensch<br>
+    Abigail Trozenski &middot; Vanderbilt University &middot; 2026
+  </div>
+</header>
+
+<div class="main-layout">
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="map-wrap"><div id="map"></div></div>
+</div>
+
+<script>
+var SITES = [
+  {
+    num:"01", name:"Grenadierstra\u00dfe",
+    addr:"Now Almstadtstra\u00dfe, Mitte",
+    lat:52.5247, lng:13.4115,
+    status:"renamed", statusLabel:"Renamed 1951",
+    desc:"The family settled here after migrating from Tuchel in 1856. The main artery of Berlin\u2019s most stigmatized Jewish district, the Scheunenviertel. Lewin visited his parents in their small apartment near Alexanderplatz every day of his life. Alfred D\u00f6blin described it as a street of \u2018Hebrew signage, Jewish butchers, craftsmen\u2019s workshops, bookshops.\u2019 During the November 1923 riots, police stood by as mobs attacked Jewish shops. By 1945, the Scheunenviertel was largely annihilated.",
+    img:"berlin_grenadierstrasse.jpg"
+  },
+  {
+    num:"02", name:"Hindersinstra\u00dfe 2",
+    addr:"Alsenviertel (demolished)",
+    lat:52.5185, lng:13.3730,
+    status:"destroyed", statusLabel:"Demolished",
+    desc:"Family home in the elite Alsenviertel, between the Reichstag and the Spree. Clara and Louis raised three daughters here: Gertrud (1884\u20131944), Herta (1886\u20131987), and Irene (1888\u20131985). Schweinfurth visited regularly, bringing rare books. The domestic space functioned as an informal extension of Lewin\u2019s scientific networks. Only a few blocks from Grenadierstra\u00dfe, it represented proximity to political authority and imperial prestige rather than marginality. Vanished beneath postwar urban renewal.",
+    img:"berlin_hindersinstrasse.jpg"
+  },
+  {
+    num:"03", name:"Heidereutergasse Synagogue",
+    addr:"Heidereutergasse, Mitte",
+    lat:52.5220, lng:13.4060,
+    status:"destroyed", statusLabel:"Destroyed",
+    desc:"The oldest synagogue in Berlin, within walking distance of the family home. After the death of his father in 1916, Lewin prayed here \u2018every day, twice or even more.\u2019 A ritual center rendered ghostly through violence, urban renewal, and postwar redevelopment. Its fate parallels that of the neighborhoods it served.",
+    img:"berlin_heidereutergasse.jpg"
+  },
+  {
+    num:"04", name:"Friedrich-Wederschen Gymnasium",
+    addr:"Mitte",
+    lat:52.5135, lng:13.3950,
+    status:"destroyed", statusLabel:"Demolished (19th c.)",
+    desc:"One of Berlin\u2019s most prestigious institutions, where Lewin was admitted in 1864 through his mother Rahel\u2019s advocacy. The Prussian Gymnasium functioned as both gate and gauntlet. Here Lewin was mentored by Paul de Lagarde\u2014later a vocal antisemite. Demolished during nineteenth-century urban reconstruction.",
+    img:null
+  },
+  {
+    num:"05", name:"Private Laboratory, Ziegelstra\u00dfe",
+    addr:"Ziegelstra\u00dfe, Mitte",
+    lat:52.5255, lng:13.3890,
+    status:"memorial", statusLabel:"Commemorative Plaque",
+    desc:"Unable to secure a full professorship despite his extraordinary publication record, Lewin maintained a private laboratory in his Berlin apartment. A commemorative plaque was unveiled on November 8, 1996\u2014but mounted a few doors away from the actual laboratory site. The plaque marks institutional exclusion as much as scientific achievement.",
+    img:"berlin_ziegelstrasse.jpg"
+  },
+  {
+    num:"06", name:"Charit\u00e9",
+    addr:"Charit\u00e9platz 1, Mitte",
+    lat:52.5255, lng:13.3795,
+    status:"extant", statusLabel:"Extant",
+    desc:"Berlin\u2019s historic medical university where Lewin earned his doctorate (1875) and habilitated in pharmacology, toxicology, and hygiene (1881). His career at the Pharmacological Institute under Oscar Liebreich began here, though institutional advancement was systematically denied.",
+    img:null
+  },
+  {
+    num:"07", name:"Jewish Hospital",
+    addr:"Iranische Stra\u00dfe, Wedding",
+    lat:52.5560, lng:13.3470,
+    status:"extant", statusLabel:"Extant",
+    desc:"Lewin was involved in the founding of a Jewish hospital, directing his scientific expertise toward philanthropy and institutional reform. His communal leadership extended from the synagogue into medical care for Berlin\u2019s Jewish community.",
+    img:null
+  },
+  {
+    num:"08", name:"Former Botanical Garden",
+    addr:"Potsdamer Stra\u00dfe, Sch\u00f6neberg",
+    lat:52.5080, lng:13.3690,
+    status:"renamed", statusLabel:"Relocated 1910",
+    desc:"Lewin and Georg Schweinfurth made shared excursions to the former Botanical Garden on Potsdamer Stra\u00dfe. These visits brought sustained personal exchange into the private sphere of scientific sociability, beyond institutional venues.",
+    img:null
+  },
+  {
+    num:"09", name:"Wei\u00dfensee Cemetery",
+    addr:"Herbert-Baum-Stra\u00dfe 45, Wei\u00dfensee",
+    lat:52.5530, lng:13.4640,
+    status:"extant", statusLabel:"Extant \u2014 Grave Restored",
+    desc:"J\u00fcdischer Friedhof Wei\u00dfensee. Prof Dr. Med Louis Lewin, 9 November 1850 \u2013 1 December 1929. Clara Wolff Lewin, 5 October 1856 \u2013 9 January 1943, Theresienstadt. Ermordet im Holocaust. The grave was restored decades later. Photographs taken by the author during research visits, summer 2022.",
+    img:"berlin_weissensee.jpg"
+  },
+  {
+    num:"10", name:"Louis-Lewin-Stra\u00dfe U-Bahn",
+    addr:"Adlershof, Treptow-K\u00f6penick",
+    lat:52.4215, lng:13.5125,
+    status:"memorial", statusLabel:"Named in his honor",
+    desc:"A U-Bahn station bearing Lewin\u2019s name. For years, the station signage misspelled his name. A memorial in a divided city\u2014his presence survives as transit infrastructure, a name passengers pass through without knowing its origin.",
+    img:null
+  }
+];
+
+var STATUS_COLORS = {
+  destroyed:'#b85050', extant:'#6a8f6a', memorial:'#c9a55a', renamed:'#6a7faf'
+};
+
+window.addEventListener('load', function(){
+  if(typeof L==='undefined'){
+    document.getElementById('map').innerHTML='<div style="padding:3rem;color:#c9a55a;font-family:monospace;">Leaflet library could not load. Check internet connection.</div>';
+    return;
+  }
+
+  var map = L.map('map',{zoomControl:true}).setView([52.52, 13.40], 12);
+
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{
+    attribution:'&copy; OpenStreetMap &copy; CARTO',
+    subdomains:'abcd', maxZoom:19
+  }).addTo(map);
+
+  var markers = [];
+  var sidebar = document.getElementById('sidebar');
+
+  // Build sidebar header
+  var header = document.createElement('div');
+  header.className = 'sidebar-header';
+  header.innerHTML = '<h2>Memory, Space, and Erasure</h2><p>The sites of Louis Lewin\u2019s life in Berlin\u2014childhood homes, professional residences, laboratories, and communal spaces\u2014trace a geography of institutional access, exclusion, and postwar forgetting. Most no longer exist under their original names or forms. Together they reveal how the spatial traces of Jewish scientific life were rendered illegible through violence, urban renewal, and bureaucratic indifference.</p>';
+  sidebar.appendChild(header);
+
+  SITES.forEach(function(s, i){
+    // Sidebar item
+    var el = document.createElement('div');
+    el.className = 'site-item';
+    el.id = 'site-'+i;
+    el.innerHTML = '<div class="site-num">SITE '+s.num+'</div>'
+      +'<div class="site-name">'+s.name+'</div>'
+      +'<div class="site-addr">'+s.addr+'</div>'
+      +'<div class="site-desc">'+s.desc.substring(0,120)+'...</div>'
+      +'<span class="site-status status-'+s.status+'">'+s.statusLabel+'</span>';
+    el.addEventListener('click', function(){
+      map.setView([s.lat, s.lng], 15, {animate:true});
+      markers[i].openPopup();
+      document.querySelectorAll('.site-item').forEach(function(x){x.classList.remove('active');});
+      el.classList.add('active');
+    });
+    sidebar.appendChild(el);
+
+    // Map marker
+    var color = STATUS_COLORS[s.status] || '#c9a55a';
+    var icon = L.divIcon({
+      className:'',
+      html:'<div style="position:relative;"><div style="width:14px;height:14px;border-radius:50%;background:'+color+';border:2px solid rgba(255,255,255,0.8);box-shadow:0 0 8px rgba(0,0,0,0.5);"></div><div style="position:absolute;top:-8px;left:18px;font-family:\'JetBrains Mono\',monospace;font-size:9px;color:'+color+';white-space:nowrap;letter-spacing:0.1em;">'+s.num+'</div></div>',
+      iconSize:[14,14], iconAnchor:[7,7]
+    });
+    var m = L.marker([s.lat, s.lng], {icon:icon}).addTo(map);
+    m.bindPopup('<strong style="font-family:Playfair Display,serif;font-size:1rem;">'+s.name+'</strong><br><span style="font-family:JetBrains Mono,monospace;font-size:0.65rem;color:#8a7340;">'+s.addr+'</span><br><br>'+s.desc.substring(0,200)+'...<br><br><span style="font-family:JetBrains Mono,monospace;font-size:0.6rem;color:'+color+';">'+s.statusLabel+'</span>', {maxWidth:320});
+    m.on('click', function(){
+      document.querySelectorAll('.site-item').forEach(function(x){x.classList.remove('active');});
+      document.getElementById('site-'+i).classList.add('active');
+      document.getElementById('site-'+i).scrollIntoView({behavior:'smooth',block:'center'});
+    });
+    markers.push(m);
+  });
+});
+</script>
+</body>
+</html>

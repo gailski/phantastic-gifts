@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phantastic Gifts &mdash; A Digital Exhibition on Louis Lewin (1850&ndash;1929)</title>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   CSS CUSTOM PROPERTIES
+   ============================================================ */
+:root {
+  --bg-deep:       #060606;
+  --bg-primary:    #0e0d0b;
+  --bg-card:       #161412;
+  --bg-elevated:   #1e1b17;
+  --bg-parchment:  #f0e4cc;
+  --bg-parchment-dark: #d9c9a3;
+  --gold:          #c9a55a;
+  --gold-light:    #e0c97f;
+  --gold-dim:      #8a7340;
+  --amber:         #d4a574;
+  --poison-red:    #8b3a3a;
+  --poison-red-light: #b85050;
+  --botanical:     #4a6b4a;
+  --botanical-light: #6a8f6a;
+  --ink:           #2a2520;
+  --text-primary:  #e8e0d4;
+  --text-secondary:#a89e8e;
+  --text-muted:    #6e6458;
+  --text-dark:     #2a2520;
+  --text-gold:     #c9a55a;
+  --font-display:  'Playfair Display', Georgia, serif;
+  --font-body:     'Cormorant Garamond', 'Times New Roman', serif;
+  --font-mono:     'JetBrains Mono', 'Courier New', monospace;
+  --section-pad:   clamp(60px, 10vw, 140px);
+  --content-max:   1100px;
+  --content-wide:  1400px;
+}
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  background: var(--bg-deep);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: var(--gold); color: var(--bg-deep); }
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--gold); text-decoration: none; transition: color 0.3s; }
+a:hover { color: var(--gold-light); }
+
+/* ============================================================
+   UTILITY
+   ============================================================ */
+.section-pad { padding: var(--section-pad) clamp(20px, 5vw, 60px); }
+.content-wrap { max-width: var(--content-max); margin: 0 auto; }
+.content-wide { max-width: var(--content-wide); margin: 0 auto; }
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.section-title em { font-style: italic; color: var(--gold); }
+
+.section-subtitle {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.divider { width: 60px; height: 1px; background: var(--gold-dim); margin: 3rem 0; }
+.divider-center { width: 60px; height: 1px; background: var(--gold-dim); margin: 3rem auto; }
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+.site-nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  padding: 1rem 2rem;
+  display: flex; justify-content: space-between; align-items: center;
+  transition: background 0.4s, backdrop-filter 0.4s;
+}
+.site-nav.scrolled {
+  background: rgba(6,6,6,0.92);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+}
+.nav-brand {
+  font-family: var(--font-display); font-size: 1rem; font-weight: 700;
+  color: var(--gold); letter-spacing: 0.05em;
+}
+.nav-links { display: flex; gap: 1.5rem; list-style: none; }
+.nav-links a {
+  font-family: var(--font-mono); font-size: 0.65rem;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--text-secondary); transition: color 0.3s; position: relative;
+}
+.nav-links a:hover { color: var(--gold); }
+.nav-links a::after {
+  content: ''; position: absolute; bottom: -4px; left: 0;
+  width: 0; height: 1px; background: var(--gold); transition: width 0.3s;
+}
+.nav-links a:hover::after { width: 100%; }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+.nav-toggle span { display: block; width: 22px; height: 1px; background: var(--gold); margin: 5px 0; transition: 0.3s; }
+@media (max-width: 768px) {
+  .nav-toggle { display: block; }
+  .nav-links {
+    display: none; position: absolute; top: 100%; left: 0; right: 0;
+    background: rgba(6,6,6,0.96); flex-direction: column; padding: 1rem 2rem 2rem; gap: 1rem;
+  }
+  .nav-links.open { display: flex; }
+}
+
+/* ============================================================
+   01. HERO
+   ============================================================ */
+.hero {
+  position: relative; min-height: 100vh;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: clamp(40px, 8vw, 120px) clamp(20px, 5vw, 80px);
+  overflow: hidden;
+}
+.hero-bg { position: absolute; inset: 0; z-index: 0; }
+.hero-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.25; filter: sepia(0.4) contrast(1.1); }
+.hero-overlay {
+  position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(to top, var(--bg-deep) 0%, rgba(6,6,6,0.7) 40%, rgba(6,6,6,0.3) 100%);
+}
+.hero-content { position: relative; z-index: 2; max-width: 800px; }
+.hero-overline {
+  font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.3em;
+  text-transform: uppercase; color: var(--gold-dim); margin-bottom: 1.5rem;
+  opacity: 0; animation: fadeUp 1s 0.3s forwards;
+}
+.hero-title {
+  font-family: var(--font-display); font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 900; line-height: 0.95; color: var(--text-primary);
+  margin-bottom: 0.5rem; opacity: 0; animation: fadeUp 1s 0.5s forwards;
+}
+.hero-title em { font-style: italic; color: var(--gold); }
+.hero-desc {
+  font-family: var(--font-body); font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+  color: var(--text-secondary); max-width: 520px; margin-top: 1.5rem;
+  opacity: 0; animation: fadeUp 1s 0.8s forwards;
+}
+.hero-scroll-cue {
+  position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+  z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+  opacity: 0; animation: fadeUp 1s 1.2s forwards;
+}
+.hero-scroll-cue span { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); }
+.scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, var(--gold-dim), transparent); animation: scrollPulse 2s infinite; }
+
+/* ============================================================
+   02. INTRODUCTION
+   ============================================================ */
+.intro { background: var(--bg-primary); }
+.intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(30px, 5vw, 80px); align-items: center; }
+.intro-text p { font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 1.25rem; }
+.intro-text p.section-label { font-size: 0.7rem; color: var(--gold-dim); }
+.intro-text p:nth-of-type(2)::first-letter {
+  font-family: var(--font-display); font-size: 3.5rem; float: left;
+  line-height: 1; margin-right: 0.5rem; color: var(--gold); font-weight: 700;
+}
+.intro-pull-quote { position: relative; padding: 2rem 2.5rem; border-left: 2px solid var(--gold-dim); }
+.intro-pull-quote blockquote { font-family: var(--font-display); font-style: italic; font-size: clamp(1.3rem, 2.5vw, 1.8rem); line-height: 1.45; color: var(--text-primary); }
+.intro-pull-quote cite { display: block; margin-top: 1rem; font-family: var(--font-mono); font-style: normal; font-size: 0.75rem; letter-spacing: 0.1em; color: var(--text-muted); }
+@media (max-width: 768px) { .intro-grid { grid-template-columns: 1fr; } }
+
+/* ============================================================
+   03. PORTRAIT GALLERY
+   ============================================================ */
+.portraits { background: var(--bg-deep); }
+.portrait-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+.portrait-card {
+  position: relative; overflow: hidden; background: var(--bg-card);
+  border: 1px solid rgba(201,165,90,0.1); transition: border-color 0.4s, transform 0.4s;
+}
+.portrait-card:hover { border-color: rgba(201,165,90,0.3); transform: translateY(-4px); }
+.portrait-card img { width: 100%; aspect-ratio: 3/4; object-fit: cover; filter: sepia(0.15) contrast(1.05); transition: filter 0.4s, transform 0.6s; }
+.portrait-card:hover img { filter: sepia(0) contrast(1); transform: scale(1.03); }
+.portrait-caption { padding: 1rem 1.25rem; }
+.portrait-caption h3 { font-family: var(--font-display); font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.25rem; }
+.portrait-caption p { font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted); letter-spacing: 0.05em; }
+
+/* ============================================================
+   04. PHARMAKON
+   ============================================================ */
+.pharmakon { background: var(--bg-primary); position: relative; }
+.pharmakon-layout { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(30px, 5vw, 80px); }
+.pharmakon-concept { display: flex; flex-direction: column; gap: 2rem; }
+.pharmakon-duality { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.duality-card { padding: 1.5rem; border: 1px solid rgba(201,165,90,0.15); background: var(--bg-card); }
+.duality-card h4 { font-family: var(--font-display); font-size: 1.3rem; margin-bottom: 0.5rem; }
+.duality-card.gift h4 { color: var(--gold); }
+.duality-card.gift-poison h4 { color: var(--poison-red-light); }
+.duality-card p { font-size: 0.95rem; color: var(--text-secondary); }
+.pharmakon-image { position: relative; }
+.pharmakon-image img { width: 100%; height: 100%; object-fit: cover; filter: sepia(0.2); }
+@media (max-width: 768px) { .pharmakon-layout { grid-template-columns: 1fr; } .pharmakon-duality { grid-template-columns: 1fr; } }
+
+/* ============================================================
+   05. BIOGRAPHY TIMELINE
+   ============================================================ */
+.timeline-section { background: var(--bg-deep); }
+.timeline-track { position: relative; padding-left: 3rem; }
+.timeline-track::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--gold-dim) 10%, var(--gold-dim) 90%, transparent);
+}
+.timeline-entry { position: relative; padding-bottom: 3rem; opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s; }
+.timeline-entry.visible { opacity: 1; transform: translateY(0); }
+.timeline-entry::before {
+  content: ''; position: absolute; left: -3rem; top: 0.5rem;
+  width: 7px; height: 7px; border-radius: 50%; background: var(--gold-dim);
+  border: 2px solid var(--bg-deep); transform: translateX(-3px);
+}
+.timeline-year { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.15em; color: var(--gold); margin-bottom: 0.5rem; }
+.timeline-entry h3 { font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.5rem; }
+.timeline-entry p { font-size: 1rem; color: var(--text-secondary); max-width: 600px; }
+
+/* ============================================================
+   06. POETRY
+   ============================================================ */
+.poetry { background: var(--bg-primary); }
+.poem-section-inner { max-width: 900px; margin: 0 auto; }
+.poem-header { text-align: center; margin-bottom: 2.5rem; }
+.poem-eyebrow { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 0.75rem; }
+.poem-title-display { font-family: var(--font-display); font-size: 2rem; color: var(--text-primary); }
+.poem-meta { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.4rem; font-style: italic; }
+.poem-bilingual { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+.poem-col-label { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 1rem; display: block; }
+.poem-text-block { font-family: var(--font-display); font-style: italic; font-size: 1.15rem; color: rgba(232,224,212,0.8); line-height: 2; white-space: pre-line; }
+.poem-text-block.translation { color: rgba(232,224,212,0.5); font-size: 1.05rem; }
+.poem-divider-line { border: none; border-top: 1px solid rgba(201,165,90,0.15); margin: 3.5rem 0; }
+.poem-note-text { font-size: 0.85rem; color: var(--text-muted); text-align: center; font-style: italic; margin-top: 1.5rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+@media (max-width: 768px) { .poem-bilingual { grid-template-columns: 1fr; gap: 1.5rem; } }
+
+/* ============================================================
+   07. JOURNEY MAP
+   ============================================================ */
+.journey-map { background: var(--bg-deep); position: relative; }
+.journey-intro-text { font-size: 1.05rem; color: var(--text-secondary); max-width: 700px; margin-bottom: 2rem; }
+.journey-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }
+.journey-img-card { position: relative; overflow: hidden; background: var(--bg-card); border: 1px solid rgba(201,165,90,0.1); }
+.journey-img-card img { width: 100%; aspect-ratio: 4/3; object-fit: cover; filter: sepia(0.2) contrast(1.05); transition: transform 0.6s, filter 0.4s; }
+.journey-img-card:hover img { transform: scale(1.04); filter: sepia(0) contrast(1); }
+.journey-img-card .card-caption { padding: 1rem 1.25rem; }
+.journey-img-card .card-caption h4 { font-family: var(--font-display); font-size: 1rem; color: var(--gold); margin-bottom: 0.25rem; }
+.journey-img-card .card-caption p { font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted); }
+.journey-stops { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 2.5rem; }
+.stop-card { padding: 1.25rem; background: var(--bg-card); border: 1px solid rgba(201,165,90,0.1); }
+.stop-card h4 { font-family: var(--font-display); font-size: 1rem; color: var(--gold); margin-bottom: 0.25rem; }
+.stop-card .stop-date { font-family: var(--font-mono); font-size: 0.65rem; color: var(--gold-dim); letter-spacing: 0.1em; margin-bottom: 0.5rem; }
+.stop-card p { font-size: 0.9rem; color: var(--text-secondary); }
+
+/* ============================================================
+   08. DRAWINGS
+   ============================================================ */
+.drawings { background: var(--bg-primary); }
+.drawing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+.drawing-card { background: var(--bg-parchment); padding: 1.5rem; border: 1px solid var(--bg-parchment-dark); transition: transform 0.4s; }
+.drawing-card:hover { transform: translateY(-3px); }
+.drawing-card img { width: 100%; object-fit: contain; margin-bottom: 1rem; }
+.drawing-card h4 { font-family: var(--font-display); font-size: 0.95rem; color: var(--text-dark); margin-bottom: 0.25rem; }
+.drawing-card p { font-family: var(--font-mono); font-size: 0.7rem; color: var(--ink); opacity: 0.6; }
+
+/* ============================================================
+   09. PASSENGER MANIFEST
+   ============================================================ */
+.manifest { background: var(--bg-deep); }
+.manifest-document {
+  background: var(--bg-parchment); padding: clamp(20px, 4vw, 50px);
+  max-width: 800px; margin: 2rem auto 0; position: relative;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.3), inset 0 0 80px rgba(0,0,0,0.05);
+}
+.manifest-document::before { content: ''; position: absolute; inset: 8px; border: 1px solid rgba(42,37,32,0.15); pointer-events: none; }
+.manifest-header { text-align: center; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(42,37,32,0.2); margin-bottom: 1.5rem; }
+.manifest-header h3 { font-family: var(--font-display); font-size: 1.5rem; color: var(--text-dark); font-weight: 700; }
+.manifest-header p { font-family: var(--font-mono); font-size: 0.75rem; color: var(--ink); opacity: 0.6; margin-top: 0.5rem; }
+.manifest-image { width: 100%; margin-bottom: 1.5rem; }
+.manifest-image img { width: 100%; filter: sepia(0.1) contrast(1.1); }
+.manifest-images-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
+.manifest-images-row img { width: 100%; filter: sepia(0.1) contrast(1.1); }
+.manifest-transcription { font-family: var(--font-mono); font-size: 0.8rem; line-height: 1.8; color: var(--text-dark); }
+.manifest-transcription table { width: 100%; border-collapse: collapse; }
+.manifest-transcription th, .manifest-transcription td { text-align: left; padding: 0.4rem 0.75rem; border-bottom: 1px solid rgba(42,37,32,0.1); font-size: 0.8rem; }
+.manifest-transcription th { font-weight: 500; color: var(--ink); opacity: 0.5; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; }
+.manifest-highlight { background: rgba(201,165,90,0.2); }
+
+/* ============================================================
+   10. PHANTASTICA
+   ============================================================ */
+.phantastica { background: var(--bg-primary); }
+.taxonomy-intro { font-size: 1.1rem; color: var(--text-secondary); max-width: 700px; margin-bottom: 3rem; }
+.taxonomy-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+.taxonomy-card {
+  background: var(--bg-card); border: 1px solid rgba(201,165,90,0.1);
+  padding: 2rem; position: relative; overflow: hidden; transition: border-color 0.4s;
+}
+.taxonomy-card:hover { border-color: rgba(201,165,90,0.3); }
+.taxonomy-card::before { content: attr(data-number); position: absolute; top: -10px; right: 10px; font-family: var(--font-display); font-size: 5rem; font-weight: 900; color: rgba(201,165,90,0.06); line-height: 1; pointer-events: none; }
+.taxonomy-card h3 { font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; margin-bottom: 0.25rem; }
+.taxonomy-card .card-latin { font-family: var(--font-display); font-style: italic; font-size: 0.9rem; color: var(--gold); margin-bottom: 0.75rem; }
+.taxonomy-card p { font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 0.75rem; }
+.taxonomy-card .substances { font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted); letter-spacing: 0.05em; }
+
+/* ============================================================
+   11. CORRESPONDENCE
+   ============================================================ */
+.correspondence { background: var(--bg-deep); }
+.corr-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1.5rem; margin: 2rem 0 3rem; }
+.corr-stat { text-align: center; padding: 1.5rem; background: var(--bg-card); border: 1px solid rgba(201,165,90,0.1); }
+.corr-stat .stat-number { font-family: var(--font-display); font-size: 2.5rem; font-weight: 700; color: var(--gold); }
+.corr-stat .stat-label { font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.25rem; }
+.corr-intro { font-size: 1.05rem; color: var(--text-secondary); max-width: 700px; margin-bottom: 2rem; }
+.corr-sample { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+.corr-card { padding: 1.25rem; background: var(--bg-card); border: 1px solid rgba(201,165,90,0.1); }
+.corr-card h4 { font-family: var(--font-display); font-size: 1rem; color: var(--text-primary); margin-bottom: 0.25rem; }
+.corr-card .corr-role { font-family: var(--font-mono); font-size: 0.7rem; color: var(--gold-dim); margin-bottom: 0.5rem; }
+.corr-card p { font-size: 0.9rem; color: var(--text-secondary); }
+
+/* ============================================================
+   12. EPILOGUE
+   ============================================================ */
+.epilogue { background: var(--bg-primary); text-align: center; position: relative; }
+.epilogue-content { max-width: 700px; margin: 0 auto; }
+.epilogue-text { font-family: var(--font-display); font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-style: italic; line-height: 1.6; color: var(--text-primary); margin-bottom: 2rem; }
+.epilogue-dates { font-family: var(--font-mono); font-size: 1.5rem; letter-spacing: 0.3em; color: var(--gold-dim); }
+.grave-block { background: var(--bg-card); border: 1px solid rgba(201,165,90,0.15); padding: 2rem; margin: 2.5rem auto; max-width: 500px; font-family: var(--font-display); font-size: 1rem; line-height: 1.8; color: var(--text-secondary); text-align: center; }
+.grave-block strong { color: var(--text-primary); display: block; margin-bottom: 0.5rem; font-size: 0.85rem; font-family: var(--font-mono); letter-spacing: 0.1em; }
+.grave-block em { color: var(--poison-red-light); }
+.epilogue-note { font-size: 0.95rem; color: var(--text-secondary); margin-top: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+.byline { font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); letter-spacing: 0.05em; margin-top: 2rem; line-height: 1.8; }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer { background: var(--bg-deep); padding: 3rem clamp(20px, 5vw, 60px); border-top: 1px solid rgba(201,165,90,0.1); text-align: center; }
+.footer-content { font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted); letter-spacing: 0.05em; }
+.footer-content p { margin-bottom: 0.5rem; }
+
+/* ============================================================
+   LIGHTBOX
+   ============================================================ */
+.lightbox { position: fixed; inset: 0; z-index: 9999; background: rgba(0,0,0,0.92); display: none; justify-content: center; align-items: center; cursor: pointer; }
+.lightbox.active { display: flex; }
+.lightbox img { max-width: 90vw; max-height: 85vh; object-fit: contain; }
+.lightbox-caption { position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%); color: var(--text-secondary); font-family: var(--font-mono); font-size: 0.75rem; text-align: center; max-width: 600px; }
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes scrollPulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.stagger-children > * { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.stagger-children.visible > *:nth-child(1) { transition-delay: 0.05s; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(2) { transition-delay: 0.12s; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(3) { transition-delay: 0.19s; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(4) { transition-delay: 0.26s; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(5) { transition-delay: 0.33s; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(6) { transition-delay: 0.40s; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(7) { transition-delay: 0.47s; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(8) { transition-delay: 0.54s; opacity: 1; transform: translateY(0); }
+
+/* GRAIN */
+body::after {
+  content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 9998; opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat; background-size: 256px 256px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav class="site-nav" id="siteNav">
+  <div class="nav-brand"><em>Phantastic</em> Gifts</div>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#intro">Introduction</a></li>
+    <li><a href="#portraits">Portraits</a></li>
+    <li><a href="#pharmakon">Pharmakon</a></li>
+    <li><a href="#timeline">Life</a></li>
+    <li><a href="#poetry">Poetry</a></li>
+    <li><a href="#journey">Journey 1887</a></li>
+    <li><a href="#phantastica">Phantastica</a></li>
+    <li><a href="#correspondence">Letters</a></li>
+    <li><a href="#epilogue">Epilogue</a></li>
+  </ul>
+</nav>
+
+<!-- 01. HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <img src="images/IMG_7652.jpeg" alt="Louis Lewin, portrait photograph">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-overline">A Digital Exhibition on Louis Lewin (1850&ndash;1929)</p>
+    <h1 class="hero-title"><em>Phantastic</em> Gifts</h1>
+    <p class="hero-desc">
+      In German, <em>Gift</em> means poison. In English, it means present.
+      This exhibition restores the legacy of a scientist who understood
+      that every substance &mdash; and every word &mdash; carries both.
+    </p>
+  </div>
+  <div class="hero-scroll-cue"><span>Scroll</span><div class="scroll-line"></div></div>
+</section>
+
+<!-- 02. INTRODUCTION -->
+<section class="intro section-pad" id="intro">
+  <div class="content-wide">
+    <div class="intro-grid">
+      <div class="intro-text reveal">
+        <p class="section-label">Introduction · Einleitung</p>
+        <p>
+          Louis Lewin was born in 1850 in Tuchel, West Prussia, into a Jewish family
+          navigating the precarious terrain of assimilation and identity in the German Empire.
+          He would become the founder of modern toxicology, a pioneer in psychopharmacology,
+          and the author of works that shaped how the twentieth century understood the
+          relationship between human beings and intoxicating substances.
+        </p>
+        <p>
+          The title of this exhibition plays on the German word <em>Gift</em>, which means
+          poison &mdash; a false friend to its English cognate meaning present or offering.
+          This linguistic duality mirrors Lewin's central insight: every substance is both
+          remedy and danger, and the boundary between the two is measured in dosage.
+        </p>
+        <p>
+          This exhibition brings together portraits, poetry, botanical illustrations,
+          passenger manifests, letters, and the taxonomic architecture of his masterwork
+          <em>Phantastica</em> to reconstruct the world of a scientist whose legacy was
+          deliberately obscured by the regime that consumed his homeland.
+        </p>
+      </div>
+      <div class="intro-pull-quote reveal">
+        <blockquote>
+          &ldquo;Alle Dinge sind Gift, und nichts ist ohne Gift;
+          allein die Dosis macht, da&szlig; ein Ding kein Gift ist.&rdquo;
+        </blockquote>
+        <cite>&mdash; Paracelsus (1493&ndash;1541)</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03. PORTRAIT GALLERY -->
+<section class="portraits section-pad" id="portraits">
+  <div class="content-wide">
+    <p class="section-label reveal">Portraits · Bildnisse</p>
+    <h2 class="section-title reveal">Portraits of Louis Lewin</h2>
+    <p class="section-subtitle reveal">Photographs, engravings, and surviving images across five decades of scientific life</p>
+    <div class="portrait-grid stagger-children">
+      <div class="portrait-card">
+        <img src="images/Screenshot_20260113_at_8_37_32PM.png" alt="Louis Lewin, young Privatdozent" class="lightbox-trigger" data-caption="Louis Lewin as a young Privatdozent, c. 1880. Foto: Charit&eacute;">
+        <div class="portrait-caption">
+          <h3>Young Privatdozent</h3>
+          <p>c. 1880 &middot; Berlin &middot; Foto: Charit&eacute;</p>
+        </div>
+      </div>
+      <div class="portrait-card">
+        <img src="images/Screenshot_20260113_at_8_42_30PM.png" alt="Louis Lewin, c. 1885" class="lightbox-trigger" data-caption="Louis Lewin, c. 1885. From the Lewin-Sachs family archive.">
+        <div class="portrait-caption">
+          <h3>At the University</h3>
+          <p>c. 1885 &middot; Berlin</p>
+        </div>
+      </div>
+      <div class="portrait-card">
+        <img src="images/Screenshot_20260113_at_9_45_10PM.png" alt="Louis and Clara Lewin, c. 1890" class="lightbox-trigger" data-caption="Louis and Clara Lewin, c. 1890. Clara came from a teacher's family in Osnabrück. She became his lifelong companion and the addressee of his travel diary. From the Lewin-Sachs family archive.">
+        <div class="portrait-caption">
+          <h3>Louis &amp; Clara</h3>
+          <p>c. 1890 &middot; Lewin-Sachs family archive</p>
+        </div>
+      </div>
+      <div class="portrait-card">
+        <img src="images/IMG_7652.jpeg" alt="Louis Lewin, later years" class="lightbox-trigger" data-caption="Louis Lewin in later years, c. 1920. From the Lewin-Sachs family archive.">
+        <div class="portrait-caption">
+          <h3>Later Years</h3>
+          <p>c. 1920 &middot; Lewin-Sachs family archive</p>
+        </div>
+      </div>
+      <div class="portrait-card">
+        <img src="images/Screenshot_20260113_at_8_41_08PM.png" alt="Line engraving of Louis Lewin" class="lightbox-trigger" data-caption="Line engraving of Louis Lewin, c. 1925.">
+        <div class="portrait-caption">
+          <h3>Engraving</h3>
+          <p>c. 1925 &middot; Published posthumously</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04. PHARMAKON -->
+<section class="pharmakon section-pad" id="pharmakon">
+  <div class="content-wide">
+    <div class="pharmakon-layout">
+      <div class="pharmakon-concept reveal">
+        <p class="section-label">Pharmakon · φάρμακον</p>
+        <h2 class="section-title">The Word That Means Both</h2>
+        <p style="color:var(--text-secondary);margin-bottom:2rem;">
+          In ancient Greek, <em>pharmakon</em> (&phi;&alpha;&rho;&mu;&alpha;&kappa;&omicron;&nu;)
+          designated simultaneously the remedy and the poison, the cure and the curse.
+          Jacques Derrida's reading of Plato's <em>Phaedrus</em> revealed how this
+          irreducible ambiguity structured Western thought about writing, medicine,
+          and knowledge itself. For Lewin, this was not philosophy but laboratory fact:
+          a substance relieves suffering at one dose and produces injury at another. He argued
+          toxicity was never about the substance alone &mdash; it depended on dose, exposure,
+          environment, and the social distribution of harm.
+        </p>
+        <div class="pharmakon-duality">
+          <div class="duality-card gift">
+            <h4>Gift (English)</h4>
+            <p>A present, an offering, something freely given. From Proto-Germanic <em>*giftiz</em>: that which is given.</p>
+          </div>
+          <div class="duality-card gift-poison">
+            <h4>Gift (Deutsch)</h4>
+            <p>Poison. A substance that destroys. Same root, inverted meaning &mdash; the shadow twin of generosity.</p>
+          </div>
+        </div>
+      </div>
+      <div class="pharmakon-image reveal">
+        <img src="images/Screenshot_20260107_at_1_44_46AM.png" alt="Lewin's desk: historical photograph alongside the surviving desk in family custody" class="lightbox-trigger" data-caption="Left: Lewin's study in Berlin, archival photograph. Right: The desk today, preserved by the Lewin-Sachs family. Photograph taken during the author's research visit, 2022.">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05. BIOGRAPHY TIMELINE -->
+<section class="timeline-section section-pad" id="timeline">
+  <div class="content-wrap">
+    <p class="section-label reveal">A Life in Science · Lebenslauf</p>
+    <h2 class="section-title reveal">From <em>Tuchel</em> to Berlin and the world</h2>
+    <div class="divider"></div>
+    <div class="timeline-track">
+      <div class="timeline-entry">
+        <div class="timeline-year">9 November 1850</div>
+        <h3>Born in Tuchel, West Prussia</h3>
+        <p>A West Prussian borderland &mdash; German, Polish, Jewish, contested. His parents Hirsch and Rahel Appelbaum were Orthodox Jews in a predominantly Christian town.</p>
+      </div>
+      <div class="timeline-entry">
+        <div class="timeline-year">1856</div>
+        <h3>Migration to Berlin</h3>
+        <p>The family settled on Grenadierstra&szlig;e in the Scheunenviertel, Berlin&rsquo;s most stigmatized Jewish quarter. He visited his parents there every day of his life for the rest of theirs.</p>
+      </div>
+      <div class="timeline-entry">
+        <div class="timeline-year">1864&ndash;1875</div>
+        <h3>Gymnasium and Doctorate</h3>
+        <p>Admitted through his mother Rahel&rsquo;s advocacy. Mentored by the orientalist Paul de Lagarde &mdash; later a vocal antisemite &mdash; then earned his doctorate at Friedrich-Wilhelms-Universit&auml;t in 1875 and habilitated in pharmacology, toxicology, and hygiene in 1881.</p>
+      </div>
+      <div class="timeline-entry">
+        <div class="timeline-year">1883</div>
+        <h3>Marries Clara Bernhardine Wolff</h3>
+        <p>Clara came from a teacher&rsquo;s family in Osnabr&uuml;ck. She became his lifelong companion, the addressee of his travel diary, and the recipient of his letters from across the world.</p>
+      </div>
+      <div class="timeline-entry">
+        <div class="timeline-year">1886</div>
+        <h3>Pioneering Mescaline Research</h3>
+        <p>Among the first European scientists to conduct laboratory studies of peyote (<em>Anhalonium Lewinii</em>, named in his honor), analyzing its alkaloids and effects on human consciousness.</p>
+      </div>
+      <div class="timeline-entry">
+        <div class="timeline-year">1887</div>
+        <h3>Journey to North America</h3>
+        <p>Embarks on a five-month research journey across the United States and Canada, studying indigenous uses of psychoactive plants, visiting laboratories, and encountering the infrastructures of industrial modernity.</p>
+      </div>
+      <div class="timeline-entry">
+        <div class="timeline-year">1893&ndash;1920s</div>
+        <h3>Institutional Exclusion</h3>
+        <p>Despite an extraordinary publication record, Lewin was repeatedly denied a full professorship. He maintained a private laboratory in his Berlin apartment &mdash; an act of persistence against institutional antisemitism.</p>
+      </div>
+      <div class="timeline-entry">
+        <div class="timeline-year">1924</div>
+        <h3><em>Phantastica</em> Published</h3>
+        <p>Publishes his magnum opus, <em>Phantastica: Die bet&auml;ubenden und erregenden Genussmittel</em>, the first systematic classification of psychoactive substances. A foundational text in the genealogy of psychedelic science.</p>
+      </div>
+      <div class="timeline-entry">
+        <div class="timeline-year">1 December 1929</div>
+        <h3>Death in Berlin</h3>
+        <p>He died at 79. Clara survived him by fourteen years, only to be murdered in Theresienstadt in January 1943. Their daughter Gertrud was murdered there too. Their remains are lost.</p>
+      </div>
+    </div>
+
+    <div class="divider-center" style="margin:3rem auto;"></div>
+    <div class="reveal" style="text-align:center;max-width:600px;margin:0 auto;">
+      <p style="font-size:1.05rem;color:var(--text-secondary);margin-bottom:1.5rem;">
+        An interactive map of Lewin&rsquo;s Berlin &mdash; the sites of childhood, professional life, communal worship, institutional exclusion, and postwar erasure &mdash; accompanies this exhibition.
+      </p>
+      <a href="maps-berlin.html" style="display:inline-block;padding:0.75rem 2rem;border:1px solid var(--gold);color:var(--gold);font-family:var(--font-mono);font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;transition:all 0.3s;">Explore Lewin&rsquo;s Berlin &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- 06. POETRY -->
+<section class="poetry section-pad" id="poetry">
+  <div class="content-wrap">
+    <p class="section-label reveal">Poetry · Dichtung</p>
+    <h2 class="section-title reveal">Lewin the Poet</h2>
+    <p class="section-subtitle reveal">Verses from the travel diary, written for Clara across the Atlantic</p>
+    <div class="divider-center"></div>
+
+    <div class="poem-section-inner">
+      <!-- AUSREISE -->
+      <div class="poem-header reveal">
+        <div class="poem-eyebrow">Aus dem Reisetagebuch &middot; From the travel diary</div>
+        <div class="poem-title-display">Ausreise</div>
+        <div class="poem-meta">Written aboard the SS Hammonia, Atlantic Ocean &middot; 31 July 1887</div>
+      </div>
+      <div class="poem-bilingual reveal">
+        <div>
+          <span class="poem-col-label">Deutsch</span>
+          <div class="poem-text-block">Sonnenglanz liegt auf dem Meere
+Dessen Fl&auml;che, leichtbewegt
+Von des Westwinds Fl&uuml;gelschlage,
+Mich geduldig zielw&auml;rts tr&auml;gt.
+
+Abseits von dem Menschenstrome,
+An die Schiffswand angelehnt,
+Denke ich, erf&uuml;llt von Liebe
+Derer, die mein Herz ersehnt.
+
+Denke an die lieben Kleinen
+Und mein Weib, die weit zur&uuml;ck
+Meergetrennt von mir nun leben &mdash;
+Fern dem Blick, mein fernes Gl&uuml;ck!
+
+Meine Lippen sprechen leise
+Was mein ganzes Ich bewegt,
+Senden Worte auf zu Jenem,
+Der das Menschenschicksal tr&auml;gt:
+
+Halt, o Gott mir meine Lieben
+Immerfort in guter Hut,
+Niemals lasse sie entbehren
+Der Gesundheit h&ouml;chstes Gut!
+
+Sch&uuml;tze Du auch meine Pfade
+Leite mich zum Heimatherd,
+Da&szlig; ich gesund ich wiederfinde
+Alle, die mein Herz begehrt!</div>
+        </div>
+        <div>
+          <span class="poem-col-label">English &middot; Translation by the author</span>
+          <div class="poem-text-block translation">Sunlight lies upon the sea
+Whose surface, gently moved
+By the wing-beat of the west wind,
+Carries me patiently toward my goal.
+
+Apart from the stream of people,
+Leaning against the ship&rsquo;s wall,
+I think, filled with love
+Of those whom my heart longs for.
+
+I think of the dear little ones
+And my wife, who now lives far behind,
+Separated from me by the sea &mdash;
+Far from sight, my distant happiness!
+
+My lips speak softly
+What moves my whole being,
+Sending words upward to Him
+Who carries the fate of mankind:
+
+Hold, O God, my loved ones
+Forever in good keeping,
+Never let them be deprived
+Of health, the highest good!
+
+Protect also my own path,
+Lead me to my home hearth,
+That I may find again in health
+All those whom my heart desires!</div>
+        </div>
+      </div>
+
+      <hr class="poem-divider-line">
+
+      <!-- KAMLOOPS POEM -->
+      <div class="poem-header reveal">
+        <div class="poem-title-display" style="font-size:1.5rem;">Written after the train derailment at Kamloops</div>
+        <div class="poem-meta">25 August 1887 &middot; Somewhere in British Columbia</div>
+      </div>
+      <div class="poem-bilingual reveal">
+        <div>
+          <span class="poem-col-label">Deutsch</span>
+          <div class="poem-text-block">Mein theures Weib, ihr s&uuml;&szlig;en Kinder,
+An wen als Euch hab' ich gedacht,
+Als j&auml;hes Ungl&uuml;ck mich bedrohte
+In der vergangenen, finstern Nacht!
+
+Ihr wart die Engel, die mich sch&uuml;tzten
+Und Euer Beten war mein Hort &mdash;
+&bdquo;Den Vater gieb gesund uns wieder&ldquo;!
+So t&ouml;nt zu Gott auf dieses Wort.
+
+Erh&ouml;rung fand der Liebe Flehen,
+Das Fallen aus dem Kindermund &mdash;
+F&uuml;r sie, die meiner noch bed&uuml;rfen
+Erhielt der H&ouml;chste mich gesund.</div>
+        </div>
+        <div>
+          <span class="poem-col-label">English &middot; Translation by the author</span>
+          <div class="poem-text-block translation">My dear wife, my sweet children,
+Who else but you did I think of,
+When sudden misfortune threatened me
+In the dark terror of that night!
+
+You were the angels who protected me
+And your prayer was my refuge &mdash;
+&ldquo;Give us back our father, healthy!&rdquo;
+So it rose to God on this word.
+
+The love&rsquo;s plea found its answer,
+The words falling from children&rsquo;s mouths &mdash;
+For them, who still need me,
+The Almighty kept me well.</div>
+        </div>
+      </div>
+      <p class="poem-note-text reveal">After a train derailment on the Canadian Pacific Railway near Kamloops, British Columbia, Lewin tended to injured passengers through the night. He wrote this poem for Clara in the hours after.</p>
+
+      <hr class="poem-divider-line">
+
+      <!-- HEIMKEHR -->
+      <div class="poem-header reveal">
+        <div class="poem-eyebrow">Aus dem Reisetagebuch &middot; From the travel diary</div>
+        <div class="poem-title-display">Heimkehr</div>
+        <div class="poem-meta">Written aboard the SS Wieland, returning to Hamburg &middot; September 1887</div>
+      </div>
+      <div class="poem-bilingual reveal">
+        <div>
+          <span class="poem-col-label">Deutsch</span>
+          <div class="poem-text-block">Zur Heimath! Welch' wonniger Klang!
+Nie ahnte ich, was die Heimath ist!
+Jetzt wei&szlig; ich's, wo ich so lang
+Kinder, Weib und heimische Sitte vermi&szlig;t.
+
+Gro&szlig;es sah ich in Ost und West &mdash;
+Gewaltige Str&ouml;me, &uuml;ppigsten Wald
+Himmelstrebende Felsen mit dem Adlernest
+Und Fl&auml;chen schier endlos in Gestalt!
+
+Staunen ergriff mich all&uuml;berall
+Sinn und Geist war gefangen &mdash;
+Doch das Herz im nacht&ouml;nenden Wiederhall
+Nach der Heimath tr&auml;gt es Verlangen
+
+Sei ruhig Meer, seid g&uuml;nstig Winde
+F&uuml;hrt schnelle mich den langen Pfad,
+Da&szlig; in der Heimath die Lieben ich finde
+Und auf die Ruhe folget die That.</div>
+        </div>
+        <div>
+          <span class="poem-col-label">English &middot; Translation by the author</span>
+          <div class="poem-text-block translation">Home! What a blissful sound!
+I never knew what home was!
+Now I know it, having so long missed
+Children, wife, and familiar ways.
+
+Great things I saw in east and west &mdash;
+Mighty rivers, the richest forest,
+Sky-reaching cliffs with the eagle&rsquo;s nest
+And plains seemingly endless in form!
+
+Wonder seized me everywhere,
+Sense and spirit were captive &mdash;
+But the heart, in its echoing resonance,
+Longs after home
+
+Be calm, sea, be favorable, winds,
+Lead me quickly the long path,
+That in home I find my loved ones
+And after rest follows action.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 07. JOURNEY MAP -->
+<section class="journey-map section-pad" id="journey">
+  <div class="content-wide">
+    <p class="section-label reveal">The 1887 Journey · Reise</p>
+    <h2 class="section-title reveal"><em>Modernity</em> in Motion</h2>
+    <p class="journey-intro-text reveal">
+      In July 1887, Louis Lewin boarded the SS Hammonia in Hamburg and crossed the Atlantic with his uncle.
+      Over five months he traveled from New York to Niagara Falls, across Canada by rail on the Canadian Pacific Railway,
+      down to San Francisco, back east through Denver and Kansas City, to Washington for the U.S. Medical Congress,
+      through Philadelphia, Pittsburgh, Detroit, Chicago, and Boston, before returning from New York aboard the SS Wieland on 29 September 1887.
+    </p>
+
+    <div class="journey-stops stagger-children">
+      <div class="stop-card">
+        <h4>Hamburg &rarr; Atlantic</h4>
+        <div class="stop-date">31 July &ndash; 10 August</div>
+        <p>Departed aboard SS Hammonia. Wrote the <em>Ausreise</em> poem on the first night.</p>
+      </div>
+      <div class="stop-card">
+        <h4>New York</h4>
+        <div class="stop-date">11&ndash;15 August</div>
+        <p>Central Park, Metropolitan Museum, the Battery, Staten Island. Waited anxiously for Clara's letter.</p>
+      </div>
+      <div class="stop-card">
+        <h4>Niagara Falls</h4>
+        <div class="stop-date">17 August</div>
+        <p>Visited the Whirlpool, Goat Island, and the Suspension Bridge. Called it a triumph of human calculation.</p>
+      </div>
+      <div class="stop-card">
+        <h4>Montreal</h4>
+        <div class="stop-date">18&ndash;19 August</div>
+        <p>Visited McGill College and Mount Royal Park. Boarded the Canadian Pacific Railway.</p>
+      </div>
+      <div class="stop-card">
+        <h4>Canadian Rockies</h4>
+        <div class="stop-date">20&ndash;25 August</div>
+        <p>Rail through Winnipeg, Regina, Medicine Hat. Survived a train derailment at Kamloops.</p>
+      </div>
+      <div class="stop-card">
+        <h4>San Francisco</h4>
+        <div class="stop-date">28&ndash;30 August</div>
+        <p>Palace Hotel. Explored Chinatown, visited opium dens, sketched the floor plan from memory.</p>
+      </div>
+      <div class="stop-card">
+        <h4>Washington, D.C.</h4>
+        <div class="stop-date">4&ndash;7 September</div>
+        <p>U.S. Medical Congress. Visited the Smithsonian Institution. Explored Pennsylvania Avenue.</p>
+      </div>
+      <div class="stop-card">
+        <h4>Return Voyage</h4>
+        <div class="stop-date">29 September</div>
+        <p>Boarded the SS Wieland from New York. Wrote the <em>Heimkehr</em> poem at sea.</p>
+      </div>
+    </div>
+
+    <div class="journey-gallery stagger-children" style="margin-top:3rem;">
+      <div class="journey-img-card">
+        <img src="images/18cabinonhammonia.png" alt="Lewin's sketch of his cabin on the SS Hammonia" class="lightbox-trigger" data-caption="Lewin's sketch of his SS Hammonia cabin, drawn for Clara. From the 1985 diary edition.">
+        <div class="card-caption">
+          <h4>SS Hammonia Cabin</h4>
+          <p>Sketch by Lewin &middot; July 1887</p>
+        </div>
+      </div>
+      <div class="journey-img-card">
+        <img src="images/niagarafalls.png" alt="Niagara Falls" class="lightbox-trigger" data-caption="Niagara Falls, as reproduced in the 1985 diary edition. Lewin visited on 17 August 1887.">
+        <div class="card-caption">
+          <h4>Niagara Falls</h4>
+          <p>17 August 1887</p>
+        </div>
+      </div>
+      <div class="journey-img-card">
+        <img src="images/goatisland57.png" alt="Goat Island, Niagara" class="lightbox-trigger" data-caption="Goat Island at Niagara Falls, from the diary.">
+        <div class="card-caption">
+          <h4>Goat Island</h4>
+          <p>Niagara &middot; August 1887</p>
+        </div>
+      </div>
+      <div class="journey-img-card">
+        <img src="images/78CPRtraininterior.png" alt="CPR train interior" class="lightbox-trigger" data-caption="Interior of a Canadian Pacific Railway car, from the 1985 diary edition.">
+        <div class="card-caption">
+          <h4>CPR Train Interior</h4>
+          <p>Canadian Pacific Railway &middot; August 1887</p>
+        </div>
+      </div>
+      <div class="journey-img-card">
+        <img src="images/78CPRlaubwa_lder.png" alt="CPR Laubwälder" class="lightbox-trigger" data-caption="Forest scenery along the Canadian Pacific Railway route, from the diary.">
+        <div class="card-caption">
+          <h4>Laubw&auml;lder</h4>
+          <p>CPR route through the forests &middot; August 1887</p>
+        </div>
+      </div>
+      <div class="journey-img-card">
+        <img src="images/palacehotel117.png" alt="Palace Hotel, San Francisco" class="lightbox-trigger" data-caption="The Palace Hotel in San Francisco, where Lewin stayed in August 1887.">
+        <div class="card-caption">
+          <h4>Palace Hotel</h4>
+          <p>San Francisco &middot; August 1887</p>
+        </div>
+      </div>
+      <div class="journey-img-card">
+        <img src="images/133winnemucca.png" alt="Lewin's sketch of Indigenous mother at Winnemucca" class="lightbox-trigger" data-caption="Lewin's sketch of an Indigenous mother with child in cradleboard, drawn at Winnemucca station (Nevada) from memory.">
+        <div class="card-caption">
+          <h4>Winnemucca Station</h4>
+          <p>Sketch by Lewin &middot; Nevada</p>
+        </div>
+      </div>
+      <div class="journey-img-card">
+        <img src="images/176pennincline.png" alt="Penn Incline" class="lightbox-trigger" data-caption="The Penn Incline, from the diary. Lewin traveled through Pittsburgh in September 1887.">
+        <div class="card-caption">
+          <h4>Penn Incline</h4>
+          <p>Pittsburgh &middot; September 1887</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 08. DRAWINGS -->
+<section class="drawings section-pad" id="drawings">
+  <div class="content-wide">
+    <p class="section-label reveal">Drawings · Zeichnungen</p>
+    <h2 class="section-title reveal">Lewin&rsquo;s Own Hand</h2>
+    <p class="section-subtitle reveal">Scientific illustrations and sketches from his publications and the 1887 diary</p>
+    <div class="drawing-grid stagger-children">
+      <div class="drawing-card">
+        <img src="images/opiumden.png" alt="Opium den floor plan, drawn by Lewin" class="lightbox-trigger" data-caption="Floor plan of an opium den in San Francisco's Chinatown, drawn by Lewin from memory. Rooms (Zimmer) line both sides of a central corridor. From the 1985 diary edition.">
+        <h4>Opium Den Floor Plan</h4>
+        <p>San Francisco Chinatown &middot; Drawn from memory &middot; 1887</p>
+      </div>
+      <div class="drawing-card">
+        <img src="images/opiumpipeparts126.png" alt="Opium pipe parts diagram" class="lightbox-trigger" data-caption="Diagram of opium pipe components, from Lewin's publications.">
+        <h4>Opium Pipe Components</h4>
+        <p>Technical diagram &middot; From Lewin&rsquo;s publications</p>
+      </div>
+      <div class="drawing-card">
+        <img src="images/49.png" alt="Scientific apparatus diagram" class="lightbox-trigger" data-caption="Scientific apparatus diagram from Lewin's toxicological research.">
+        <h4>Laboratory Apparatus</h4>
+        <p>Toxicological research &middot; Technical illustration</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 09. PASSENGER MANIFEST -->
+<section class="manifest section-pad" id="manifest">
+  <div class="content-wide">
+    <p class="section-label reveal">Passenger Manifests · Schiffsliste</p>
+    <h2 class="section-title reveal">Passenger Manifests</h2>
+    <p class="section-subtitle reveal">Documentary evidence of Lewin&rsquo;s Atlantic crossings, 1887</p>
+    <div class="manifest-document reveal">
+      <div class="manifest-header">
+        <h3>Hamburg-Amerikanische Packetfahrt</h3>
+        <p>Salon Passagier Liste &middot; 1887</p>
+      </div>
+      <div class="manifest-images-row">
+        <img src="images/hammonia.png" alt="HAPAG Salon Passagier Liste cover" class="lightbox-trigger" data-caption="Cover of the Hamburg-Amerikanische Packetfahrt Actien-Gesellschaft salon passenger list for the outbound voyage.">
+        <img src="images/wielandreturnnames.png" alt="SS Wieland return passenger list showing Dr. Louis Lewin" class="lightbox-trigger" data-caption="Saloon passenger list of the Steamship Wieland, from New York, Sept. 29, 1887. Dr. Louis Lewin appears second on the list.">
+      </div>
+      <div class="manifest-transcription">
+        <p style="margin-bottom:1rem;font-style:italic;opacity:0.7;">Steamship Wieland &middot; A. Albers, Commander &middot; From New York, September 29, 1887</p>
+        <table>
+          <thead>
+            <tr><th>Name</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Mr. John R. Warburg</td><td></td></tr>
+            <tr class="manifest-highlight"><td><strong>Dr. Louis Lewin</strong></td><td>Return voyage to Hamburg</td></tr>
+            <tr><td>Mrs. Mathilde Begerow</td><td></td></tr>
+            <tr><td>Dr. Carl Thieme</td><td></td></tr>
+            <tr><td>Dr. Herman Rathgen</td><td></td></tr>
+            <tr><td>Dr. &amp; Mrs. Joseph Heckscher</td><td></td></tr>
+            <tr><td>Mr. &amp; Mrs. Emil Schmid</td><td></td></tr>
+            <tr><td>Dr. Robert Goehring</td><td></td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top:1rem;font-style:italic;font-size:0.75rem;opacity:0.5;">Selected entries from the complete saloon passenger list. Full manifest reproduced in the Lewin-Sachs family archive.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. PHANTASTICA -->
+<section class="phantastica section-pad" id="phantastica">
+  <div class="content-wide">
+    <p class="section-label reveal">Phantastica</p>
+    <h2 class="section-title reveal">The Five Kingdoms of Intoxication</h2>
+    <p class="taxonomy-intro reveal">
+      In 1924, Lewin published <em>Phantastica</em>, proposing the first rigorous taxonomy
+      of psychoactive substances. He organized them not by chemical structure but by their
+      effects on human consciousness &mdash; a phenomenological classification that
+      anticipated modern psychopharmacology by decades.
+    </p>
+    <div class="taxonomy-grid stagger-children">
+      <div class="taxonomy-card" data-number="I">
+        <h3>Euphorica</h3>
+        <div class="card-latin">Sedatives of Mental Activity</div>
+        <p>Substances that diminish or suspend mental activity and reduce pain and distress.</p>
+        <div class="substances">Opium &middot; Morphine &middot; Heroin &middot; Cocaine</div>
+      </div>
+      <div class="taxonomy-card" data-number="II">
+        <h3>Phantastica</h3>
+        <div class="card-latin">Agents of Hallucination</div>
+        <p>Substances that produce illusions, hallucinations, and altered states of perception.</p>
+        <div class="substances">Peyote &middot; Cannabis &middot; Fly Agaric &middot; Ayahuasca</div>
+      </div>
+      <div class="taxonomy-card" data-number="III">
+        <h3>Inebriantia</h3>
+        <div class="card-latin">Agents of Intoxication</div>
+        <p>Substances producing initial excitation followed by depression of mental function.</p>
+        <div class="substances">Alcohol &middot; Ether &middot; Chloroform &middot; Benzene</div>
+      </div>
+      <div class="taxonomy-card" data-number="IV">
+        <h3>Hypnotica</h3>
+        <div class="card-latin">Agents of Sleep</div>
+        <p>Substances that mechanically induce sleep by depressing cerebral activity.</p>
+        <div class="substances">Chloral hydrate &middot; Barbiturates &middot; Bromides</div>
+      </div>
+      <div class="taxonomy-card" data-number="V">
+        <h3>Excitantia</h3>
+        <div class="card-latin">Agents of Stimulation</div>
+        <p>Substances that stimulate mental activity without subsequent depression.</p>
+        <div class="substances">Coffee &middot; Tea &middot; Tobacco &middot; Betel &middot; Khat</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11. CORRESPONDENCE -->
+<section class="correspondence section-pad" id="correspondence">
+  <div class="content-wide">
+    <p class="section-label reveal">Correspondence · Korrespondenz</p>
+    <h2 class="section-title reveal">A Transnational Network</h2>
+    <p class="corr-intro reveal">
+      Lewin&rsquo;s Nachlass at the Staatsbibliothek zu Berlin preserves hundreds of letters sent <em>to</em> him &mdash;
+      but few written <em>by</em> him. His correspondents span pharmacology, medicine, law, industry, and colonial administration
+      across Germany, Europe, the United States, and beyond.
+    </p>
+    <div class="corr-stats stagger-children">
+      <div class="corr-stat"><div class="stat-number">491</div><div class="stat-label">Correspondents</div></div>
+      <div class="corr-stat"><div class="stat-number">28</div><div class="stat-label">Countries</div></div>
+      <div class="corr-stat"><div class="stat-number">1880s&ndash;1929</div><div class="stat-label">Date Range</div></div>
+      <div class="corr-stat"><div class="stat-number">Letters, Postcards, Telegrams</div><div class="stat-label">Exchange Types</div></div>
+    </div>
+    <div class="corr-sample stagger-children">
+      <div class="corr-card">
+        <h4>John Jacob Abel</h4>
+        <div class="corr-role">Pharmacologist &middot; Baltimore &middot; 1894</div>
+        <p>Pioneer of American pharmacology. Correspondence in English.</p>
+      </div>
+      <div class="corr-card">
+        <h4>Ernst Abbe</h4>
+        <div class="corr-role">Physicist &middot; Jena &middot; 1896</div>
+        <p>Creator of the Abbe refractometer. Exchanged postcards with Lewin.</p>
+      </div>
+      <div class="corr-card">
+        <h4>Emil Abderhalden</h4>
+        <div class="corr-role">Physiologist &middot; Berlin &middot; 1906&ndash;1907</div>
+        <p>Swiss-German physiologist. Multiple letters exchanged.</p>
+      </div>
+      <div class="corr-card">
+        <h4>Cyrus Adler</h4>
+        <div class="corr-role">Archeologist, Librarian &middot; Washington &middot; 1908</div>
+        <p>Smithsonian Institution curator. Correspondence in English.</p>
+      </div>
+    </div>
+
+    <!-- SAMPLE POSTCARDS FROM THE ARCHIVE -->
+    <div style="margin-top:3rem;" class="reveal">
+      <p class="section-subtitle" style="margin-bottom:1.5rem;">From the archive: postcards addressed to <em>Prof. Dr. L. Lewin, Berlin, Hindersinstr. 2</em></p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:2rem;" class="stagger-children">
+      <div style="background:var(--bg-card);border:1px solid rgba(201,165,90,0.1);overflow:hidden;">
+        <img src="images/IMG_4807.jpeg" alt="Postcard from Theodor Koch-Gr&uuml;nberg to Lewin" class="lightbox-trigger" data-caption="Postcard from Theodor Koch-Gr&uuml;nberg to Prof. Dr. L. Lewin, Berlin, Hindersinstr. 2. Sent from the Linden-Museum Stuttgart on stationery of the W&uuml;rtt. Verein f&uuml;r Handelsgeographie. Discusses Caapi (ayahuasca), referencing Raf. Karsten&rsquo;s work on South American Indians. Pr. St.-Bibl. 31.21, acc. Darmst." style="width:100%;filter:sepia(0.05);">
+        <div style="padding:1rem 1.25rem;">
+          <h4 style="font-family:var(--font-display);font-size:0.95rem;color:var(--text-primary);">Theodor Koch-Gr&uuml;nberg &rarr; Lewin</h4>
+          <p style="font-family:var(--font-mono);font-size:0.65rem;color:var(--gold-dim);margin-top:0.25rem;">Stuttgart, 1924 &middot; Linden-Museum &middot; On Caapi (ayahuasca)</p>
+        </div>
+      </div>
+      <div style="background:var(--bg-card);border:1px solid rgba(201,165,90,0.1);overflow:hidden;">
+        <img src="images/IMG_4736.jpeg" alt="Postkarte from K&ouml;nigreich Bayern to Lewin" class="lightbox-trigger" data-caption="K&ouml;nigreich Bayern Postkarte addressed to Hrn. Prof. Dr. L. Lewin, in Berlin, Hindersinstrasse 2. Postmarked 28/6/96. From Heinrich Kiliani in M&uuml;nchen, discussing Antiaris and Digitalis." style="width:100%;filter:sepia(0.05);">
+        <div style="padding:1rem 1.25rem;">
+          <h4 style="font-family:var(--font-display);font-size:0.95rem;color:var(--text-primary);">Heinrich Kiliani &rarr; Lewin</h4>
+          <p style="font-family:var(--font-mono);font-size:0.65rem;color:var(--gold-dim);margin-top:0.25rem;">M&uuml;nchen, 22.6.1896 &middot; K&ouml;nigreich Bayern &middot; On Antiaris &amp; Digitalis</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider-center" style="margin:3rem auto;"></div>
+    <div class="reveal" style="text-align:center;max-width:600px;margin:0 auto;">
+      <p style="font-size:1.05rem;color:var(--text-secondary);margin-bottom:1.5rem;">
+        An interactive scholarly map of Lewin&rsquo;s correspondence network &mdash; spanning five continents,
+        six thematic categories, and four decades &mdash; is available as a companion to this exhibition.
+      </p>
+      <a href="maps-correspondence.html" style="display:inline-block;padding:0.75rem 2rem;border:1px solid var(--gold);color:var(--gold);font-family:var(--font-mono);font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;transition:all 0.3s;">Explore the Correspondence Map &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- 12. EPILOGUE -->
+<section class="epilogue section-pad" id="epilogue">
+  <div class="content-wrap">
+    <div class="epilogue-content reveal">
+      <p class="section-label">Epilogue · Epilog</p>
+      <h2 class="section-title">In Memoriam</h2>
+      <div class="divider-center"></div>
+      <p class="epilogue-text">
+        He classified the substances that alter consciousness,
+        but could not have classified the madness that consumed his country
+        four years after his death. His name was struck from the record;
+        his work attributed to others or simply forgotten.
+        This exhibition is an act of restoration.
+      </p>
+      <p class="epilogue-dates">1850 &mdash; 1929</p>
+
+      <div class="grave-block">
+        <strong>J&uuml;discher Friedhof Wei&szlig;ensee, Berlin</strong>
+        Prof Dr. Med Louis Lewin<br>
+        9. November 1850 &middot; 1. Dezember 1929<br><br>
+        Clara Wolff Lewin<br>
+        5. October 1856 &middot; 9. Januar 1943<br>
+        Theresienstadt<br>
+        <em>Ermordet im Holocaust</em>
+      </div>
+
+      <!-- GRAVE PHOTOS -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:2.5rem auto;max-width:800px;" class="reveal">
+        <div>
+          <img src="images/230406000595500045.jpg" alt="Lewin grave at Wei&szlig;ensee, 2022" class="lightbox-trigger" data-caption="The Lewin grave at J&uuml;discher Friedhof Wei&szlig;ensee, Berlin. Clara Wolff Lewin's inscription records her murder at Theresienstadt. Photograph by the author, summer 2022." style="width:100%;filter:sepia(0.1) contrast(1.05);border:1px solid rgba(201,165,90,0.15);">
+          <p style="font-family:var(--font-mono);font-size:0.65rem;color:var(--text-muted);margin-top:0.5rem;text-align:center;">The grave today &middot; Photograph by the author, 2022</p>
+        </div>
+        <div>
+          <img src="images/230406000595500044.jpg" alt="Clara Wolff Lewin inscription, Wei&szlig;ensee" class="lightbox-trigger" data-caption="Detail: Clara Wolff Lewin, 5. October 1856 &ndash; 9. Januar 1943. Theresienstadt. Ermordet im Holocaust. Photograph by the author, summer 2022." style="width:100%;filter:sepia(0.1) contrast(1.05);border:1px solid rgba(201,165,90,0.15);">
+          <p style="font-family:var(--font-mono);font-size:0.65rem;color:var(--text-muted);margin-top:0.5rem;text-align:center;">Clara&rsquo;s inscription &middot; <em>Ermordet im Holocaust</em></p>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:1.5rem auto;max-width:800px;" class="reveal">
+        <div>
+          <img src="images/Grab_LL_1.jpeg" alt="Lewin grave, 1981 memorial" class="lightbox-trigger" data-caption="The grave of Prof. Dr. Med. Louis Lewin at Wei&szlig;ensee, photographed during the 1981 international memorial conference. Wreaths placed by conference participants. From the Lewin-Sachs family archive." style="width:100%;filter:sepia(0.15) contrast(1.05);border:1px solid rgba(201,165,90,0.15);">
+          <p style="font-family:var(--font-mono);font-size:0.65rem;color:var(--text-muted);margin-top:0.5rem;text-align:center;">1981 memorial conference &middot; Lewin-Sachs archive</p>
+        </div>
+        <div>
+          <img src="images/Bo_Holmstedt_Rede_Grab_LL.jpeg" alt="Bo Holmstedt's address at the Lewin grave, 1981" class="lightbox-trigger" data-caption="Bo Holmstedt delivers an address at Louis Lewin's grave, J&uuml;discher Friedhof Wei&szlig;ensee, during the 1981 international memorial conference in East Berlin. From the Lewin-Sachs family archive." style="width:100%;filter:sepia(0.15) contrast(1.05);border:1px solid rgba(201,165,90,0.15);">
+          <p style="font-family:var(--font-mono);font-size:0.65rem;color:var(--text-muted);margin-top:0.5rem;text-align:center;">Bo Holmstedt at the graveside, 1981 &middot; Lewin-Sachs archive</p>
+        </div>
+      </div>
+
+      <!-- CARICATURE -->
+      <div style="max-width:800px;margin:2.5rem auto;" class="reveal">
+        <img src="images/Screen_Shot_2022-12-16_at_3_20_10_AM.png" alt="Ad majorem medicinae gloriam, caricature by Aloisi Wintzler, Berlin 1927" class="lightbox-trigger" data-caption="'Ad majorem medicinae gloriam' &mdash; a satirical caricature of the Berlin medical faculty in procession, signed Aloisi Wintzler, Berlin 1927. Lewin appears among the figures. The cart carries his publications; the sign reads 'Vorsicht! Streng Gift!' (Caution! Severe Poison!). From the Lewin-Sachs family archive." style="width:100%;filter:sepia(0.1);border:1px solid rgba(201,165,90,0.15);">
+        <p style="font-family:var(--font-mono);font-size:0.65rem;color:var(--text-muted);margin-top:0.5rem;text-align:center;"><em>Ad majorem medicinae gloriam</em> &mdash; Aloisi Wintzler, Berlin 1927 &middot; Lewin-Sachs family archive</p>
+      </div>
+
+      <p class="epilogue-note">
+        This digital exhibition was created as part of doctoral research at Vanderbilt University.
+        It draws on Lewin&rsquo;s surviving Nachlass at the Staatsbibliothek zu Berlin&ndash;Preu&szlig;ischer Kulturbesitz,
+        the private Lewin-Sachs family archive, and the posthumously published travel diary
+        <em>Durch die USA und Canada im Jahre 1887</em>, ed. Bo Holmstedt and Karlheinz Lohs
+        (Akademie-Verlag Berlin, 1985).
+      </p>
+      <p class="epilogue-note">
+        Photographs of the Wei&szlig;ensee grave were taken by the author during research visits in summer 2022.
+        All diary translations from the German are by the author unless otherwise noted.
+      </p>
+      <p class="byline">
+        Abigail Trozenski<br> &middot; 2026
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>Phantastic Gifts &mdash; A Digital Exhibition on Louis Lewin (1850&ndash;1929)</p>
+    <p>Abigail Trozenski &middot; 2026 &middot; Vanderbilt University</p>
+    <p style="margin-top:1rem;opacity:0.5;">All archival images used with permission. Exhibition content &copy; 2026 Abigail Trozenski.</p>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <img id="lb-img" src="" alt="">
+  <div class="lightbox-caption" id="lb-caption"></div>
+</div>
+
+<!-- JAVASCRIPT -->
+<script>
+(function() {
+  "use strict";
+
+  /* NAV */
+  var nav = document.getElementById("siteNav");
+  var toggle = document.getElementById("navToggle");
+  var links = document.getElementById("navLinks");
+
+  window.addEventListener("scroll", function() {
+    if (window.scrollY > 60) { nav.classList.add("scrolled"); }
+    else { nav.classList.remove("scrolled"); }
+  });
+
+  toggle.addEventListener("click", function() { links.classList.toggle("open"); });
+
+  var navAnchors = links.querySelectorAll("a");
+  for (var i = 0; i < navAnchors.length; i++) {
+    navAnchors[i].addEventListener("click", function() { links.classList.remove("open"); });
+  }
+
+  /* SCROLL REVEAL */
+  if ("IntersectionObserver" in window) {
+    var revealObserver = new IntersectionObserver(function(entries) {
+      for (var j = 0; j < entries.length; j++) {
+        if (entries[j].isIntersecting) { entries[j].target.classList.add("visible"); }
+      }
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+
+    var revealEls = document.querySelectorAll(".reveal, .stagger-children, .timeline-entry");
+    for (var k = 0; k < revealEls.length; k++) { revealObserver.observe(revealEls[k]); }
+  } else {
+    var allReveal = document.querySelectorAll(".reveal, .stagger-children, .timeline-entry");
+    for (var m = 0; m < allReveal.length; m++) { allReveal[m].classList.add("visible"); }
+  }
+
+  /* SMOOTH SCROLL */
+  var smoothLinks = document.querySelectorAll('a[href^="#"]');
+  for (var n = 0; n < smoothLinks.length; n++) {
+    smoothLinks[n].addEventListener("click", function(e) {
+      var href = this.getAttribute("href");
+      if (href && href.length > 1) {
+        var target = document.querySelector(href);
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: "smooth", block: "start" }); }
+      }
+    });
+  }
+
+  /* LIGHTBOX */
+  var lb = document.getElementById("lightbox");
+  var lbImg = document.getElementById("lb-img");
+  var lbCap = document.getElementById("lb-caption");
+  var triggers = document.querySelectorAll(".lightbox-trigger");
+
+  for (var t = 0; t < triggers.length; t++) {
+    triggers[t].addEventListener("click", function() {
+      lbImg.src = this.src;
+      lbCap.textContent = this.getAttribute("data-caption") || "";
+      lb.classList.add("active");
+    });
+    triggers[t].style.cursor = "zoom-in";
+  }
+
+  lb.addEventListener("click", function() { lb.classList.remove("active"); lbImg.src = ""; });
+})();
+</script>
+
+</body>
+</html>

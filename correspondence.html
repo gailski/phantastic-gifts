@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Correspondents — Phantastic Gifts</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg-deep:#060606;--bg-primary:#0e0d0b;--bg-card:#161412;--bg-elevated:#1e1b17;
+  --gold:#c9a55a;--gold-light:#e0c97f;--gold-dim:#8a7340;
+  --poison-red:#8b3a3a;--poison-red-light:#b85050;
+  --text-primary:#e8e0d4;--text-secondary:#a89e8e;--text-muted:#6e6458;
+  --font-display:'Playfair Display',Georgia,serif;
+  --font-body:'Cormorant Garamond','Times New Roman',serif;
+  --font-mono:'JetBrains Mono','Courier New',monospace;
+}
+html,body{background:var(--bg-primary);color:var(--text-primary);font-family:var(--font-body);font-size:1.05rem;line-height:1.65;min-height:100vh;}
+a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(201,165,90,0.3);transition:all 0.2s;}
+a:hover{color:var(--gold-light);border-bottom-color:var(--gold-light);}
+
+.site-header{border-bottom:1px solid rgba(201,165,90,0.12);background:rgba(14,13,11,0.92);backdrop-filter:blur(6px);padding:1.25rem 2rem;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;}
+.site-header .brand{font-family:var(--font-display);font-size:1.15rem;font-weight:700;color:var(--gold);}
+.site-header .brand em{font-style:italic;color:var(--text-primary);}
+.site-header nav{display:flex;gap:2rem;font-family:var(--font-mono);font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;}
+.site-header nav a{color:var(--text-secondary);border:none;padding-bottom:2px;border-bottom:1px solid transparent;}
+.site-header nav a:hover,.site-header nav a.current{color:var(--gold);border-bottom-color:var(--gold-dim);}
+@media(max-width:700px){.site-header{flex-direction:column;gap:1rem;}.site-header nav{gap:1.2rem;flex-wrap:wrap;justify-content:center;}}
+
+.page-intro{padding:3rem 2rem 2rem;max-width:1400px;margin:0 auto;}
+.page-intro .preamble{font-family:var(--font-mono);font-size:0.72rem;color:var(--gold-dim);letter-spacing:0.25em;text-transform:uppercase;margin-bottom:1.5rem;}
+.page-intro h1{font-family:var(--font-display);font-size:clamp(2rem,5vw,3.2rem);font-weight:700;margin-bottom:1rem;letter-spacing:-0.01em;}
+.page-intro h1 em{font-style:italic;color:var(--gold);}
+.page-intro .lede{font-family:var(--font-display);font-style:italic;font-size:1.2rem;color:var(--text-secondary);max-width:70ch;line-height:1.55;margin-bottom:1rem;}
+.page-intro .note{font-size:0.95rem;color:var(--text-muted);max-width:72ch;line-height:1.7;}
+
+.controls{padding:1.5rem 2rem;max-width:1400px;margin:0 auto;display:flex;gap:1rem;flex-wrap:wrap;align-items:center;border-bottom:1px solid rgba(201,165,90,0.08);}
+.search-box{flex:1;min-width:260px;position:relative;}
+.search-box input{width:100%;background:var(--bg-card);border:1px solid rgba(201,165,90,0.15);color:var(--text-primary);padding:0.75rem 1rem 0.75rem 2.5rem;font-family:var(--font-body);font-size:1rem;outline:none;transition:border-color 0.2s;}
+.search-box input:focus{border-color:var(--gold-dim);}
+.search-box input::placeholder{color:var(--text-muted);font-style:italic;}
+.search-box::before{content:"⌕";position:absolute;left:0.85rem;top:50%;transform:translateY(-50%);color:var(--gold-dim);font-size:1.2rem;}
+.filter-sel{background:var(--bg-card);border:1px solid rgba(201,165,90,0.15);color:var(--text-primary);padding:0.75rem 1rem;font-family:var(--font-body);font-size:0.95rem;outline:none;cursor:pointer;min-width:160px;}
+.filter-sel:focus{border-color:var(--gold-dim);}
+.count-display{font-family:var(--font-mono);font-size:0.75rem;color:var(--gold-dim);letter-spacing:0.1em;margin-left:auto;}
+
+.results{max-width:1400px;margin:2rem auto;padding:0 2rem 4rem;}
+.letter-group{margin-bottom:3rem;}
+.letter-group h2{font-family:var(--font-display);font-size:2.5rem;color:var(--gold-dim);margin-bottom:1.5rem;border-bottom:1px solid rgba(201,165,90,0.15);padding-bottom:0.5rem;letter-spacing:0.05em;}
+
+.c-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.25rem;}
+.c-card{background:var(--bg-card);border:1px solid rgba(201,165,90,0.08);padding:1.25rem 1.4rem;transition:all 0.2s;display:flex;flex-direction:column;gap:0.35rem;}
+.c-card:hover{border-color:rgba(201,165,90,0.25);background:var(--bg-elevated);}
+.c-name{font-family:var(--font-display);font-size:1.15rem;color:var(--text-primary);font-weight:600;line-height:1.25;}
+.c-job{font-family:var(--font-body);font-size:0.95rem;color:var(--gold);font-style:italic;}
+.c-meta{font-family:var(--font-mono);font-size:0.7rem;color:var(--text-muted);letter-spacing:0.05em;display:flex;flex-wrap:wrap;gap:0.4rem 1rem;margin-top:0.25rem;}
+.c-meta .tag{color:var(--text-secondary);}
+.c-meta .tag-year{color:var(--gold-dim);}
+.c-subject{font-size:0.92rem;color:var(--text-secondary);margin-top:0.5rem;line-height:1.5;font-style:italic;}
+.c-exchange{font-family:var(--font-mono);font-size:0.68rem;color:var(--gold-dim);letter-spacing:0.1em;margin-top:0.5rem;padding-top:0.5rem;border-top:1px dashed rgba(201,165,90,0.1);}
+
+.empty{text-align:center;padding:4rem 2rem;color:var(--text-muted);font-style:italic;font-size:1.1rem;}
+
+.site-footer{border-top:1px solid rgba(201,165,90,0.12);background:var(--bg-deep);padding:2rem;margin-top:3rem;text-align:center;font-family:var(--font-mono);font-size:0.72rem;color:var(--text-muted);letter-spacing:0.08em;}
+.site-footer a{color:var(--text-secondary);border:none;}
+.site-footer a:hover{color:var(--gold);}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="brand"><em>Phantastic</em> Gifts</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="exhibition.html">Exhibition</a>
+    <a href="correspondence.html" class="current">Correspondents</a>
+    <a href="maps-berlin.html">Berlin</a>
+    <a href="maps-correspondence.html">World</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+
+<div class="page-intro">
+  <div class="preamble">The Nachlass</div>
+  <h1>The <em>Correspondents</em></h1>
+  <p class="lede">Lewin wrote to the world. The world wrote back.</p>
+  <p class="note">This directory indexes every correspondent identified in the Nachlass Louis Lewin at the Staatsbibliothek zu Berlin, drawn from the surviving incoming letters (Lewin's outgoing correspondence does not survive as a collection). Entries vary in completeness as transcription and research continue; every named correspondent is included, even where biographical details are fragmentary. Filters below allow browsing by country, profession, and decade. A searchable name field appears at left.</p>
+</div>
+
+<div class="controls">
+  <div class="search-box"><input id="q" type="search" placeholder="Search by name, profession, city, or subject…"></div>
+  <select id="f-country" class="filter-sel"><option value="">All countries</option></select>
+  <select id="f-decade" class="filter-sel"><option value="">All decades</option></select>
+  <div class="count-display" id="count">—</div>
+</div>
+
+<div class="results" id="results"></div>
+
+<footer class="site-footer">
+  Data: Nachl. Louis Lewin, Staatsbibliothek zu Berlin · <em>Phantastic Gifts</em> 2026 · <a href="index.html">Home</a>
+</footer>
+
+<script>
+let DATA = [];
+let COUNTRIES = new Set();
+let DECADES = new Set();
+
+// Extract a decade string from the years field (e.g., "1884-1933" -> ["1880s","1890s","1900s","1910s","1920s","1930s"])
+function decadesFromYears(y){
+  if(!y) return [];
+  const nums = y.match(/\d{4}/g);
+  if(!nums) return [];
+  const n = nums.map(Number);
+  if(n.length === 1) return [Math.floor(n[0]/10)*10 + 's'];
+  const lo = Math.min(...n), hi = Math.max(...n);
+  const out = [];
+  for(let d = Math.floor(lo/10)*10; d <= Math.floor(hi/10)*10; d += 10){
+    out.push(d + 's');
+  }
+  return out;
+}
+
+async function loadData(){
+  try {
+    const res = await fetch('correspondence.json');
+    DATA = await res.json();
+    DATA.forEach(r => {
+      if(r.country) r.country.split(',').forEach(c => COUNTRIES.add(c.trim()));
+      decadesFromYears(r.years).forEach(d => DECADES.add(d));
+    });
+    populateFilters();
+    render();
+  } catch(e){
+    document.getElementById('results').innerHTML = '<div class="empty">Could not load correspondence data.</div>';
+  }
+}
+
+function populateFilters(){
+  const cSel = document.getElementById('f-country');
+  [...COUNTRIES].sort().forEach(c => {
+    const o = document.createElement('option'); o.value = c; o.textContent = c; cSel.appendChild(o);
+  });
+  const dSel = document.getElementById('f-decade');
+  [...DECADES].sort().forEach(d => {
+    const o = document.createElement('option'); o.value = d; o.textContent = d; dSel.appendChild(o);
+  });
+}
+
+function matches(r, q, country, decade){
+  if(country){
+    if(!r.country || !r.country.toLowerCase().includes(country.toLowerCase())) return false;
+  }
+  if(decade){
+    const ds = decadesFromYears(r.years);
+    if(!ds.includes(decade)) return false;
+  }
+  if(q){
+    const hay = [r.name, r.job, r.city, r.country, r.subject, r.exchange, r.years].filter(Boolean).join(' ').toLowerCase();
+    if(!hay.includes(q.toLowerCase())) return false;
+  }
+  return true;
+}
+
+function render(){
+  const q = document.getElementById('q').value.trim();
+  const country = document.getElementById('f-country').value;
+  const decade = document.getElementById('f-decade').value;
+  const filtered = DATA.filter(r => matches(r, q, country, decade));
+  document.getElementById('count').textContent = filtered.length + ' of ' + DATA.length;
+
+  const container = document.getElementById('results');
+  if(filtered.length === 0){
+    container.innerHTML = '<div class="empty">No correspondents match the current filters.</div>';
+    return;
+  }
+
+  // Group by first letter of surname
+  const groups = {};
+  filtered.forEach(r => {
+    const parts = r.name.replace(',', ' ').trim().split(/\s+/);
+    const last = parts.length > 1 ? parts[parts.length-1] : parts[0];
+    const letter = (last[0] || '?').toUpperCase();
+    if(!groups[letter]) groups[letter] = [];
+    groups[letter].push(r);
+  });
+
+  const letters = Object.keys(groups).sort();
+  let html = '';
+  letters.forEach(L => {
+    html += '<div class="letter-group"><h2>' + L + '</h2><div class="c-grid">';
+    groups[L].forEach(r => {
+      html += '<div class="c-card">';
+      html += '<div class="c-name">' + escapeHtml(r.name) + '</div>';
+      if(r.job) html += '<div class="c-job">' + escapeHtml(r.job) + '</div>';
+      const metaParts = [];
+      if(r.years) metaParts.push('<span class="tag tag-year">' + escapeHtml(r.years) + '</span>');
+      if(r.city) metaParts.push('<span class="tag">' + escapeHtml(r.city) + '</span>');
+      if(r.country && r.country !== r.city) metaParts.push('<span class="tag">' + escapeHtml(r.country) + '</span>');
+      if(r.lang) metaParts.push('<span class="tag">' + escapeHtml(r.lang) + '</span>');
+      if(metaParts.length) html += '<div class="c-meta">' + metaParts.join('') + '</div>';
+      if(r.subject) html += '<div class="c-subject">' + escapeHtml(r.subject) + '</div>';
+      if(r.exchange || r.dates){
+        const bits = [r.exchange, r.dates].filter(Boolean).join(' · ');
+        html += '<div class="c-exchange">' + escapeHtml(bits) + '</div>';
+      }
+      html += '</div>';
+    });
+    html += '</div></div>';
+  });
+  container.innerHTML = html;
+}
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
+}
+
+document.getElementById('q').addEventListener('input', render);
+document.getElementById('f-country').addEventListener('change', render);
+document.getElementById('f-decade').addEventListener('change', render);
+
+loadData();
+</script>
+
+</body>
+</html>
