@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phantastic Gifts — A Digital Project on Louis Lewin (1850–1929)</title>
+<meta name="description" content="A digital research project on the German-Jewish pharmacologist and toxicologist Louis Lewin (1850–1929), by Abigail Trozenski, Vanderbilt University.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg-deep:#060606;
+  --bg-primary:#0e0d0b;
+  --bg-card:#161412;
+  --bg-elevated:#1e1b17;
+  --gold:#c9a55a;
+  --gold-light:#e0c97f;
+  --gold-dim:#8a7340;
+  --poison-red:#8b3a3a;
+  --poison-red-light:#b85050;
+  --botanical:#4a6b4a;
+  --text-primary:#e8e0d4;
+  --text-secondary:#a89e8e;
+  --text-muted:#6e6458;
+  --font-display:'Playfair Display',Georgia,serif;
+  --font-body:'Cormorant Garamond','Times New Roman',serif;
+  --font-mono:'JetBrains Mono','Courier New',monospace;
+  --content-max:1100px;
+}
+html,body{background:var(--bg-primary);color:var(--text-primary);font-family:var(--font-body);font-size:1.08rem;line-height:1.7;min-height:100vh;}
+a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(201,165,90,0.3);transition:border-color 0.2s,color 0.2s;}
+a:hover{color:var(--gold-light);border-bottom-color:var(--gold-light);}
+
+/* ============ HEADER ============ */
+.site-header{border-bottom:1px solid rgba(201,165,90,0.12);background:rgba(14,13,11,0.92);backdrop-filter:blur(6px);padding:1.25rem 2rem;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;}
+.site-header .brand{font-family:var(--font-display);font-size:1.15rem;font-weight:700;color:var(--gold);letter-spacing:0.02em;}
+.site-header .brand em{font-style:italic;color:var(--text-primary);}
+.site-header nav{display:flex;gap:2rem;font-family:var(--font-mono);font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;}
+.site-header nav a{color:var(--text-secondary);border:none;padding-bottom:2px;border-bottom:1px solid transparent;}
+.site-header nav a:hover,.site-header nav a.current{color:var(--gold);border-bottom-color:var(--gold-dim);}
+@media(max-width:700px){.site-header{flex-direction:column;gap:1rem;}.site-header nav{gap:1.2rem;flex-wrap:wrap;justify-content:center;}}
+
+/* ============ HERO with sketch portrait ============ */
+.hero{min-height:85vh;display:flex;align-items:center;padding:4rem 2rem 6rem;max-width:var(--content-max);margin:0 auto;position:relative;}
+.hero-content{flex:1;z-index:2;max-width:640px;}
+.hero-portrait{position:absolute;right:-40px;top:10%;width:420px;max-width:45%;opacity:0.42;filter:sepia(0.35) hue-rotate(-8deg) brightness(1.05) contrast(1.1);mix-blend-mode:screen;pointer-events:none;z-index:1;}
+.hero-portrait img{width:100%;height:auto;display:block;}
+.hero-preamble{font-family:var(--font-mono);font-size:0.72rem;color:var(--gold-dim);letter-spacing:0.25em;text-transform:uppercase;margin-bottom:2rem;}
+.hero h1{font-family:var(--font-display);font-size:clamp(3rem,8vw,5.5rem);font-weight:900;line-height:0.98;color:var(--text-primary);margin-bottom:1.5rem;letter-spacing:-0.01em;}
+.hero h1 .phantastic{font-style:italic;font-weight:400;color:var(--gold);display:block;}
+.hero h1 .gifts{font-weight:900;}
+.hero .subtitle{font-family:var(--font-display);font-style:italic;font-size:clamp(1.2rem,2.5vw,1.65rem);color:var(--text-secondary);line-height:1.35;margin-bottom:2.5rem;max-width:46ch;}
+.hero .dissertation-note{font-family:var(--font-body);font-size:1rem;color:var(--text-secondary);max-width:58ch;line-height:1.7;margin-bottom:1rem;}
+.hero .dissertation-note em{color:var(--gold-light);font-style:italic;}
+.hero .byline{font-family:var(--font-mono);font-size:0.7rem;color:var(--text-muted);letter-spacing:0.12em;margin-top:3rem;}
+@media(max-width:900px){.hero-portrait{width:280px;opacity:0.2;top:5%;right:-30px;}}
+@media(max-width:600px){.hero-portrait{display:none;}}
+
+/* ============ SECTIONS ============ */
+.section{padding:5rem 2rem;max-width:var(--content-max);margin:0 auto;}
+.section.divided{border-top:1px solid rgba(201,165,90,0.1);}
+.section h2{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;color:var(--text-primary);margin-bottom:1rem;letter-spacing:-0.01em;}
+.section h2 em{font-style:italic;color:var(--gold);}
+.section-intro{font-family:var(--font-display);font-style:italic;font-size:1.2rem;color:var(--text-secondary);max-width:58ch;margin-bottom:3rem;line-height:1.55;}
+
+/* ============ EPIGRAPHS ============ */
+.epigraphs{display:grid;gap:2.5rem;margin:3rem 0;}
+.epigraph{background:var(--bg-card);padding:2rem 2.5rem;border-left:3px solid var(--gold-dim);}
+.epigraph.paracelsus{border-left-color:var(--poison-red);}
+.epigraph-label{font-family:var(--font-mono);font-size:0.68rem;color:var(--gold-dim);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:1rem;}
+.epigraph blockquote{font-family:var(--font-display);font-style:italic;font-size:1.15rem;color:var(--text-primary);line-height:1.5;margin-bottom:1rem;font-weight:400;}
+.epigraph blockquote.lang-de{color:var(--text-secondary);font-size:1.05rem;}
+.epigraph .translation-label{font-family:var(--font-mono);font-size:0.65rem;color:var(--gold-dim);letter-spacing:0.15em;text-transform:uppercase;margin:1rem 0 0.5rem;}
+.epigraph cite{font-family:var(--font-mono);font-size:0.72rem;color:var(--text-muted);font-style:normal;letter-spacing:0.05em;display:block;margin-top:1rem;}
+.epigraph cite .source-author{color:var(--gold-dim);}
+
+/* ============ PHARMAKON EXPLAINER ============ */
+.pharmakon-box{background:var(--bg-card);border-left:3px solid var(--poison-red);padding:2rem 2.5rem;margin:3rem 0;}
+.pharmakon-box p{font-size:1.05rem;line-height:1.75;color:var(--text-primary);}
+.pharmakon-box p + p{margin-top:1rem;}
+.pharmakon-box .term{font-family:var(--font-display);font-style:italic;color:var(--gold);font-size:1.12em;}
+.pharmakon-box .term-de{color:var(--poison-red-light);font-weight:600;}
+
+/* ============ CARD GRID ============ */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:2rem;}
+.card{background:var(--bg-card);border:1px solid rgba(201,165,90,0.08);padding:2rem 1.75rem;transition:border-color 0.2s,transform 0.2s,background 0.2s;display:flex;flex-direction:column;text-decoration:none;color:inherit;position:relative;overflow:hidden;}
+.card::before{content:"";position:absolute;top:0;left:0;width:100%;height:1px;background:linear-gradient(90deg,transparent,var(--gold-dim),transparent);opacity:0;transition:opacity 0.3s;}
+.card:hover{border-color:rgba(201,165,90,0.3);background:var(--bg-elevated);transform:translateY(-2px);}
+.card:hover::before{opacity:1;}
+.card .card-num{font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.25em;color:var(--gold-dim);margin-bottom:1rem;text-transform:uppercase;}
+.card h3{font-family:var(--font-display);font-size:1.35rem;color:var(--gold);margin-bottom:0.5rem;line-height:1.2;}
+.card h3 em{font-style:italic;color:var(--text-primary);}
+.card .card-sub{font-family:var(--font-mono);font-size:0.68rem;color:var(--text-muted);letter-spacing:0.1em;margin-bottom:1rem;text-transform:uppercase;}
+.card p{font-size:0.96rem;color:var(--text-secondary);line-height:1.65;flex-grow:1;}
+.card .card-link{font-family:var(--font-mono);font-size:0.7rem;color:var(--gold-dim);letter-spacing:0.15em;margin-top:1.5rem;text-transform:uppercase;}
+.card:hover .card-link{color:var(--gold);}
+
+/* ============ CITATION ============ */
+.citation{background:var(--bg-card);border:1px solid rgba(201,165,90,0.12);padding:1.75rem 2rem;margin-top:2.5rem;}
+.citation-label{font-family:var(--font-mono);font-size:0.68rem;color:var(--gold-dim);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:0.75rem;}
+.citation-text{font-size:0.95rem;color:var(--text-primary);line-height:1.6;font-family:var(--font-body);}
+.citation-text em{font-style:italic;color:var(--gold);}
+
+/* ============ FOOTER ============ */
+.site-footer{border-top:1px solid rgba(201,165,90,0.12);background:var(--bg-deep);padding:3rem 2rem 2.5rem;margin-top:5rem;}
+.site-footer-inner{max-width:var(--content-max);margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:2rem;align-items:flex-start;}
+.site-footer .col{font-family:var(--font-mono);font-size:0.72rem;color:var(--text-muted);line-height:1.9;letter-spacing:0.05em;}
+.site-footer .col-title{color:var(--gold-dim);text-transform:uppercase;letter-spacing:0.2em;margin-bottom:0.5rem;font-size:0.65rem;}
+.site-footer a{color:var(--text-secondary);border:none;}
+.site-footer a:hover{color:var(--gold);}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="brand"><em>Phantastic</em> Gifts</div>
+  <nav>
+    <a href="index.html" class="current">Home</a>
+    <a href="exhibition.html">Exhibition</a>
+    <a href="correspondence.html">Correspondents</a>
+    <a href="maps-berlin.html">Berlin</a>
+    <a href="maps-correspondence.html">World</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-portrait"><img src="images/lewin-sketch-portrait.png" alt="Line-drawn portrait sketch of Louis Lewin"></div>
+  <div class="hero-content">
+    <div class="hero-preamble">A digital research project · 1850–1929</div>
+    <h1>
+      <span class="phantastic">Phantastic</span>
+      <span class="gifts">Gifts</span>
+    </h1>
+    <p class="subtitle">The scientific life, letters, and afterlife of Louis Lewin — pharmacologist, toxicologist, ethnobotanist, and one of modernity's earliest readers of intoxication.</p>
+    <p class="dissertation-note">
+      A digital companion to the doctoral dissertation <em>The Gifts of Louis Lewin: A Cross-Cultural History of a Life in Toxicology, Pharmacology, and Intoxication</em>, Vanderbilt University, 2026.
+    </p>
+    <p class="byline">Abigail Trozenski · Vanderbilt University · 2026</p>
+  </div>
+</section>
+
+
+
+<section class="section divided">
+  <h2>What is <em>Phantastic Gifts</em>?</h2>
+  <p class="section-intro">A digital companion to a completed dissertation — and a standing archive in its own right.</p>
+
+  <p style="max-width:68ch;color:var(--text-secondary);margin-bottom:1.5rem;">This project draws on the Nachlass Louis Lewin at the Staatsbibliothek zu Berlin, supplementary collections in Berlin and Hamburg, and sustained archival work across German, French, English, and Russian materials. It presents Lewin's scientific correspondence, his writings on industrial poisoning and psychoactive plants, his family's dispersed papers, and the material traces of Jewish scientific life in Imperial and Weimar Berlin.</p>
+
+  <p style="max-width:68ch;color:var(--text-secondary);margin-bottom:1.5rem;">The site comprises four principal components: an exhibition interpreting Lewin's life through archival objects; a searchable directory of his five-hundred-odd correspondents; a map of the Berlin sites where he worked, worshipped, and was subsequently erased; and a map of his international correspondence network across forty-two countries.</p>
+
+  <div class="pharmakon-box">
+    <p>In English, <em>gifts</em> signify benevolent offerings. In German, <span class="term-de">Gift</span> is poison. This double meaning captures the central paradox of Lewin's work — and the shape of his archive.</p>
+    <p>Following Derrida, a <span class="term">pharmakon</span> is a substance that is simultaneously remedy and poison, preservation and corruption. Lewin's Nachlass is itself a <span class="term">pharmakon-archive</span>: a body of knowledge that preserves and enlightens even as it bears the scars of violence, exclusion, and loss. Reading the archive against that calibrated silence is one of this project's central commitments.</p>
+  </div>
+</section>
+
+<section class="section divided">
+  <h2>Explore</h2>
+  <p class="section-intro">Five entry points into the material.</p>
+
+  <div class="cards">
+
+    <a class="card" href="exhibition.html">
+      <div class="card-num">I.</div>
+      <h3>The <em>Exhibition</em></h3>
+      <div class="card-sub">Twelve sections · curated objects</div>
+      <p>Portraits, poems, passenger manifests, Lewin's own handwriting, the five kingdoms of intoxication from <em>Phantastica</em>, and the material afterlife of the archive. A guided tour through the visual record.</p>
+      <div class="card-link">Enter the exhibition →</div>
+    </a>
+
+    <a class="card" href="correspondence.html">
+      <div class="card-num">II.</div>
+      <h3>The <em>Correspondents</em></h3>
+      <div class="card-sub">509 letters · 42 countries</div>
+      <p>A searchable directory of every correspondent in Lewin's Nachlass — physicians, chemists, ethnographers, missionaries, colonial officers, poets. Filter by country, category, profession, or decade.</p>
+      <div class="card-link">Browse the directory →</div>
+    </a>
+
+    <a class="card" href="maps-berlin.html">
+      <div class="card-num">III.</div>
+      <h3>Lewin's <em>Berlin</em></h3>
+      <div class="card-sub">Ten sites · 1850–1929</div>
+      <p>The Grenadierstraße of his childhood. The Ziegelstraße laboratory. The Heidereutergasse synagogue. Weißensee cemetery. A geography of Jewish scientific life and its afterwards.</p>
+      <div class="card-link">Open the Berlin map →</div>
+    </a>
+
+    <a class="card" href="maps-correspondence.html">
+      <div class="card-num">IV.</div>
+      <h3>The <em>Network</em></h3>
+      <div class="card-sub">Paris · Bucharest · Tsumeb · Sumatra</div>
+      <p>Lewin's correspondence moved through laboratories, clinics, colonial mines, and ethnographic expeditions on four continents. The world map plots that traffic.</p>
+      <div class="card-link">Open the world map →</div>
+    </a>
+
+    <a class="card" href="about.html">
+      <div class="card-num">V.</div>
+      <h3><em>About</em> the Project</h3>
+      <div class="card-sub">Author · Clara · method · citation</div>
+      <p>On the dissertation, Clara Lewin and the keeping of the archive, and the people and institutions that have made this work possible. How to cite what you find here.</p>
+      <div class="card-link">Read more →</div>
+    </a>
+
+  </div>
+</section>
+
+<section class="section divided">
+  <h2>How to Cite</h2>
+  <p class="section-intro">If you've used anything from this site in your own work.</p>
+  <div class="citation">
+    <div class="citation-label">Suggested citation</div>
+    <div class="citation-text">Trozenski, Abigail. <em>Phantastic Gifts: A Digital Project on Louis Lewin (1850–1929)</em>. Companion to <em>The Gifts of Louis Lewin: A Cross-Cultural History of a Life in Toxicology, Pharmacology, and Intoxication</em>. Vanderbilt University, 2026. [URL, accessed date].</div>
+  </div>
+  <p style="margin-top:1.5rem;font-size:0.92rem;color:var(--text-muted);max-width:58ch;line-height:1.65;">Materials from the Nachlass Louis Lewin at the Staatsbibliothek zu Berlin should be cited with their original archival designation in addition to any reference to this site. Image rights for Nachlass materials remain with the SBB–PK.</p>
+</section>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div class="col">
+      <div class="col-title">The Project</div>
+      <div><em>Phantastic Gifts</em></div>
+      <div>A digital project on Louis Lewin</div>
+      <div>2026</div>
+    </div>
+    <div class="col">
+      <div class="col-title">Author</div>
+      <div>Abigail Trozenski</div>
+      <div>Vanderbilt University</div>
+      <div><a href="about.html">About the project</a></div>
+    </div>
+    <div class="col">
+      <div class="col-title">Principal Source</div>
+      <div>Nachl. Louis Lewin</div>
+      <div>Staatsbibliothek zu Berlin</div>
+      <div>Preußischer Kulturbesitz</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
