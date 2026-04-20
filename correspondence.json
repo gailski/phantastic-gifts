@@ -9,7 +9,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Fische (Frau)",
@@ -21,7 +22,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": "X"
+  "lang": "X",
+  "category": "correspondence"
  },
  {
   "name": "Ernst Abbe",
@@ -33,7 +35,8 @@
   "country": "Germany",
   "exchange": "Postcard",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Emil Abderhalden",
@@ -45,7 +48,8 @@
   "country": "Germany",
   "exchange": "Letters, 2",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "John Jacob Abel",
@@ -57,7 +61,8 @@
   "country": "United States",
   "exchange": "Letter",
   "count": "",
-  "lang": "English"
+  "lang": "English",
+  "category": "pharma"
  },
  {
   "name": "Arthur Abelmann",
@@ -69,7 +74,8 @@
   "country": "",
   "exchange": "Letter",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "pharma"
  },
  {
   "name": "Kurt Adam",
@@ -81,7 +87,8 @@
   "country": "Berlin",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Cyrus Adler",
@@ -93,7 +100,8 @@
   "country": "United States",
   "exchange": "Letter",
   "count": "",
-  "lang": "English"
+  "lang": "English",
+  "category": "colonial"
  },
  {
   "name": "Erich Adler",
@@ -105,7 +113,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Heinrich Albrecht",
@@ -117,7 +126,8 @@
   "country": "Germany",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "industrial"
  },
  {
   "name": "Arthur Alexander",
@@ -129,7 +139,8 @@
   "country": "Germany",
   "exchange": "Letter, 2",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "W. P. Alexander",
@@ -141,7 +152,8 @@
   "country": "United States",
   "exchange": "Letter, 2",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "colonial"
  },
  {
   "name": "Eidgenössische Alkoholverwaltung",
@@ -153,7 +165,8 @@
   "country": "Switzerland",
   "exchange": "Letter",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "narcotics"
  },
  {
   "name": "Konrad Alt",
@@ -165,7 +178,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Friedrich Althoff",
@@ -177,7 +191,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Heinrich Alfred Ammelburg",
@@ -189,7 +204,8 @@
   "country": "Germany",
   "exchange": "Letter, 2",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "pharma"
  },
  {
   "name": "Richard Andersen",
@@ -201,7 +217,8 @@
   "country": "Denmark",
   "exchange": "Letter",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "pharma"
  },
  {
   "name": "Bernhard Ankermann",
@@ -213,7 +230,8 @@
   "country": "Germany",
   "exchange": "Letter, 2",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "Wilhelm Arning",
@@ -225,7 +243,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "Eduard Hermann Aronsohn",
@@ -237,7 +256,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Max Asch",
@@ -249,7 +269,8 @@
   "country": "Germany",
   "exchange": "Correspondence Card",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Gustav Aschaffenburg",
@@ -261,7 +282,8 @@
   "country": "Germany",
   "exchange": "Letter, 3",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Paul Ascherson",
@@ -273,7 +295,8 @@
   "country": "Germany",
   "exchange": "Letters, 3, Postcards, 6",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "Adolf Athen",
@@ -285,7 +308,8 @@
   "country": "Cameroon",
   "exchange": "Letter, Coupon",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "colonial"
  },
  {
   "name": "Georg Aulmann",
@@ -297,7 +321,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Karl Aust",
@@ -309,7 +334,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Theodor Axenfeld",
@@ -321,7 +347,8 @@
   "country": "Germany",
   "exchange": "Letter, 2, Postcard",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Karl Eduard Theodor Baatz",
@@ -333,7 +360,21 @@
   "country": "Poland",
   "exchange": "Letter",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
+ },
+ {
+  "name": "Michael Joseph Ross Bach",
+  "subject": "",
+  "job": "",
+  "years": "",
+  "dates": "1882-1883",
+  "city": "Würzburg",
+  "country": "",
+  "exchange": "",
+  "count": "",
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Karl Bachem",
@@ -345,7 +386,8 @@
   "country": "Germany",
   "exchange": "Postcard",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Giovanni Bader",
@@ -357,7 +399,8 @@
   "country": "Italian",
   "exchange": "Correspondence Card",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Andrew Balfour",
@@ -369,7 +412,8 @@
   "country": "England",
   "exchange": "Postcard",
   "count": "",
-  "lang": "English"
+  "lang": "English",
+  "category": "colonial"
  },
  {
   "name": "Max Bartels",
@@ -381,7 +425,8 @@
   "country": "Germany",
   "exchange": "Letter, 3",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Ernst Arthur Barth",
@@ -393,7 +438,8 @@
   "country": "Germany",
   "exchange": "Resume, Letter",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Rudolf Bassenge",
@@ -405,7 +451,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "J.R. Bassett",
@@ -417,7 +464,8 @@
   "country": "Sudan",
   "exchange": "Letter",
   "count": "",
-  "lang": "English"
+  "lang": "English",
+  "category": "colonial"
  },
  {
   "name": "Adolf Bastian",
@@ -429,7 +477,8 @@
   "country": "Germany",
   "exchange": "Letter, 17",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "Max Bauchwitz",
@@ -441,7 +490,8 @@
   "country": "Germany",
   "exchange": "Letter, 2",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Bruno Beckmann",
@@ -453,7 +503,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Heinrich Beckurts",
@@ -465,7 +516,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Berthold Beer",
@@ -477,7 +529,8 @@
   "country": "Austria",
   "exchange": "Letter, 2",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Albert Behr",
@@ -489,7 +542,8 @@
   "country": "Livonia/Latvia",
   "exchange": "Letter, 2",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "colonial"
  },
  {
   "name": "Friedrich Behrens",
@@ -501,7 +555,8 @@
   "country": "Germany",
   "exchange": "Letter, Pages",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Emil von Behring",
@@ -513,7 +568,8 @@
   "country": "Germany",
   "exchange": "Correspondence Card",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "H. Belger",
@@ -525,7 +581,8 @@
   "country": "England",
   "exchange": "Letter",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "colonial"
  },
  {
   "name": "Peter Bergell",
@@ -537,7 +594,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Bergmann",
@@ -549,7 +607,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "industrial"
  },
  {
   "name": "Ernst von Bergmann",
@@ -561,7 +620,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "J.F. Bergmann",
@@ -573,7 +633,8 @@
   "country": "Germany",
   "exchange": "Letter, 2",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "pharma"
  },
  {
   "name": "Kurt Beringer",
@@ -585,7 +646,8 @@
   "country": "Germany",
   "exchange": "Letter, 5",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Alfred Freiherr von Berlepsch",
@@ -597,7 +659,8 @@
   "country": "Germany",
   "exchange": "Letter, Correspondence Card",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Arnold Berliner",
@@ -609,7 +672,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "N. von Bernatzek",
@@ -621,7 +685,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Beyer",
@@ -633,7 +698,8 @@
   "country": "Togo",
   "exchange": "Letter, 6",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Paul Biermann",
@@ -645,7 +711,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Eugen Karl Heinrich Bilfsinger",
@@ -657,7 +724,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "John Shaw Billings",
@@ -669,7 +737,8 @@
   "country": "United States",
   "exchange": "Letter",
   "count": "2",
-  "lang": "English"
+  "lang": "English",
+  "category": "phantastica"
  },
  {
   "name": "Karl Binz",
@@ -681,7 +750,8 @@
   "country": "Germany",
   "exchange": "Letter, 4, Cards",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "pharma"
  },
  {
   "name": "Augustin Bistryzcki",
@@ -693,7 +763,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Raphael Anatole Emile Blanchard",
@@ -705,7 +776,8 @@
   "country": "France",
   "exchange": "Letter",
   "count": "",
-  "lang": "French"
+  "lang": "French",
+  "category": "colonial"
  },
  {
   "name": "Karl Blumensaat",
@@ -717,7 +789,8 @@
   "country": "Germany",
   "exchange": "Letter, 2",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Ferdinand Blumenthal",
@@ -729,7 +802,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "Walther Blumenthal",
@@ -741,7 +815,8 @@
   "country": "Panama",
   "exchange": "Letter, 3",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "E. Bombelon",
@@ -753,7 +828,8 @@
   "country": "",
   "exchange": "Letter",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "J. Bondi",
@@ -765,7 +841,8 @@
   "country": "Belarus",
   "exchange": "Letter",
   "count": "4",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Paul Bong",
@@ -777,7 +854,8 @@
   "country": "Germany",
   "exchange": "Announcement",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "W. G. Boorsma",
@@ -789,7 +867,8 @@
   "country": "Indonesia",
   "exchange": "Postcard, Letter",
   "count": "1, 2",
-  "lang": ""
+  "lang": "",
+  "category": "pharma"
  },
  {
   "name": "Ludwig Borchardt",
@@ -801,7 +880,8 @@
   "country": "",
   "exchange": "Letter",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "Moritz Borchardt",
@@ -813,7 +893,8 @@
   "country": "",
   "exchange": "Letter",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Anton Boretius",
@@ -825,7 +906,8 @@
   "country": "",
   "exchange": "Letter",
   "count": "3",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Heinrich Boruttau",
@@ -837,7 +919,8 @@
   "country": "",
   "exchange": "Letter",
   "count": "3",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Robert Bosse",
@@ -849,7 +932,8 @@
   "country": "",
   "exchange": "Letter",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "G. Bra",
@@ -861,7 +945,8 @@
   "country": "France",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "colonial"
  },
  {
   "name": "Kurt Brandenburg",
@@ -873,7 +958,8 @@
   "country": "",
   "exchange": "Letter",
   "count": "6",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Nathan Brann",
@@ -885,7 +971,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "August Brauer",
@@ -897,7 +984,8 @@
   "country": "",
   "exchange": "Letter",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Friedrich Brauer",
@@ -909,7 +997,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "12",
-  "lang": ""
+  "lang": "",
+  "category": "industrial"
  },
  {
   "name": "Heinrich Braun",
@@ -921,7 +1010,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "5",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Johann Bresler",
@@ -933,7 +1023,8 @@
   "country": "Poland",
   "exchange": "Letter",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "August Brestowski",
@@ -945,7 +1036,8 @@
   "country": "Austria",
   "exchange": "Letter",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Walter Brock",
@@ -957,7 +1049,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "F. A. Brockhaus",
@@ -969,7 +1062,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "pharma"
  },
  {
   "name": "Paul Camille Hippolyte Brouardel",
@@ -981,7 +1075,8 @@
   "country": "France",
   "exchange": "Letter, Visiting Card",
   "count": "10",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "George Brown",
@@ -993,7 +1088,8 @@
   "country": "England",
   "exchange": "Letter",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "colonial"
  },
  {
   "name": "Alfred Bruck",
@@ -1005,7 +1101,8 @@
   "country": "",
   "exchange": "Letter",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Emile Pascha Brugsch",
@@ -1017,7 +1114,8 @@
   "country": "Egypt",
   "exchange": "Letter",
   "count": "1",
-  "lang": "French"
+  "lang": "French",
+  "category": "colonial"
  },
  {
   "name": "Karl Heinrich Brugsch",
@@ -1029,7 +1127,8 @@
   "country": "Germany",
   "exchange": "Letter,Postcard",
   "count": "2, 1",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "Theodor Brugsch",
@@ -1041,7 +1140,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "3",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "Sir Thomas Lauder Brunton",
@@ -1053,7 +1153,8 @@
   "country": "Germany",
   "exchange": "Correspondence Card, Letter",
   "count": "2, 1",
-  "lang": ""
+  "lang": "",
+  "category": "pharma"
  },
  {
   "name": "Eugen Brückner",
@@ -1065,7 +1166,8 @@
   "country": "",
   "exchange": "Letter",
   "count": "3",
-  "lang": ""
+  "lang": "",
+  "category": "industrial"
  },
  {
   "name": "Karl von Buchka",
@@ -1077,7 +1179,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "3",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Federico G. von Buchwald",
@@ -1089,7 +1192,8 @@
   "country": "Ecuador",
   "exchange": "Letter",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "D. De Buck",
@@ -1101,7 +1205,8 @@
   "country": "Belgium",
   "exchange": "Letter, Postcard",
   "count": "2, 1",
-  "lang": "French"
+  "lang": "French",
+  "category": "phantastica"
  },
  {
   "name": "Budde",
@@ -1113,7 +1218,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Anton Bumm",
@@ -1125,7 +1231,8 @@
   "country": "Austria",
   "exchange": "Letter",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Alfred Busch",
@@ -1137,7 +1244,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Zygmunt Bychowski",
@@ -1149,7 +1257,8 @@
   "country": "Poland",
   "exchange": "Letter",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Arpad von Bókay",
@@ -1161,7 +1270,8 @@
   "country": "Hungary",
   "exchange": "Letter",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "pharma"
  },
  {
   "name": "Paul Albrecht Börner",
@@ -1173,7 +1283,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Karl Bürker",
@@ -1185,7 +1296,8 @@
   "country": "Germany",
   "exchange": "Correspondence Card, Letter",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Ernst Canné",
@@ -1197,7 +1309,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Ernst Carstens",
@@ -1209,7 +1322,8 @@
   "country": "",
   "exchange": "Letter",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "industrial"
  },
  {
   "name": "Humphry Gilbert Carter",
@@ -1221,7 +1335,8 @@
   "country": "India",
   "exchange": "Letter",
   "count": "",
-  "lang": "English"
+  "lang": "English",
+  "category": "phantastica"
  },
  {
   "name": "John Theodore Cash",
@@ -1233,7 +1348,8 @@
   "country": "Scotland",
   "exchange": "Letter",
   "count": "1",
-  "lang": "English"
+  "lang": "English",
+  "category": "colonial"
  },
  {
   "name": "Franz Caspar",
@@ -1245,7 +1361,8 @@
   "country": "",
   "exchange": "Letter",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Hugo Cassirer",
@@ -1257,7 +1374,8 @@
   "country": "",
   "exchange": "Letter",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Paul Jean Baptiste Cazeneuve",
@@ -1269,7 +1387,8 @@
   "country": "France",
   "exchange": "Letter, Correspondence Card",
   "count": "4, 2",
-  "lang": ""
+  "lang": "",
+  "category": "colonial"
  },
  {
   "name": "Victor King Chesnut",
@@ -1281,7 +1400,8 @@
   "country": "United States",
   "exchange": "Letter",
   "count": "1",
-  "lang": "English"
+  "lang": "English",
+  "category": "phantastica"
  },
  {
   "name": "F. Chevalier",
@@ -1293,7 +1413,8 @@
   "country": "France",
   "exchange": "Letter",
   "count": "1",
-  "lang": "French"
+  "lang": "French",
+  "category": "phantastica"
  },
  {
   "name": "Karl Chun",
@@ -1305,7 +1426,8 @@
   "country": "United States",
   "exchange": "Letter",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "colonial"
  },
  {
   "name": "F. Hoffmann- La Roche & Cic.",
@@ -1317,7 +1439,8 @@
   "country": "",
   "exchange": "",
   "count": "13",
-  "lang": ""
+  "lang": "",
+  "category": "pfeilgifte"
  },
  {
   "name": "Heinrich Citron",
@@ -1329,7 +1452,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Henri Clavareau",
@@ -1341,7 +1465,8 @@
   "country": "Belgium",
   "exchange": "Postcard",
   "count": "1",
-  "lang": "French"
+  "lang": "French",
+  "category": "colonial"
  },
  {
   "name": "Frederik Sigismund Alexander de Clereq",
@@ -1353,7 +1478,8 @@
   "country": "Netherlands",
   "exchange": "Letter, Postcard",
   "count": "1, 2",
-  "lang": ""
+  "lang": "",
+  "category": "colonial"
  },
  {
   "name": "Mestern & Co.",
@@ -1365,7 +1491,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Julius Meyer & Co.",
@@ -1377,7 +1504,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Konrad Cohn",
@@ -1389,7 +1517,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Bruno Cohnberg",
@@ -1401,7 +1530,8 @@
   "country": "Poland",
   "exchange": "Letter",
   "count": "6",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Julius Ernst Colla",
@@ -1413,7 +1543,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Maxime Cornu",
@@ -1425,7 +1556,8 @@
   "country": "France",
   "exchange": "Correspondence Card",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "colonial"
  },
  {
   "name": "Hermann Corvey",
@@ -1437,7 +1569,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Fritz Curschmann",
@@ -1449,7 +1582,8 @@
   "country": "",
   "exchange": "Letter",
   "count": "3",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Georg Curtius",
@@ -1461,7 +1595,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Bruno Dangschat",
@@ -1473,7 +1608,8 @@
   "country": "Russia",
   "exchange": "Letter",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "colonial"
  },
  {
   "name": "H. Danne",
@@ -1485,7 +1621,8 @@
   "country": "Italy",
   "exchange": "Letter",
   "count": "3",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "A. Darier",
@@ -1497,7 +1634,8 @@
   "country": "France",
   "exchange": "Letter",
   "count": "1",
-  "lang": "French"
+  "lang": "French",
+  "category": "colonial"
  },
  {
   "name": "Leopold Delisle",
@@ -1509,7 +1647,8 @@
   "country": "France",
   "exchange": "Postcard",
   "count": "2",
-  "lang": "French"
+  "lang": "French",
+  "category": "phantastica"
  },
  {
   "name": "Adolf Dennig",
@@ -1521,7 +1660,8 @@
   "country": "Germany",
   "exchange": "Postcard",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Deubner",
@@ -1533,7 +1673,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "industrial"
  },
  {
   "name": "Gesamtverband der christlichen Gewerkschaften Deutschlands",
@@ -1545,7 +1686,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Hellmut Deutschmann",
@@ -1557,7 +1699,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Otto von Dewitz",
@@ -1569,7 +1712,8 @@
   "country": "",
   "exchange": "Letter",
   "count": "7",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Ludwig Diels",
@@ -1581,7 +1725,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "3",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "Ernst Dietze",
@@ -1593,7 +1738,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Wilhelm Doevenspeck",
@@ -1605,7 +1751,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Rudolf Dorn",
@@ -1617,7 +1764,8 @@
   "country": "Germany",
   "exchange": "Correspondence Card",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Georg Dragendorff",
@@ -1629,7 +1777,8 @@
   "country": "",
   "exchange": "Letter, Postcard",
   "count": "1,1",
-  "lang": ""
+  "lang": "",
+  "category": "pharma"
  },
  {
   "name": "Georg Dreyfus",
@@ -1641,7 +1790,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Georges Dujardin-Beaumetz",
@@ -1653,7 +1803,8 @@
   "country": "France",
   "exchange": "Correspondence Card",
   "count": "1",
-  "lang": "french"
+  "lang": "french",
+  "category": "colonial"
  },
  {
   "name": "Alfred Döblin",
@@ -1665,7 +1816,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "3",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Hermann Dörge",
@@ -1677,7 +1829,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "H. Edelmann",
@@ -1689,7 +1842,8 @@
   "country": "France",
   "exchange": "Letter",
   "count": "2",
-  "lang": "French"
+  "lang": "French",
+  "category": "colonial"
  },
  {
   "name": "Eger",
@@ -1701,7 +1855,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "industrial"
  },
  {
   "name": "Paul Ehrenreich",
@@ -1713,7 +1868,8 @@
   "country": "Germany",
   "exchange": "Postcard, Correspondence Card",
   "count": "1,1",
-  "lang": ""
+  "lang": "",
+  "category": "colonial"
  },
  {
   "name": "Martin Eisentraut",
@@ -1725,7 +1881,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Erich Eisner",
@@ -1737,7 +1894,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "S. Elias",
@@ -1749,7 +1907,8 @@
   "country": "the Netherlands",
   "exchange": "Letter",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "colonial"
  },
  {
   "name": "B. Engel",
@@ -1761,7 +1920,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Adolf Engler",
@@ -1773,7 +1933,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "Ferdinand Enke",
@@ -1785,7 +1946,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "pharma"
  },
  {
   "name": "Richard Escales",
@@ -1797,7 +1959,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Ludwig Eschweiler",
@@ -1809,7 +1972,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Eulenburg",
@@ -1821,7 +1985,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Eulenburg",
@@ -1833,7 +1998,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Karl Anton Ewald",
@@ -1845,7 +2011,8 @@
   "country": "",
   "exchange": "",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Hanns Heinz Ewers",
@@ -1857,7 +2024,8 @@
   "country": "",
   "exchange": "Letter",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Willy Fackenheim",
@@ -1869,7 +2037,8 @@
   "country": "",
   "exchange": "Letter",
   "count": "2",
-  "lang": "Draft"
+  "lang": "Draft",
+  "category": "correspondence"
  },
  {
   "name": "Ferdinan August Falck",
@@ -1881,7 +2050,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "pharma"
  },
  {
   "name": "Hugo Falkenheim",
@@ -1893,7 +2063,8 @@
   "country": "",
   "exchange": "Letter",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Friedrich Bayer & Co., Farbenfabriken",
@@ -1905,7 +2076,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "pharma"
  },
  {
   "name": "Heinrich Fasbender",
@@ -1917,7 +2089,8 @@
   "country": "",
   "exchange": "Postcard",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Edwin Stanton Faust",
@@ -1929,7 +2102,8 @@
   "country": "",
   "exchange": "Postcard, Berlin, Correspondence Card",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "pharma"
  },
  {
   "name": "Wilhelm Filehne",
@@ -1941,7 +2115,8 @@
   "country": "",
   "exchange": "Letter",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "pharma"
  },
  {
   "name": "Heinrich Fincke",
@@ -1953,7 +2128,8 @@
   "country": "",
   "exchange": "Letter",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Karl Maria Finkelnburg",
@@ -1965,7 +2141,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Emil Fischer",
@@ -1977,7 +2154,8 @@
   "country": "",
   "exchange": "Letter, Postcard",
   "count": "7",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "Franz Fischer",
@@ -1989,7 +2167,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Hans Fischer",
@@ -2001,7 +2180,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Eduard Fleck",
@@ -2013,7 +2193,8 @@
   "country": "Romania",
   "exchange": "Postcard",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "Richard Fleischer",
@@ -2025,7 +2206,8 @@
   "country": "",
   "exchange": "Letter",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "pharma"
  },
  {
   "name": "Sir Lazarus Fletcher",
@@ -2037,7 +2219,8 @@
   "country": "England",
   "exchange": "Letter",
   "count": "9",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "Albert Florence",
@@ -2049,7 +2232,8 @@
   "country": "France",
   "exchange": "Letter, Postcard, Lots",
   "count": "26 ish",
-  "lang": "x"
+  "lang": "x",
+  "category": "pharma"
  },
  {
   "name": "Karl Georg Friedrich Wilhelm Flügge",
@@ -2061,7 +2245,8 @@
   "country": "Germany",
   "exchange": "Postcard",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Arthur Forster",
@@ -2073,7 +2258,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Joao Antonio de Freitas Fortuna",
@@ -2085,7 +2271,8 @@
   "country": "Portugal",
   "exchange": "Letter, Correspondence Card",
   "count": "",
-  "lang": "Spanish"
+  "lang": "Spanish",
+  "category": "phantastica"
  },
  {
   "name": "Albert Fraenkel",
@@ -2097,7 +2284,8 @@
   "country": "",
   "exchange": "Letter, Postcard",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Ernst Francke",
@@ -2109,7 +2297,8 @@
   "country": "Germany",
   "exchange": "Postcard, Letter",
   "count": "15!!",
-  "lang": "x"
+  "lang": "x",
+  "category": "correspondence"
  },
  {
   "name": "Adolf Frank",
@@ -2121,7 +2310,8 @@
   "country": "Germany",
   "exchange": "Letter, Correspondence Card",
   "count": "2, 1",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Johannes Franke",
@@ -2133,7 +2323,8 @@
   "country": "Germany",
   "exchange": "Thank You Note",
   "count": "",
-  "lang": "signed by Franke"
+  "lang": "signed by Franke",
+  "category": "correspondence"
  },
  {
   "name": "Adolf Franke",
@@ -2145,7 +2336,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "pharma"
  },
  {
   "name": "Johannes Franke",
@@ -2157,7 +2349,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Frei",
@@ -2169,7 +2362,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Moritz Freiberger",
@@ -2181,7 +2375,8 @@
   "country": "",
   "exchange": "Letter",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Helmuth Freund",
@@ -2193,7 +2388,8 @@
   "country": "",
   "exchange": "Mitteilung",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "H. Freyvogel",
@@ -2205,7 +2401,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Frick",
@@ -2217,7 +2414,8 @@
   "country": "",
   "exchange": "Letter",
   "count": "4",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Ferdinand Friedensburg",
@@ -2229,7 +2427,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "James Friedlaender",
@@ -2241,7 +2440,8 @@
   "country": "",
   "exchange": "Letter",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Enrique A. Frimont",
@@ -2253,7 +2453,8 @@
   "country": "Mexico",
   "exchange": "Letter",
   "count": "1",
-  "lang": "Spanish"
+  "lang": "Spanish",
+  "category": "phantastica"
  },
  {
   "name": "Max Froelich",
@@ -2265,7 +2466,8 @@
   "country": "",
   "exchange": "Letter",
   "count": "3",
-  "lang": ""
+  "lang": "",
+  "category": "pharma"
  },
  {
   "name": "G. Fromholdt",
@@ -2277,7 +2479,8 @@
   "country": "Russia",
   "exchange": "Letter",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "Paul Förster",
@@ -2289,7 +2492,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "3",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Hermann Fühner",
@@ -2301,7 +2505,8 @@
   "country": "",
   "exchange": "Letter",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Max Fürbringer",
@@ -2313,7 +2518,8 @@
   "country": "",
   "exchange": "Letter",
   "count": "3",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Otto R. von Fürth",
@@ -2325,7 +2531,8 @@
   "country": "Austria",
   "exchange": "Letter",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Brauer, August-Eisentraut, M. Tornier, G",
@@ -2337,7 +2544,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Johannes Gennerich",
@@ -2349,7 +2557,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Alfons E. Gersbach",
@@ -2361,7 +2570,8 @@
   "country": "",
   "exchange": "Letter, Draft",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Moritz Gerson",
@@ -2373,7 +2583,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Ferdinand Gidon",
@@ -2385,7 +2596,8 @@
   "country": "France",
   "exchange": "Letter",
   "count": "3",
-  "lang": "French"
+  "lang": "French",
+  "category": "phantastica"
  },
  {
   "name": "Ernst Gilg",
@@ -2397,7 +2609,8 @@
   "country": "",
   "exchange": "Letter, Postcard",
   "count": "5",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Eugéne Gley",
@@ -2409,7 +2622,8 @@
   "country": "France",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "colonial"
  },
  {
   "name": "Eduard Goldammer",
@@ -2421,7 +2635,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Alfred Goldscheider",
@@ -2433,7 +2648,8 @@
   "country": "",
   "exchange": "",
   "count": "7",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "Franz Goldschmidt",
@@ -2445,7 +2661,8 @@
   "country": "",
   "exchange": "",
   "count": "6",
-  "lang": "typed"
+  "lang": "typed",
+  "category": "correspondence"
  },
  {
   "name": "Heinemann Goldschmidt",
@@ -2457,7 +2674,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Rudolf Gottlieb",
@@ -2469,7 +2687,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Alfred Gradenwitz",
@@ -2481,7 +2700,8 @@
   "country": "",
   "exchange": "",
   "count": "2",
-  "lang": "English"
+  "lang": "English",
+  "category": "colonial"
  },
  {
   "name": "Joseph Greber",
@@ -2493,7 +2713,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Traill Green",
@@ -2505,7 +2726,8 @@
   "country": "USA",
   "exchange": "",
   "count": "2",
-  "lang": "English"
+  "lang": "English",
+  "category": "phantastica"
  },
  {
   "name": "Wilhelm Greif",
@@ -2517,7 +2739,8 @@
   "country": "",
   "exchange": "",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Alfred Grenz",
@@ -2529,7 +2752,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Moritz Greshoff",
@@ -2541,7 +2765,8 @@
   "country": "Netherlands",
   "exchange": "Letter, postcard",
   "count": "12",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "Hans Christian Greve",
@@ -2553,7 +2778,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Henri Grorichard",
@@ -2565,7 +2791,8 @@
   "country": "France",
   "exchange": "",
   "count": "1",
-  "lang": "French"
+  "lang": "French",
+  "category": "phantastica"
  },
  {
   "name": "Hans Gross",
@@ -2577,7 +2804,8 @@
   "country": "Austria",
   "exchange": "",
   "count": "7",
-  "lang": ""
+  "lang": "",
+  "category": "colonial"
  },
  {
   "name": "Alfred Grotjahn",
@@ -2589,7 +2817,8 @@
   "country": "",
   "exchange": "",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "Karl Grusewski",
@@ -2601,7 +2830,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Emil von Grósz",
@@ -2613,7 +2843,8 @@
   "country": "",
   "exchange": "",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Herbert Grünbaum",
@@ -2625,7 +2856,8 @@
   "country": "",
   "exchange": "",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "industrial"
  },
  {
   "name": "Albert Grünwedel",
@@ -2637,7 +2869,8 @@
   "country": "",
   "exchange": "",
   "count": "14",
-  "lang": ""
+  "lang": "",
+  "category": "pfeilgifte"
  },
  {
   "name": "Fritz von Gutfeld",
@@ -2649,7 +2882,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Alfred Guttmann",
@@ -2661,7 +2895,8 @@
   "country": "",
   "exchange": "",
   "count": "1",
-  "lang": "TYPED"
+  "lang": "TYPED",
+  "category": "phantastica"
  },
  {
   "name": "Joseph Feliz Guyon",
@@ -2673,7 +2908,8 @@
   "country": "",
   "exchange": "",
   "count": "5",
-  "lang": "French"
+  "lang": "French",
+  "category": "colonial"
  },
  {
   "name": "Hans Guyot",
@@ -2685,7 +2921,8 @@
   "country": "Egypt",
   "exchange": "",
   "count": "5",
-  "lang": ""
+  "lang": "",
+  "category": "pharma"
  },
  {
   "name": "Heinrich Robert Göppert",
@@ -2697,7 +2934,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Adolf Graf von Götzen",
@@ -2709,7 +2947,8 @@
   "country": "",
   "exchange": "",
   "count": "3",
-  "lang": ""
+  "lang": "",
+  "category": "pfeilgifte"
  },
  {
   "name": "Rudolf Habs",
@@ -2721,7 +2960,8 @@
   "country": "",
   "exchange": "",
   "count": "7",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Edmund Hadra",
@@ -2733,7 +2973,8 @@
   "country": "",
   "exchange": "Letter",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "narcotics"
  },
  {
   "name": "Georg Haerttel",
@@ -2745,7 +2986,8 @@
   "country": "",
   "exchange": "",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "industrial"
  },
  {
   "name": "Eduard Hahn",
@@ -2757,7 +2999,8 @@
   "country": "",
   "exchange": "",
   "count": "3",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Heinrich Haike",
@@ -2769,7 +3012,8 @@
   "country": "",
   "exchange": "",
   "count": "2",
-  "lang": "typed"
+  "lang": "typed",
+  "category": "correspondence"
  },
  {
   "name": "J.J. Halbertsma",
@@ -2781,7 +3025,8 @@
   "country": "",
   "exchange": "",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Henri Hallopeau",
@@ -2793,7 +3038,8 @@
   "country": "",
   "exchange": "",
   "count": "6",
-  "lang": "French"
+  "lang": "French",
+  "category": "colonial"
  },
  {
   "name": "John B. Hamilton",
@@ -2805,7 +3051,8 @@
   "country": "USA",
   "exchange": "",
   "count": "2",
-  "lang": "English"
+  "lang": "English",
+  "category": "colonial"
  },
  {
   "name": "H. L. Hammerstein",
@@ -2817,7 +3064,8 @@
   "country": "",
   "exchange": "",
   "count": "3",
-  "lang": "TYPED"
+  "lang": "TYPED",
+  "category": "correspondence"
  },
  {
   "name": "Heinrich Hansen",
@@ -2829,7 +3077,8 @@
   "country": "",
   "exchange": "Letter",
   "count": "14",
-  "lang": ""
+  "lang": "",
+  "category": "pharma"
  },
  {
   "name": "Hermann Harms",
@@ -2841,7 +3090,8 @@
   "country": "",
   "exchange": "",
   "count": "1",
-  "lang": "TYPED"
+  "lang": "TYPED",
+  "category": "correspondence"
  },
  {
   "name": "Theodor Harms",
@@ -2853,7 +3103,8 @@
   "country": "",
   "exchange": "",
   "count": "33",
-  "lang": ""
+  "lang": "",
+  "category": "industrial"
  },
  {
   "name": "Adolf von Harnack/Erich Harnack",
@@ -2865,7 +3116,8 @@
   "country": "",
   "exchange": "",
   "count": "4",
-  "lang": ""
+  "lang": "",
+  "category": "pfeilgifte"
  },
  {
   "name": "Emil Heese",
@@ -2877,7 +3129,8 @@
   "country": "",
   "exchange": "",
   "count": "4",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "Arthur Heffter",
@@ -2889,7 +3142,8 @@
   "country": "",
   "exchange": "Letter, Konzept",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "pfeilgifte"
  },
  {
   "name": "Anton Heidenhain",
@@ -2901,7 +3155,8 @@
   "country": "",
   "exchange": "",
   "count": "3",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "William H. Heisen",
@@ -2913,7 +3168,8 @@
   "country": "USA",
   "exchange": "",
   "count": "3",
-  "lang": "English"
+  "lang": "English",
+  "category": "pharma"
  },
  {
   "name": "Gerhard Hellmann",
@@ -2925,7 +3181,8 @@
   "country": "",
   "exchange": "",
   "count": "4",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "William Botting Hemsley",
@@ -2937,7 +3194,8 @@
   "country": "England",
   "exchange": "",
   "count": "1",
-  "lang": "English"
+  "lang": "English",
+  "category": "colonial"
  },
  {
   "name": "Richard Henneberg",
@@ -2949,7 +3207,8 @@
   "country": "",
   "exchange": "",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Paul Hennings",
@@ -2961,7 +3220,8 @@
   "country": "",
   "exchange": "Letters and postcards",
   "count": "15",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Max Henschel",
@@ -2973,7 +3233,8 @@
   "country": "",
   "exchange": "",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Otto Hertel",
@@ -2985,7 +3246,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Albert Herz",
@@ -2997,7 +3259,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Heinrich Herzberg",
@@ -3009,7 +3272,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Magistrat Herzberg/Elster",
@@ -3021,7 +3285,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Theodor Herzog",
@@ -3033,7 +3298,8 @@
   "country": "",
   "exchange": "",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Oswald Hesse",
@@ -3045,7 +3311,8 @@
   "country": "",
   "exchange": "Letter",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "industrial"
  },
  {
   "name": "Wolfgang Heubner",
@@ -3057,7 +3324,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "pharma"
  },
  {
   "name": "Georg Hieronymus",
@@ -3069,7 +3337,8 @@
   "country": "",
   "exchange": "",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Arthur William Hill",
@@ -3081,7 +3350,8 @@
   "country": "England",
   "exchange": "",
   "count": "1",
-  "lang": "English"
+  "lang": "English",
+  "category": "phantastica"
  },
  {
   "name": "Arnold Hiller",
@@ -3093,7 +3363,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Eugen Hintz",
@@ -3105,7 +3376,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Fritz Hirsch",
@@ -3117,7 +3389,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Hermann Hirschberg",
@@ -3129,7 +3402,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Julius Hirschberg",
@@ -3141,7 +3415,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "S. Hirzel",
@@ -3153,7 +3428,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "pharma"
  },
  {
   "name": "Friedrich Hoevel",
@@ -3165,7 +3441,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "J. Holfert",
@@ -3177,7 +3454,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "pharma"
  },
  {
   "name": "A. Holitscher",
@@ -3188,8 +3466,9 @@
   "city": "",
   "country": "",
   "exchange": "",
-  "count": "3 pics",
-  "lang": ""
+  "count": "1",
+  "lang": "",
+  "category": "narcotics"
  },
  {
   "name": "Deutscher Holzarbeiter-Verband",
@@ -3201,7 +3480,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "4",
-  "lang": ""
+  "lang": "",
+  "category": "industrial"
  },
  {
   "name": "Holzwart",
@@ -3213,7 +3493,8 @@
   "country": "",
   "exchange": "",
   "count": "3",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Paul Homann",
@@ -3225,7 +3506,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Honigmann",
@@ -3237,7 +3519,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "A. H. Hooker",
@@ -3249,7 +3532,8 @@
   "country": "Egypt",
   "exchange": "",
   "count": "13",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "David Hooper",
@@ -3261,7 +3545,8 @@
   "country": "India",
   "exchange": "",
   "count": "3",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "Hugo Hoppe",
@@ -3273,7 +3558,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Walther Horn",
@@ -3285,7 +3571,8 @@
   "country": "",
   "exchange": "",
   "count": "6",
-  "lang": "typed"
+  "lang": "typed",
+  "category": "correspondence"
  },
  {
   "name": "Leopold Horowitz",
@@ -3297,7 +3584,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Wilhelm Horstmann",
@@ -3308,8 +3596,9 @@
   "city": "Stalsund",
   "country": "",
   "exchange": "",
-  "count": "8",
-  "lang": ""
+  "count": "",
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "W. G. Huet",
@@ -3321,7 +3610,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Theodor Husemann",
@@ -3333,7 +3623,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Hans Hyan",
@@ -3345,7 +3636,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Johann Karl Ernst Ulrich Hörmann",
@@ -3357,7 +3649,8 @@
   "country": "",
   "exchange": "",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Becker (s. Verein Deutscher Ingenieure)",
@@ -3369,7 +3662,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "James Israel",
@@ -3381,7 +3675,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Gertrud Iversen",
@@ -3392,8 +3687,9 @@
   "city": "München",
   "country": "",
   "exchange": "",
-  "count": "6",
-  "lang": ""
+  "count": "2",
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "J. Iversen",
@@ -3405,7 +3701,8 @@
   "country": "Romania",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "Julius Jacobson",
@@ -3417,7 +3714,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Jakob Kaspar Jacusiel",
@@ -3429,7 +3727,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Erich Rudolf Jaensch",
@@ -3441,7 +3740,8 @@
   "country": "",
   "exchange": "",
   "count": "8",
-  "lang": ""
+  "lang": "",
+  "category": "industrial"
  },
  {
   "name": "Max Jaffé",
@@ -3452,8 +3752,9 @@
   "city": "Montraux",
   "country": "Switzerland",
   "exchange": "",
-  "count": "2",
-  "lang": ""
+  "count": "",
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Nikolaus von Jagic",
@@ -3465,7 +3766,8 @@
   "country": "Austria",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Feodor Jagor",
@@ -3477,7 +3779,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Friedrich Jolly",
@@ -3489,7 +3792,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Adolf Juckenack",
@@ -3501,7 +3805,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Otto Juliusburger",
@@ -3513,7 +3818,8 @@
   "country": "",
   "exchange": "",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "W. Jörss",
@@ -3525,7 +3831,8 @@
   "country": "",
   "exchange": "",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "industrial"
  },
  {
   "name": "Alfred Kaiser",
@@ -3537,7 +3844,8 @@
   "country": "Switzerland",
   "exchange": "Postcard, letter",
   "count": "4",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Otto Kalbe",
@@ -3549,7 +3857,8 @@
   "country": "Austria",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "industrial"
  },
  {
   "name": "R. Karsten",
@@ -3560,8 +3869,9 @@
   "city": "Helsingtors",
   "country": "Finland",
   "exchange": "",
-  "count": "2",
-  "lang": ""
+  "count": "",
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "Fritz Kast",
@@ -3573,7 +3883,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Konstantin Kaufmann",
@@ -3585,7 +3896,8 @@
   "country": "Switzerland",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Paul Kaufmann",
@@ -3597,7 +3909,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "S. Kaufmann",
@@ -3609,7 +3922,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Karl Leopold Kay",
@@ -3621,7 +3935,8 @@
   "country": "",
   "exchange": "",
   "count": "4",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Frederic George Kenyon",
@@ -3633,7 +3948,8 @@
   "country": "England",
   "exchange": "",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "colonial"
  },
  {
   "name": "Heinz Kerb",
@@ -3645,7 +3961,8 @@
   "country": "",
   "exchange": "",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "industrial"
  },
  {
   "name": "Heinrich Kiliani",
@@ -3657,7 +3974,8 @@
   "country": "",
   "exchange": "Postcard",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Arthur Kirchhoff",
@@ -3668,8 +3986,9 @@
   "city": "Berlin-Charlottenburg",
   "country": "",
   "exchange": "",
-  "count": "7",
-  "lang": "typed"
+  "count": "6",
+  "lang": "typed",
+  "category": "correspondence"
  },
  {
   "name": "Franz Kirchner",
@@ -3681,7 +4000,8 @@
   "country": "",
   "exchange": "",
   "count": "4",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Kanoba R. Kirtikar",
@@ -3693,7 +4013,8 @@
   "country": "",
   "exchange": "",
   "count": "3",
-  "lang": "English"
+  "lang": "English",
+  "category": "colonial"
  },
  {
   "name": "Klauber",
@@ -3705,7 +4026,8 @@
   "country": "",
   "exchange": "",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Gustav Klein",
@@ -3717,7 +4039,8 @@
   "country": "Austria",
   "exchange": "",
   "count": "7",
-  "lang": ""
+  "lang": "",
+  "category": "pharma"
  },
  {
   "name": "Georg Klemperer",
@@ -3729,7 +4052,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Hermann Knapp",
@@ -3741,7 +4065,8 @@
   "country": "",
   "exchange": "",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "Eduard Rudolf Kobert",
@@ -3753,7 +4078,8 @@
   "country": "",
   "exchange": "",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Koch",
@@ -3765,7 +4091,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Theodor Koch-Grünberg",
@@ -3777,7 +4104,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Emil Theodor Kocher",
@@ -3789,7 +4117,8 @@
   "country": "Switzerland",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Richard Kockel",
@@ -3801,7 +4130,8 @@
   "country": "",
   "exchange": "",
   "count": "3",
-  "lang": ""
+  "lang": "",
+  "category": "industrial"
  },
  {
   "name": "Hans Kohn",
@@ -3813,7 +4143,8 @@
   "country": "",
   "exchange": "",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "industrial"
  },
  {
   "name": "Oskar Kohnstamm",
@@ -3825,7 +4156,8 @@
   "country": "",
   "exchange": "",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Hermann Julius Kolbe",
@@ -3837,7 +4169,8 @@
   "country": "",
   "exchange": "",
   "count": "9",
-  "lang": "with article"
+  "lang": "with article",
+  "category": "pfeilgifte"
  },
  {
   "name": "Miron Kontorowitsch",
@@ -3849,7 +4182,8 @@
   "country": "",
   "exchange": "",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "industrial"
  },
  {
   "name": "Siegfried Korach",
@@ -3861,7 +4195,8 @@
   "country": "",
   "exchange": "",
   "count": "3",
-  "lang": ""
+  "lang": "",
+  "category": "narcotics"
  },
  {
   "name": "Emil Kraepelin",
@@ -3873,7 +4208,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "Julius Kratter",
@@ -3885,7 +4221,8 @@
   "country": "Austria",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Hermann Kuhnt",
@@ -3897,7 +4234,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "F. C. Kullak",
@@ -3909,7 +4247,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "industrial"
  },
  {
   "name": "Julius Kullmann",
@@ -3921,7 +4260,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Hans Kurella",
@@ -3933,7 +4273,8 @@
   "country": "Poland",
   "exchange": "",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "pharma"
  },
  {
   "name": "Robert Kutner",
@@ -3945,7 +4286,8 @@
   "country": "",
   "exchange": "",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "industrial"
  },
  {
   "name": "Ludwig Kärnbach",
@@ -3957,7 +4299,8 @@
   "country": "",
   "exchange": "",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "Christian Köhler",
@@ -3969,7 +4312,8 @@
   "country": "",
   "exchange": "",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "pharma"
  },
  {
   "name": "Leopold Königstein",
@@ -3981,7 +4325,8 @@
   "country": "Austria",
   "exchange": "",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Ernst Küster",
@@ -3993,7 +4338,8 @@
   "country": "",
   "exchange": "",
   "count": "3",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "William Küster",
@@ -4005,7 +4351,8 @@
   "country": "",
   "exchange": "",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "A. F. Labriola",
@@ -4017,7 +4364,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Friedrich Lampe-Vischer",
@@ -4029,7 +4377,8 @@
   "country": "",
   "exchange": "",
   "count": "3",
-  "lang": ""
+  "lang": "",
+  "category": "pharma"
  },
  {
   "name": "Joseph Landsberger",
@@ -4041,7 +4390,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Richard Landsberger",
@@ -4053,7 +4403,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Oskar Lassar",
@@ -4065,7 +4416,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Rudolf Laudenheimer",
@@ -4077,7 +4429,8 @@
   "country": "",
   "exchange": "",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Hermann Lautsch",
@@ -4089,7 +4442,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Georg Lazar",
@@ -4101,7 +4455,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Erich Lazarus",
@@ -4113,7 +4468,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "industrial"
  },
  {
   "name": "A. Lecha-Marzo",
@@ -4125,7 +4481,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": "Spanish"
+  "lang": "Spanish",
+  "category": "phantastica"
  },
  {
   "name": "J. Leda",
@@ -4137,7 +4494,8 @@
   "country": "Netherlands",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "colonial"
  },
  {
   "name": "Henri Legludic",
@@ -4149,7 +4507,8 @@
   "country": "France",
   "exchange": "",
   "count": "2",
-  "lang": "French"
+  "lang": "French",
+  "category": "pharma"
  },
  {
   "name": "Fritz Lehmann",
@@ -4161,7 +4520,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Karl Bernhard Lehmann",
@@ -4173,7 +4533,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Lejbowitsch",
@@ -4185,7 +4546,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Richard Lenzmann",
@@ -4197,7 +4559,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "C. G. Leo-Wolf",
@@ -4209,7 +4572,8 @@
   "country": "USA",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "colonial"
  },
  {
   "name": "Arthur Silvius Leppmann",
@@ -4221,7 +4585,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": "French"
+  "lang": "French",
+  "category": "colonial"
  },
  {
   "name": "Friedrich Leppmann",
@@ -4233,7 +4598,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "industrial"
  },
  {
   "name": "Edmund Lesser",
@@ -4245,7 +4611,8 @@
   "country": "",
   "exchange": "",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Julius Leva",
@@ -4257,7 +4624,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Fritz Heinrich Lewy",
@@ -4269,7 +4637,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "Alexander von Lichtenberg",
@@ -4281,7 +4650,8 @@
   "country": "",
   "exchange": "",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Karl Liebermann",
@@ -4293,7 +4663,8 @@
   "country": "",
   "exchange": "",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Otto Lincke",
@@ -4305,7 +4676,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Georg Lindemann",
@@ -4317,7 +4689,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Walter von Lingelsheim",
@@ -4329,7 +4702,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Hubert Max Linnartz",
@@ -4341,7 +4715,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Israel Lipowski",
@@ -4353,7 +4728,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Walther List",
@@ -4365,7 +4741,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Eduard Ritter von Liszt",
@@ -4377,7 +4754,8 @@
   "country": "Austria",
   "exchange": "",
   "count": "4",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Franz von Liszt",
@@ -4389,7 +4767,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Eugen Littaur",
@@ -4401,7 +4780,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Joaquin Maria de Castellarnau y de Llopart",
@@ -4413,7 +4793,8 @@
   "country": "Spain",
   "exchange": "Letter",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "colonial"
  },
  {
   "name": "Fritz Loeb",
@@ -4425,7 +4806,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Max Loebinger",
@@ -4437,7 +4819,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Karl Loening",
@@ -4449,7 +4832,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Otto Felix Loeser",
@@ -4461,7 +4845,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Paul Eduard Loewenhardt",
@@ -4473,7 +4858,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "industrial"
  },
  {
   "name": "John Loewenthal",
@@ -4485,7 +4871,8 @@
   "country": "",
   "exchange": "",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "industrial"
  },
  {
   "name": "Gewerkschadt Deutscher Lokomotivführer",
@@ -4497,7 +4884,8 @@
   "country": "",
   "exchange": "Letter",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Walter Lucke",
@@ -4509,7 +4897,8 @@
   "country": "",
   "exchange": "",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "August Ludewig",
@@ -4521,7 +4910,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Werner Ludewig",
@@ -4533,7 +4923,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Kurt Lufft",
@@ -4545,7 +4936,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Hans Lungwitz",
@@ -4557,7 +4949,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Felix von Luschan",
@@ -4569,7 +4962,8 @@
   "country": "",
   "exchange": "Letters and Postcards",
   "count": "12",
-  "lang": ""
+  "lang": "",
+  "category": "pfeilgifte"
  },
  {
   "name": "Raphael Lépine",
@@ -4581,7 +4975,8 @@
   "country": "France",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "colonial"
  },
  {
   "name": "Lösser",
@@ -4593,7 +4988,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "industrial"
  },
  {
   "name": "Alfred Maass",
@@ -4605,7 +5001,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Adolf Magnus-Levy",
@@ -4617,7 +5014,8 @@
   "country": "",
   "exchange": "",
   "count": "3",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Joseph Henry Maiden",
@@ -4629,7 +5027,8 @@
   "country": "Australia",
   "exchange": "",
   "count": "",
-  "lang": "English"
+  "lang": "English",
+  "category": "colonial"
  },
  {
   "name": "Kathreiners Malzkaffee-Fabriken",
@@ -4641,7 +5040,8 @@
   "country": "",
   "exchange": "",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "industrial"
  },
  {
   "name": "Hans Jacques Mamlok",
@@ -4653,7 +5053,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "James Mann",
@@ -4665,7 +5066,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": "English"
+  "lang": "English",
+  "category": "phantastica"
  },
  {
   "name": "John Dixon Mann",
@@ -4677,7 +5079,8 @@
   "country": "England",
   "exchange": "",
   "count": "",
-  "lang": "English"
+  "lang": "English",
+  "category": "colonial"
  },
  {
   "name": "Erman Marcus",
@@ -4689,7 +5092,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Hans Marcuse",
@@ -4701,7 +5105,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "Max Margulies",
@@ -4713,7 +5118,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "narcotics"
  },
  {
   "name": "Karl Marhold",
@@ -4725,7 +5131,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Friedrich Markgraf",
@@ -4737,7 +5144,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Rudolf Marloth",
@@ -4749,7 +5157,8 @@
   "country": "South Africa",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "colonial"
  },
  {
   "name": "Albin Marschalk",
@@ -4761,7 +5170,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "industrial"
  },
  {
   "name": "August Martin",
@@ -4773,7 +5183,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Friedrich Martius",
@@ -4785,7 +5196,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Gaston Charles Camille Maspéro",
@@ -4797,7 +5209,8 @@
   "country": "Egypt",
   "exchange": "",
   "count": "",
-  "lang": "French"
+  "lang": "French",
+  "category": "colonial"
  },
  {
   "name": "Königliches Materialprüfungsamt",
@@ -4809,7 +5222,8 @@
   "country": "",
   "exchange": "",
   "count": "6",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Paul Matthaei",
@@ -4821,7 +5235,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Wilhelm Mauer",
@@ -4833,7 +5248,8 @@
   "country": "",
   "exchange": "",
   "count": "4",
-  "lang": ""
+  "lang": "",
+  "category": "industrial"
  },
  {
   "name": "Stephan Karl Mayer",
@@ -4845,7 +5261,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "August Mayor",
@@ -4857,7 +5274,8 @@
   "country": "Switzerland",
   "exchange": "",
   "count": "",
-  "lang": "French"
+  "lang": "French",
+  "category": "phantastica"
  },
  {
   "name": "Fritz Mechthold",
@@ -4869,7 +5287,8 @@
   "country": "USA",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "industrial"
  },
  {
   "name": "Friedrich Mendel",
@@ -4881,7 +5300,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Hermann Menzel",
@@ -4893,7 +5313,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "E. Merck",
@@ -4905,7 +5326,8 @@
   "country": "",
   "exchange": "",
   "count": "11",
-  "lang": ""
+  "lang": "",
+  "category": "pharma"
  },
  {
   "name": "Merker",
@@ -4917,7 +5339,8 @@
   "country": "",
   "exchange": "",
   "count": "12",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "Ernst Meyer",
@@ -4929,7 +5352,8 @@
   "country": "",
   "exchange": "",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "pharma"
  },
  {
   "name": "George Meyer",
@@ -4941,7 +5365,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Adolf Michaelis",
@@ -4953,7 +5378,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Paul Michaëlis",
@@ -4965,7 +5391,8 @@
   "country": "",
   "exchange": "",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "pharma"
  },
  {
   "name": "Karl Miesemer",
@@ -4977,7 +5404,8 @@
   "country": "",
   "exchange": "",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "pharma"
  },
  {
   "name": "Adolf Miethe",
@@ -4989,7 +5417,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Oskar Minkowski",
@@ -5001,7 +5430,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "August Model",
@@ -5013,7 +5443,8 @@
   "country": "",
   "exchange": "",
   "count": "6",
-  "lang": ""
+  "lang": "",
+  "category": "pharma"
  },
  {
   "name": "Moise M. Moissidés",
@@ -5025,7 +5456,8 @@
   "country": "Greece",
   "exchange": "",
   "count": "",
-  "lang": "french"
+  "lang": "french",
+  "category": "phantastica"
  },
  {
   "name": "William Ovid Moor",
@@ -5037,7 +5469,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Cornelis de Mooy",
@@ -5049,7 +5482,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": "French"
+  "lang": "French",
+  "category": "colonial"
  },
  {
   "name": "Moser",
@@ -5061,7 +5495,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Max Mosse",
@@ -5073,7 +5508,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "industrial"
  },
  {
   "name": "Otto Mugdan",
@@ -5085,7 +5521,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Erich Möbius",
@@ -5097,7 +5534,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Karl August Möbius",
@@ -5109,7 +5547,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Wilhelm Mühsam",
@@ -5121,7 +5560,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Franz Müller",
@@ -5133,7 +5573,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Friedrich Wilhelm Karl Müller",
@@ -5145,7 +5586,8 @@
   "country": "",
   "exchange": "",
   "count": "3",
-  "lang": ""
+  "lang": "",
+  "category": "pharma"
  },
  {
   "name": "Reinhold Müller",
@@ -5157,7 +5599,8 @@
   "country": "",
   "exchange": "",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Bernhard Nauryn",
@@ -5169,7 +5612,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Ernst Neisser",
@@ -5181,7 +5625,8 @@
   "country": "",
   "exchange": "",
   "count": "3",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Gustav Neugebauer",
@@ -5193,7 +5638,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Alfred Neumann",
@@ -5205,7 +5651,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Joseph Newinny",
@@ -5217,7 +5664,8 @@
   "country": "Austria",
   "exchange": "",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "Franz Niedenin",
@@ -5229,7 +5677,8 @@
   "country": "",
   "exchange": "",
   "count": "3",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "Martin otto hugo Nippe",
@@ -5241,7 +5690,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "industrial"
  },
  {
   "name": "Sir Thomas Oliver",
@@ -5253,7 +5703,8 @@
   "country": "",
   "exchange": "",
   "count": "3",
-  "lang": "English"
+  "lang": "English",
+  "category": "colonial"
  },
  {
   "name": "Max Freiherr von Oppenheim",
@@ -5265,7 +5716,8 @@
   "country": "Egypt, Germany",
   "exchange": "",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "Ottendorff",
@@ -5277,7 +5729,8 @@
   "country": "",
   "exchange": "",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "industrial"
  },
  {
   "name": "Georges Pannier",
@@ -5289,19 +5742,8 @@
   "country": "France",
   "exchange": "",
   "count": "9",
-  "lang": "French"
- },
- {
-  "name": "Rudolf von Slatin Pascha",
-  "subject": "",
-  "job": "General",
-  "years": "",
-  "dates": "29/4/1910, 29/5/1910",
-  "city": "Khartoum",
-  "country": "Sudan",
-  "exchange": "",
-  "count": "2",
-  "lang": "English"
+  "lang": "French",
+  "category": "industrial"
  },
  {
   "name": "Georges Paulet",
@@ -5313,7 +5755,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": "French"
+  "lang": "French",
+  "category": "colonial"
  },
  {
   "name": "Franz Penzoldt",
@@ -5325,7 +5768,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Birger Peterson",
@@ -5337,7 +5781,8 @@
   "country": "",
   "exchange": "",
   "count": "2",
-  "lang": "French"
+  "lang": "French",
+  "category": "colonial"
  },
  {
   "name": "Martin Pfeng",
@@ -5349,7 +5794,8 @@
   "country": "",
   "exchange": "",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "narcotics"
  },
  {
   "name": "Eduard F.W. Pflüger",
@@ -5361,7 +5807,8 @@
   "country": "",
   "exchange": "",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Charles Douglas Ferguson Phillips",
@@ -5373,19 +5820,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": "English"
- },
- {
-  "name": "Walther Pick",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "20.2.1921",
-  "city": "Wien",
-  "country": "",
-  "exchange": "",
-  "count": "",
-  "lang": ""
+  "lang": "English",
+  "category": "colonial"
  },
  {
   "name": "Anatea Pinto",
@@ -5397,7 +5833,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": "French"
+  "lang": "French",
+  "category": "colonial"
  },
  {
   "name": "Louis T. Planchon",
@@ -5409,19 +5846,8 @@
   "country": "France",
   "exchange": "",
   "count": "",
-  "lang": "French"
- },
- {
-  "name": "Reinhard Planer",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "22.8.1925",
-  "city": "Berlin-Friedenau",
-  "country": "",
-  "exchange": "",
-  "count": "",
-  "lang": ""
+  "lang": "French",
+  "category": "phantastica"
  },
  {
   "name": "Václav Plavec",
@@ -5433,43 +5859,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
- },
- {
-  "name": "Alexander von Poehl",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "12.2.1905",
-  "city": "St. Petersburg",
-  "country": "",
-  "exchange": "",
-  "count": "",
-  "lang": ""
- },
- {
-  "name": "Julius Pohl",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "14.7.1911",
-  "city": "Prag",
-  "country": "",
-  "exchange": "",
-  "count": "",
-  "lang": ""
- },
- {
-  "name": "Jules Poisson",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "",
-  "city": "Montpellier",
-  "country": "",
-  "exchange": "",
-  "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "Mary K. Polk",
@@ -5481,7 +5872,8 @@
   "country": "Philippines",
   "exchange": "",
   "count": "",
-  "lang": "English"
+  "lang": "English",
+  "category": "colonial"
  },
  {
   "name": "Otto Poppenberg",
@@ -5493,7 +5885,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Ewald, K. A. Kohn, H. Posner",
@@ -5505,7 +5898,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Karl Posner",
@@ -5517,7 +5911,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Robert Potoníe",
@@ -5529,7 +5924,8 @@
   "country": "",
   "exchange": "",
   "count": "3",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Gabriel Pouchet",
@@ -5541,7 +5937,8 @@
   "country": "France",
   "exchange": "",
   "count": "21",
-  "lang": "French"
+  "lang": "French",
+  "category": "phantastica"
  },
  {
   "name": "Hermann Prinz",
@@ -5553,7 +5950,8 @@
   "country": "USA",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "colonial"
  },
  {
   "name": "Max Prochowhik",
@@ -5565,55 +5963,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
- },
- {
-  "name": "Bernhard Proskauer",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "15.3.1895",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "",
-  "lang": ""
- },
- {
-  "name": "Robert Pschorr",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "1905-07-07 00:00:00",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "2 letters, no date 1st",
-  "lang": ""
- },
- {
-  "name": "Karl Pullrich",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "1.5.1908",
-  "city": "Jena",
-  "country": "",
-  "exchange": "",
-  "count": "",
-  "lang": ""
- },
- {
-  "name": "Georg Puppe",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "10.5.1918",
-  "city": "Königsberg",
-  "country": "",
-  "exchange": "",
-  "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "August Pütter",
@@ -5625,79 +5976,8 @@
   "country": "",
   "exchange": "",
   "count": "2",
-  "lang": ""
- },
- {
-  "name": "Frédéric de Quervain",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "28.11.1908",
-  "city": "La Chaux-de-Fonds",
-  "country": "Switzerland",
-  "exchange": "",
-  "count": "",
-  "lang": ""
- },
- {
-  "name": "Wilhelm von Radloff",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "1902–1907",
-  "city": "Sillamäe",
-  "country": "Estonia",
-  "exchange": "",
-  "count": "4",
-  "lang": ""
- },
- {
-  "name": "Ivan Ramazovic",
-  "subject": "",
-  "job": "Russian Physiologist",
-  "years": "",
-  "dates": "",
-  "city": "",
-  "country": "",
-  "exchange": "",
-  "count": "",
-  "lang": ""
- },
- {
-  "name": "Alfred Raphaelson",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "31/8/1917",
-  "city": "Mainz",
-  "country": "",
-  "exchange": "",
-  "count": "",
-  "lang": ""
- },
- {
-  "name": "Karl Rapp",
-  "subject": "",
-  "job": "Ingenieur",
-  "years": "",
-  "dates": "1904-08-09 00:00:00",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "",
-  "lang": ""
- },
- {
-  "name": "C. Rasch",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "december 29, 1902, january 5, 1903",
-  "city": "Copenhagen",
-  "country": "Denmark",
-  "exchange": "",
-  "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Fritz Rathenau",
@@ -5709,7 +5989,8 @@
   "country": "",
   "exchange": "",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Chharles Lee Reese",
@@ -5721,7 +6002,8 @@
   "country": "USA",
   "exchange": "",
   "count": "3",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "Max Reess",
@@ -5733,7 +6015,8 @@
   "country": "",
   "exchange": "",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Berlin, Reichsarbeitsverwaltung",
@@ -5745,7 +6028,8 @@
   "country": "",
   "exchange": "Letter",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Eugen Richter",
@@ -5757,7 +6041,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Henry Nicholas Ridley",
@@ -5769,7 +6054,8 @@
   "country": "",
   "exchange": "",
   "count": "5",
-  "lang": "English"
+  "lang": "English",
+  "category": "colonial"
  },
  {
   "name": "J.D. Riedel",
@@ -5781,7 +6067,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "pharma"
  },
  {
   "name": "Walter Riehm",
@@ -5793,7 +6080,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Otto Riesser",
@@ -5805,7 +6093,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Johann Heinrich Rille",
@@ -5817,7 +6106,8 @@
   "country": "Austria",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Walther Rimarski",
@@ -5829,7 +6119,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Agostinho Antonio da Rocha",
@@ -5840,20 +6131,9 @@
   "city": "Coimbra",
   "country": "Portugal",
   "exchange": "",
-  "count": "8",
-  "lang": "French"
- },
- {
-  "name": "Emil Rochett",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "1915-10-04 00:00:00",
-  "city": "Merano",
-  "country": "Italy",
-  "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "French",
+  "category": "phantastica"
  },
  {
   "name": "Richard Roesicke",
@@ -5865,31 +6145,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
- },
- {
-  "name": "Johannes Hermann Rohwedder",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "8/2/1899",
-  "city": "Bad Oldesloe",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Josef Rollmann",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "27/1/1913",
-  "city": "Essen",
-  "country": "",
-  "exchange": "",
-  "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "industrial"
  },
  {
   "name": "Ernst von Romberg",
@@ -5901,79 +6158,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
- },
- {
-  "name": "Oskar Roos",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "26 Sept, 1920, 6/10/1920",
-  "city": "Ebgingen",
-  "country": "",
-  "exchange": "",
-  "count": "2",
-  "lang": ""
- },
- {
-  "name": "Wilhelm Rosenau",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "1927-02-17 00:00:00",
-  "city": "Friedland",
-  "country": "",
-  "exchange": "",
-  "count": "",
-  "lang": ""
- },
- {
-  "name": "Leopold Rosenau",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "16/2/1908",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "",
-  "lang": ""
- },
- {
-  "name": "Theodor Rosenberg",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "1908-05-12 00:00:00",
-  "city": "Bad Langensalza",
-  "country": "",
-  "exchange": "",
-  "count": "",
-  "lang": ""
- },
- {
-  "name": "Hermann Rosenkranz",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "31/5/1907",
-  "city": "Schöneberg",
-  "country": "",
-  "exchange": "",
-  "count": "",
-  "lang": ""
- },
- {
-  "name": "Samuel Siegmund Rosenstein",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "16/1/1882",
-  "city": "Leiden",
-  "country": "Netherlands",
-  "exchange": "",
-  "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Oskar Rosenthal",
@@ -5985,31 +6171,8 @@
   "country": "",
   "exchange": "",
   "count": "3",
-  "lang": ""
- },
- {
-  "name": "Leopold Rosenthaler",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "14/3/1914, 17/3/1914",
-  "city": "Straßburg",
-  "country": "",
-  "exchange": "",
-  "count": "2",
-  "lang": ""
- },
- {
-  "name": "Michael Joseph Rossbach",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "1882-1883",
-  "city": "Würzburg",
-  "country": "",
-  "exchange": "",
-  "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Henry Ling Roth",
@@ -6021,11 +6184,12 @@
   "country": "England",
   "exchange": "",
   "count": "",
-  "lang": "English"
+  "lang": "English",
+  "category": "colonial"
  },
  {
   "name": "A. rouhier",
-  "subject": "Phantastica & Plants",
+  "subject": "",
   "job": "",
   "years": "",
   "dates": "1913",
@@ -6033,7 +6197,8 @@
   "country": "France",
   "exchange": "",
   "count": "2",
-  "lang": "French"
+  "lang": "French",
+  "category": "colonial"
  },
  {
   "name": "Felix von Roy",
@@ -6045,7 +6210,8 @@
   "country": "",
   "exchange": "",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "narcotics"
  },
  {
   "name": "Max Rubens",
@@ -6057,34 +6223,11 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
-  "name": "Jakob Ruhemann",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "21/10/1906",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "",
-  "lang": ""
- },
- {
-  "name": "Theophil Runck",
-  "subject": "Toxicology",
-  "job": "",
-  "years": "",
-  "dates": "1/4/1902, 9/4/1902, 26/4/1902",
-  "city": "Mundelsheim",
-  "country": "",
-  "exchange": "",
-  "count": "3",
-  "lang": ""
- },
- {
-  "name": "Henry Hurd Rusby",
+  "name": "Henry hurd Rusby",
   "subject": "",
   "job": "",
   "years": "",
@@ -6093,7 +6236,8 @@
   "country": "USA",
   "exchange": "",
   "count": "",
-  "lang": "English"
+  "lang": "English",
+  "category": "colonial"
  },
  {
   "name": "Johannes Rutgers",
@@ -6102,10 +6246,11 @@
   "years": "",
   "dates": "25/5/1899, 30 May 1899",
   "city": "Rotterdam",
-  "country": "Netherlands",
+  "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Paul Röthig",
@@ -6117,43 +6262,8 @@
   "country": "",
   "exchange": "",
   "count": "3",
-  "lang": ""
- },
- {
-  "name": "Pabl Rückhard",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "26/10.1884",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "",
-  "lang": ""
- },
- {
-  "name": "Gerhard Rüdiger",
-  "subject": "Student",
-  "job": "",
-  "years": "",
-  "dates": "17/1/1918",
-  "city": "Wernigerode",
-  "country": "",
-  "exchange": "",
-  "count": "",
-  "lang": ""
- },
- {
-  "name": "Rudolf Said-Ruete",
-  "subject": "Phantastica & Plants",
-  "job": "",
-  "years": "",
-  "dates": "23 November 1905, 29 December 1905",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Joseph Saile",
@@ -6165,23 +6275,12 @@
   "country": "USA",
   "exchange": "",
   "count": "",
-  "lang": "English"
- },
- {
-  "name": "Ernst Leopold Salkowski",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "1904-1912",
-  "city": "Charlottenburg",
-  "country": "",
-  "exchange": "",
-  "count": "9",
-  "lang": ""
+  "lang": "English",
+  "category": "colonial"
  },
  {
   "name": "H. Saltzmann",
-  "subject": "Publications",
+  "subject": "",
   "job": "Redaktion der Apotheker Zeitung und Verstand des deutschen Apothekervereins",
   "years": "",
   "dates": "1897-1910",
@@ -6189,7 +6288,8 @@
   "country": "",
   "exchange": "",
   "count": "5",
-  "lang": ""
+  "lang": "",
+  "category": "pharma"
  },
  {
   "name": "Karl Gustav Santesson",
@@ -6201,79 +6301,8 @@
   "country": "Sweden",
   "exchange": "",
   "count": "11",
-  "lang": ""
- },
- {
-  "name": "David Sarason",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "13/4/1915, 18/4/1915",
-  "city": "Berlin-Dahlem",
-  "country": "",
-  "exchange": "",
-  "count": "2",
-  "lang": ""
- },
- {
-  "name": "Erich Saupe",
-  "subject": "",
-  "job": "Stadtkrankenhaus Dresden",
-  "years": "",
-  "dates": "1926-01-06 00:00:00",
-  "city": "Dresden",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Ernst Schaffnit",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "19/12/1916, 1/2/1918",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "2",
-  "lang": ""
- },
- {
-  "name": "Hugo Schavinsland",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "25/4/1907",
-  "city": "Bremen",
-  "country": "",
-  "exchange": "",
-  "count": "",
-  "lang": ""
- },
- {
-  "name": "Wilhelm Schellmann",
-  "subject": "",
-  "job": "Sanitätsrat",
-  "years": "",
-  "dates": "20/9/1929",
-  "city": "Elmshorn",
-  "country": "",
-  "exchange": "",
-  "count": "",
-  "lang": ""
- },
- {
-  "name": "Otto Schettels",
-  "subject": "",
-  "job": "Augenheilkunde",
-  "years": "",
-  "dates": "1909-08-10 00:00:00",
-  "city": "Krefeld",
-  "country": "",
-  "exchange": "",
-  "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "colonial"
  },
  {
   "name": "Georg Schlesinger",
@@ -6285,7 +6314,8 @@
   "country": "",
   "exchange": "",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "industrial"
  },
  {
   "name": "Karl Schmatolla",
@@ -6297,7 +6327,8 @@
   "country": "",
   "exchange": "",
   "count": "3",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Johannes Dietrich Eduard Schmeltz",
@@ -6309,7 +6340,8 @@
   "country": "",
   "exchange": "",
   "count": "3",
-  "lang": ""
+  "lang": "",
+  "category": "pfeilgifte"
  },
  {
   "name": "Adolf Schmidt",
@@ -6321,59 +6353,12 @@
   "country": "",
   "exchange": "",
   "count": "3",
-  "lang": ""
- },
- {
-  "name": "Schmidt",
-  "subject": "Industrial Poisoning",
-  "job": "Königliche Gewerbeinspektion",
-  "years": "",
-  "dates": "1900-01-08 00:00:00",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "",
-  "lang": ""
- },
- {
-  "name": "H. Schmidt",
-  "subject": "Industrial Poisoning",
-  "job": "Unfallversicherungs-Praxis",
-  "years": "",
-  "dates": "11/9/1906-6/5/1909",
-  "city": "Leipzig",
-  "country": "",
-  "exchange": "",
-  "count": "5",
-  "lang": ""
- },
- {
-  "name": "Max Schmidt",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "18/11/1927",
-  "city": "Angola",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "W. Schmidt",
-  "subject": "",
-  "job": "Deutscher Brauer Bund",
-  "years": "",
-  "dates": "1927-05-01 00:00:00",
-  "city": "Charlottenburg",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Oswald Schmiedeberg",
-  "subject": "Phantastica & Plants",
+  "subject": "",
   "job": "",
   "years": "",
   "dates": "1885-1909",
@@ -6381,43 +6366,8 @@
   "country": "",
   "exchange": "",
   "count": "13",
-  "lang": ""
- },
- {
-  "name": "Hans Schneickerd",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "1920-12-12 00:00:00",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Heinrich Schoeler",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "20/11/1887, 22/12/1910",
-  "city": "",
-  "country": "",
-  "exchange": "",
-  "count": "2",
-  "lang": ""
- },
- {
-  "name": "Francois Schoofs",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "24/10/1911",
-  "city": "Liège",
-  "country": "Belgium",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "Hugo Schulz",
@@ -6429,11 +6379,12 @@
   "country": "",
   "exchange": "",
   "count": "5",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Karl Schumann",
-  "subject": "Phantastica & Plants",
+  "subject": "",
   "job": "",
   "years": "",
   "dates": "12/9/1894",
@@ -6441,19 +6392,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
- },
- {
-  "name": "Max Eduard Schwabe",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "1905",
-  "city": "Hannover",
-  "country": "",
-  "exchange": "",
-  "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "phantastica"
  },
  {
   "name": "J. Schwalbe",
@@ -6465,43 +6405,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "1",
-  "lang": ""
- },
- {
-  "name": "Julius Schwalbe",
-  "subject": "Publications",
-  "job": "Deutsche medizinische wochenschrift",
-  "years": "",
-  "dates": "25 may 1906-october 4, 1906",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "3",
-  "lang": ""
- },
- {
-  "name": "Emmanuel Schwarz",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "14/1/1904",
-  "city": "",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Karl Schweigger",
-  "subject": "Phantastica & Plants",
-  "job": "",
-  "years": "",
-  "dates": "15/11/1900, 20/11/1900",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Georg Schweinfurth",
@@ -6513,67 +6418,8 @@
   "country": "Egypt, Germany",
   "exchange": "",
   "count": "FOLDERS",
-  "lang": ""
- },
- {
-  "name": "Hermann Graf Schweinitz",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "1908",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "2",
-  "lang": ""
- },
- {
-  "name": "Simon Schwendener",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "14/12/1894",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Paul Schwenke",
-  "subject": "",
-  "job": "Königliche Bibliothek",
-  "years": "",
-  "dates": "",
-  "city": "",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "August Johann Otto Schwieder",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "1900-05-02 00:00:00",
-  "city": "Rüdersdorf",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Wilhelm Schwinge",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "13/3/1912",
-  "city": "Rathenow",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "colonial"
  },
  {
   "name": "Heinrich Schäfer",
@@ -6585,127 +6431,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": ""
- },
- {
-  "name": "Markus Seckbach",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "22/8/1928",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "J. Segel",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "1907, 1908",
-  "city": "Vienna",
-  "country": "Austria",
-  "exchange": "",
-  "count": "2",
-  "lang": ""
- },
- {
-  "name": "Eduard Seler",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "12/6/1894",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Hermann Senator",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "27/9/1892",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "A. Seydel",
-  "subject": "",
-  "job": "Verlagsbuchhändler",
-  "years": "",
-  "dates": "1904",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "2",
-  "lang": ""
- },
- {
-  "name": "Ernst Sidler-Huguenin",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "",
-  "city": "Zurich",
-  "country": "Switzerland",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Nadine Sieber",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "1906",
-  "city": "St. Petersburg",
-  "country": "Russia",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Siefart",
-  "subject": "",
-  "job": "Regierungsrat",
-  "years": "",
-  "dates": "1906-1909",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "7",
-  "lang": ""
- },
- {
-  "name": "Friedrich Aufust Ewald Siehe",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "29/10/1899",
-  "city": "Sulechów",
-  "country": "Poland",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "G. Hermann Sieveking",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "21/6/1904",
-  "city": "Hamburg",
-  "country": "",
-  "exchange": "",
-  "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Paul Singer",
@@ -6717,19 +6444,8 @@
   "country": "",
   "exchange": "",
   "count": "",
-  "lang": "5"
- },
- {
-  "name": "Richard Skutsch",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "21/1/1902",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
+  "lang": "5",
+  "category": "correspondence"
  },
  {
   "name": "W. Ernst Haas & Sohn",
@@ -6741,151 +6457,8 @@
   "country": "",
   "exchange": "",
   "count": "3",
-  "lang": ""
- },
- {
-  "name": "Werner Sombart",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "1904-04-05 00:00:00",
-  "city": "Breslau",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Reinhold Spengler",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "28/2/1926",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Ernst Stadelmann",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "1906-1908",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "8",
-  "lang": ""
- },
- {
-  "name": "Paul Staudinger",
-  "subject": "",
-  "job": "Forschungsreisender",
-  "years": "",
-  "dates": "1903-1908",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "6",
-  "lang": ""
- },
- {
-  "name": "Karl Stegmann",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "18/11/1913",
-  "city": "Mannheim",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Karl von den Steinen",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "6/11/1896",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "William Stirling",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "1902-01-04 00:00:00",
-  "city": "Manchester",
-  "country": "England",
-  "exchange": "",
-  "count": "1",
-  "lang": "Postcard"
- },
- {
-  "name": "Johann Heinrich Stmicl??",
-  "subject": "",
-  "job": "Doctor",
-  "years": "",
-  "dates": "1882-1895",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "2",
-  "lang": ""
- },
- {
-  "name": "Paul Ferdinand Strassmann",
-  "subject": "",
-  "job": "Doctor",
-  "years": "",
-  "dates": "1911-02-05 00:00:00",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Franz Herman Strauch",
-  "subject": "",
-  "job": "Admiral",
-  "years": "",
-  "dates": "7/4/1899",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Kurt Strauch",
-  "subject": "",
-  "job": "Doctor",
-  "years": "",
-  "dates": "1929-02-03 00:00:00",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Georg Leopold Strube",
-  "subject": "",
-  "job": "Doctor",
-  "years": "",
-  "dates": "1900",
-  "city": "Bremen",
-  "country": "",
-  "exchange": "",
-  "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Helene Stöcker",
@@ -6897,43 +6470,8 @@
   "country": "",
   "exchange": "",
   "count": "1",
-  "lang": ""
- },
- {
-  "name": "Albert Heinrih Stönner",
-  "subject": "",
-  "job": "Orientalist, Ethnologist",
-  "years": "",
-  "dates": "1911-10-11 00:00:00",
-  "city": "Ber",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Johann Hepomik Stützle",
-  "subject": "",
-  "job": "Doctor",
-  "years": "",
-  "dates": "1908-10-01 00:00:00",
-  "city": "Biberach",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Karl Sudhoff",
-  "subject": "",
-  "job": "Medicalhistorian",
-  "years": "",
-  "dates": "1908-1909",
-  "city": "Leipzig",
-  "country": "",
-  "exchange": "",
-  "count": "3",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "C. F. Boehringer & Söhne",
@@ -6945,43 +6483,8 @@
   "country": "Germany",
   "exchange": "Letter",
   "count": "16",
-  "lang": ""
- },
- {
-  "name": "Hermann Tappeiner",
-  "subject": "",
-  "job": "Doctor",
-  "years": "",
-  "dates": "",
-  "city": "",
-  "country": "",
-  "exchange": "",
-  "count": "2",
-  "lang": ""
- },
- {
-  "name": "B. Taussig",
-  "subject": "",
-  "job": "Doctor",
-  "years": "",
-  "dates": "1/12/1893",
-  "city": "Iași",
-  "country": "Romania",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Ferdinand Teetz",
-  "subject": "",
-  "job": "Philologist",
-  "years": "",
-  "dates": "29/8/1905",
-  "city": "Bad Oeynhausen",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "pharma"
  },
  {
   "name": "Ludwik Teleky",
@@ -6993,163 +6496,8 @@
   "country": "Austria",
   "exchange": "",
   "count": "2",
-  "lang": ""
- },
- {
-  "name": "Hugo Thiem",
-  "subject": "",
-  "job": "Biologist",
-  "years": "",
-  "dates": "21/1/1925",
-  "city": "Hamburg",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Georg Thieme",
-  "subject": "",
-  "job": "Verlagsbuchhandlung",
-  "years": "",
-  "dates": "1906-02-11 00:00:00",
-  "city": "Leipzig",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Georg Thilenius",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "1879, 1883",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "2",
-  "lang": ""
- },
- {
-  "name": "Otto Thilo",
-  "subject": "",
-  "job": "Doctor, Zoologist",
-  "years": "",
-  "dates": "1879-1883",
-  "city": "Riga",
-  "country": "Latvia",
-  "exchange": "",
-  "count": "7",
-  "lang": ""
- },
- {
-  "name": "Henri Léon Thoinot",
-  "subject": "",
-  "job": "Doctor",
-  "years": "",
-  "dates": "1910-1911",
-  "city": "Paris",
-  "country": "France",
-  "exchange": "",
-  "count": "5",
-  "lang": "French"
- },
- {
-  "name": "Karl Tholl",
-  "subject": "",
-  "job": "Doctor",
-  "years": "",
-  "dates": "1916-01-02 00:00:00",
-  "city": "",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Hermann Thoms",
-  "subject": "",
-  "job": "Pharmacologist",
-  "years": "",
-  "dates": "1893-1916",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "10",
-  "lang": ""
- },
- {
-  "name": "Erich Thulcke",
-  "subject": "",
-  "job": "Doctor",
-  "years": "",
-  "dates": "20/2/1921",
-  "city": "Teplice",
-  "country": "Czech Republic",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Robert Tissot",
-  "subject": "",
-  "job": "Doctor",
-  "years": "",
-  "dates": "1903",
-  "city": "La Chaux-de-Fonds",
-  "country": "Switzerland",
-  "exchange": "",
-  "count": "4",
-  "lang": "French"
- },
- {
-  "name": "Paul Tockuss",
-  "subject": "",
-  "job": "Doctor",
-  "years": "",
-  "dates": "1904-04-06 00:00:00",
-  "city": "Kreuzberg",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Bernhard Tollens",
-  "subject": "",
-  "job": "Chemist",
-  "years": "",
-  "dates": "23/6/1901",
-  "city": "Göttingen",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Gustav Tornier",
-  "subject": "",
-  "job": "Zoologist",
-  "years": "",
-  "dates": "1898, 1912, 1920",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "",
-  "lang": ""
- },
- {
-  "name": "Adolf Trendelenburg",
-  "subject": "",
-  "job": "Archaeologist",
-  "years": "",
-  "dates": "1900-10-12 00:00:00",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "industrial"
  },
  {
   "name": "Akkumulatorenwerke System Tribelhorn",
@@ -7161,127 +6509,8 @@
   "country": "Germany",
   "exchange": "Letter, 2",
   "count": "",
-  "lang": ""
- },
- {
-  "name": "Alexander Tschirch",
-  "subject": "",
-  "job": "Pharmacologist",
-  "years": "",
-  "dates": "13/4/1888",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "H. Tzschachmann",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "17/9/1912",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "",
-  "lang": ""
- },
- {
-  "name": "Robert Türstig",
-  "subject": "",
-  "job": "Meteorologist",
-  "years": "",
-  "dates": "28/8/1910",
-  "city": "Omdurmann",
-  "country": "Sudan",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Paul Uhlenhuth",
-  "subject": "",
-  "job": "Doctor",
-  "years": "",
-  "dates": "1908-07-06 00:00:00",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Wilhelm Uhthoff",
-  "subject": "",
-  "job": "Doctor",
-  "years": "",
-  "dates": "1905, 1911",
-  "city": "Breslau",
-  "country": "",
-  "exchange": "",
-  "count": "2",
-  "lang": ""
- },
- {
-  "name": "Paul Gerson Unna",
-  "subject": "",
-  "job": "Doctor",
-  "years": "",
-  "dates": "1887, 1889",
-  "city": "Elmsbüttel",
-  "country": "",
-  "exchange": "",
-  "count": "4",
-  "lang": ""
- },
- {
-  "name": "Ignaz Urban",
-  "subject": "",
-  "job": "Botanist",
-  "years": "",
-  "dates": "13/8/1909",
-  "city": "Borkum",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Henry de Varigny",
-  "subject": "",
-  "job": "Doctor",
-  "years": "",
-  "dates": "1888",
-  "city": "Paris",
-  "country": "France",
-  "exchange": "",
-  "count": "1",
-  "lang": "French"
- },
- {
-  "name": "J. Vassenz",
-  "subject": "",
-  "job": "Translator",
-  "years": "",
-  "dates": "1910, 1912",
-  "city": "Paris",
-  "country": "France",
-  "exchange": "",
-  "count": "3",
-  "lang": "French"
- },
- {
-  "name": "Hewig Ventz",
-  "subject": "geb. Foerster",
-  "job": "",
-  "years": "",
-  "dates": "16/6/1909",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Gustav Fischer Verlag",
@@ -7293,7 +6522,8 @@
   "country": "",
   "exchange": "Letter",
   "count": "2",
-  "lang": ""
+  "lang": "",
+  "category": "pharma"
  },
  {
   "name": "Karl heymanns Verlag",
@@ -7305,31 +6535,8 @@
   "country": "",
   "exchange": "",
   "count": "15",
-  "lang": ""
- },
- {
-  "name": "C. Vidal",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "24/10/1893",
-  "city": "Paris",
-  "country": "France",
-  "exchange": "",
-  "count": "1",
-  "lang": "French"
- },
- {
-  "name": "Emile Vidal",
-  "subject": "",
-  "job": "Doctor",
-  "years": "",
-  "dates": "",
-  "city": "",
-  "country": "",
-  "exchange": "",
-  "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "pharma"
  },
  {
   "name": "Walter Roth/ Dr. von Vietinghoff",
@@ -7341,55 +6548,21 @@
   "country": "",
   "exchange": "Letter, Postcard",
   "count": "4, 1",
-  "lang": ""
- },
- {
-  "name": "Albert Heinrich Alexander Villaret",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "24/10/1910",
-  "city": "Eisenach",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Hans Virchow",
-  "subject": "",
-  "job": "Doctor",
-  "years": "",
-  "dates": "14/11/1903",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Rudolf Virchow",
   "subject": "",
-  "job": "Doctor",
+  "job": "",
   "years": "",
   "dates": "1879-1894",
   "city": "Berlin",
   "country": "",
   "exchange": "",
   "count": "4",
-  "lang": ""
- },
- {
-  "name": "Dr. von Vistinghoff-Scheel",
-  "subject": "",
-  "job": "Chemiker-Zeitung",
-  "years": "",
-  "dates": "",
-  "city": "",
-  "country": "",
-  "exchange": "",
-  "count": "",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Ludwig Vogel",
@@ -7401,7 +6574,8 @@
   "country": "",
   "exchange": "Letters and articles",
   "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Karl von Voit",
@@ -7413,175 +6587,8 @@
   "country": "",
   "exchange": "",
   "count": "7",
-  "lang": ""
- },
- {
-  "name": "Georg Volkens",
-  "subject": "",
-  "job": "Botanist",
-  "years": "",
-  "dates": "26/7/1892",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Johannes Volkmann",
-  "subject": "",
-  "job": "Doctor",
-  "years": "",
-  "dates": "20/5/1927",
-  "city": "Halle",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Richard von Volkmann",
-  "subject": "",
-  "job": "Doctor",
-  "years": "",
-  "dates": "23/3/1873",
-  "city": "Halle",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Oskar Vulpius",
-  "subject": "",
-  "job": "Doctor",
-  "years": "",
-  "dates": "188, 1892, 1895",
-  "city": "Heidelberg",
-  "country": "",
-  "exchange": "3 letters",
-  "count": "",
-  "lang": ""
- },
- {
-  "name": "Karl Walter",
-  "subject": "",
-  "job": "Doctor",
-  "years": "",
-  "dates": "",
-  "city": "",
-  "country": "",
-  "exchange": "",
-  "count": "",
-  "lang": ""
- },
- {
-  "name": "Otto Warburg",
-  "subject": "",
-  "job": "Botanist",
-  "years": "",
-  "dates": "1886-1892",
-  "city": "Java",
-  "country": "Indonesia",
-  "exchange": "",
-  "count": "3",
-  "lang": ""
- },
- {
-  "name": "Martin Wasserman",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "23/5/1906",
-  "city": "Hamburg",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "George Watt",
-  "subject": "",
-  "job": "Botanist",
-  "years": "",
-  "dates": "20/5/1896",
-  "city": "Kolkata",
-  "country": "India",
-  "exchange": "",
-  "count": "",
-  "lang": "English"
- },
- {
-  "name": "Friedrich Weeren",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "19/9/1896",
-  "city": "Hattingen",
-  "country": "",
-  "exchange": "",
-  "count": "",
-  "lang": ""
- },
- {
-  "name": "Wolgang Weichardt",
-  "subject": "",
-  "job": "Doctor",
-  "years": "",
-  "dates": "23/6/1917",
-  "city": "Erlangen",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Julius Weise",
-  "subject": "",
-  "job": "Teacher",
-  "years": "",
-  "dates": "1912",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "4",
-  "lang": ""
- },
- {
-  "name": "Oskar Weski",
-  "subject": "",
-  "job": "Doctor",
-  "years": "",
-  "dates": "24/2/1916",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Robert Wichmann",
-  "subject": "",
-  "job": "Kaufmann",
-  "years": "",
-  "dates": "13/10/1915",
-  "city": "Hamburg",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "August Widenmann",
-  "subject": "",
-  "job": "Doctor",
-  "years": "",
-  "dates": "1899, 1900, 1901",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "4",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  },
  {
   "name": "Kammer für Arbeiter und Angestellte in Wien",
@@ -7592,32 +6599,9 @@
   "city": "",
   "country": "",
   "exchange": "",
-  "count": "3",
-  "lang": ""
- },
- {
-  "name": "Bernard Wiki",
-  "subject": "",
-  "job": "Doctor",
-  "years": "",
-  "dates": "1923-03-05 00:00:00",
-  "city": "Geneva",
-  "country": "Switzerland",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Theodor Willmann",
-  "subject": "",
-  "job": "",
-  "years": "",
-  "dates": "1907",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "3",
-  "lang": ""
+  "count": "",
+  "lang": "",
+  "category": "industrial"
  },
  {
   "name": "Karl Wilmanns",
@@ -7629,210 +6613,7 @@
   "country": "",
   "exchange": "",
   "count": "6",
-  "lang": ""
- },
- {
-  "name": "K. Wimmer",
-  "subject": "",
-  "job": "Kaffee-Handels-AG",
-  "years": "",
-  "dates": "29/1/1912",
-  "city": "Bremen",
-  "country": "",
-  "exchange": "",
-  "count": "",
-  "lang": ""
- },
- {
-  "name": "Hermann Winzer",
-  "subject": "",
-  "job": "Engineer",
-  "years": "",
-  "dates": "1926-06-03 00:00:00",
-  "city": "Düren",
-  "country": "",
-  "exchange": "",
-  "count": "",
-  "lang": ""
- },
- {
-  "name": "Willy Wobbo",
-  "subject": "",
-  "job": "Apotheker",
-  "years": "",
-  "dates": "1911 and 1915",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "2",
-  "lang": ""
- },
- {
-  "name": "Alfred Wohl",
-  "subject": "",
-  "job": "Chemist",
-  "years": "",
-  "dates": "22/1/1895",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Richard Wolffenstein",
-  "subject": "",
-  "job": "Chemist",
-  "years": "",
-  "dates": "1903",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "4",
-  "lang": ""
- },
- {
-  "name": "Hans Wunderlich",
-  "subject": "",
-  "job": "Botanist",
-  "years": "",
-  "dates": "1904-12-11 00:00:00",
-  "city": "Erlangen",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Anton Wölfer",
-  "subject": "",
-  "job": "Doctor",
-  "years": "",
-  "dates": "8/1/1886",
-  "city": "Vienna",
-  "country": "Austria",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Zedlitz",
-  "subject": "",
-  "job": "Regierungsrat",
-  "years": "",
-  "dates": "21/10/1911",
-  "city": "Düsseldorf",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Georg Zehden",
-  "subject": "",
-  "job": "Doctor",
-  "years": "",
-  "dates": "1926-07-01 00:00:00",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Franz Zernik",
-  "subject": "",
-  "job": "Pharmacologist",
-  "years": "",
-  "dates": "1902-1915",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "5 letters!",
-  "lang": ""
- },
- {
-  "name": "Friedrich von Zezschwitz",
-  "subject": "",
-  "job": "Verlagsbuchhandlung",
-  "years": "",
-  "dates": "1912-02-05 00:00:00",
-  "city": "!!!",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Ernst Ziemke",
-  "subject": "",
-  "job": "Doctor",
-  "years": "",
-  "dates": "1907-03-04 00:00:00",
-  "city": "Kiel",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Heinz Zikel",
-  "subject": "",
-  "job": "Doctor",
-  "years": "",
-  "dates": "29/8/1904",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Arnold Zimmer",
-  "subject": "",
-  "job": "Doctor",
-  "years": "",
-  "dates": "23/12/1925",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "Ernst Zunker",
-  "subject": "",
-  "job": "Doctor",
-  "years": "",
-  "dates": "",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "2",
-  "lang": ""
- },
- {
-  "name": "Nathan Zuntz",
-  "subject": "",
-  "job": "Doctor",
-  "years": "",
-  "dates": "5/1/1892",
-  "city": "Berlin",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
- },
- {
-  "name": "E. Zürchner",
-  "subject": "",
-  "job": "Marienbader Mineralwasser-Versendung",
-  "years": "",
-  "dates": "",
-  "city": "Marienbad",
-  "country": "",
-  "exchange": "",
-  "count": "1",
-  "lang": ""
+  "lang": "",
+  "category": "correspondence"
  }
 ]

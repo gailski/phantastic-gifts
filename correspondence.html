@@ -11,6 +11,7 @@
   --bg-deep:#060606;--bg-primary:#0e0d0b;--bg-card:#161412;--bg-elevated:#1e1b17;
   --gold:#c9a55a;--gold-light:#e0c97f;--gold-dim:#8a7340;
   --poison-red:#8b3a3a;--poison-red-light:#b85050;
+  --botanical:#4a6b4a;--botanical-light:#6a8f6a;
   --text-primary:#e8e0d4;--text-secondary:#a89e8e;--text-muted:#6e6458;
   --font-display:'Playfair Display',Georgia,serif;
   --font-body:'Cormorant Garamond','Times New Roman',serif;
@@ -45,18 +46,30 @@ a:hover{color:var(--gold-light);border-bottom-color:var(--gold-light);}
 .filter-sel:focus{border-color:var(--gold-dim);}
 .count-display{font-family:var(--font-mono);font-size:0.75rem;color:var(--gold-dim);letter-spacing:0.1em;margin-left:auto;}
 
+.cat-chips{display:flex;flex-wrap:wrap;gap:0.5rem;padding:0 2rem 1rem;max-width:1400px;margin:0 auto;}
+.cat-chip{font-family:var(--font-mono);font-size:0.65rem;padding:0.35rem 0.85rem;border:1px solid rgba(201,165,90,0.2);color:var(--text-secondary);cursor:pointer;transition:all 0.2s;background:transparent;letter-spacing:0.1em;text-transform:uppercase;}
+.cat-chip:hover{border-color:var(--gold);color:var(--gold);}
+.cat-chip.active{background:var(--gold);color:var(--bg-primary);border-color:var(--gold);}
+
 .results{max-width:1400px;margin:2rem auto;padding:0 2rem 4rem;}
 .letter-group{margin-bottom:3rem;}
 .letter-group h2{font-family:var(--font-display);font-size:2.5rem;color:var(--gold-dim);margin-bottom:1.5rem;border-bottom:1px solid rgba(201,165,90,0.15);padding-bottom:0.5rem;letter-spacing:0.05em;}
 
 .c-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.25rem;}
-.c-card{background:var(--bg-card);border:1px solid rgba(201,165,90,0.08);padding:1.25rem 1.4rem;transition:all 0.2s;display:flex;flex-direction:column;gap:0.35rem;}
-.c-card:hover{border-color:rgba(201,165,90,0.25);background:var(--bg-elevated);}
+.c-card{background:var(--bg-card);border:1px solid rgba(201,165,90,0.08);border-left:3px solid var(--gold-dim);padding:1.25rem 1.4rem;transition:all 0.2s;display:flex;flex-direction:column;gap:0.35rem;}
+.c-card:hover{border-color:rgba(201,165,90,0.25);border-left-color:var(--gold);background:var(--bg-elevated);}
+.c-card.cat-phantastica{border-left-color:#b57dc4;}
+.c-card.cat-colonial{border-left-color:var(--poison-red-light);}
+.c-card.cat-pharma{border-left-color:var(--botanical-light);}
+.c-card.cat-industrial{border-left-color:#c9a55a;}
+.c-card.cat-pfeilgifte{border-left-color:#8b3a3a;}
+.c-card.cat-narcotics{border-left-color:#c87a4a;}
 .c-name{font-family:var(--font-display);font-size:1.15rem;color:var(--text-primary);font-weight:600;line-height:1.25;}
 .c-job{font-family:var(--font-body);font-size:0.95rem;color:var(--gold);font-style:italic;}
 .c-meta{font-family:var(--font-mono);font-size:0.7rem;color:var(--text-muted);letter-spacing:0.05em;display:flex;flex-wrap:wrap;gap:0.4rem 1rem;margin-top:0.25rem;}
 .c-meta .tag{color:var(--text-secondary);}
 .c-meta .tag-year{color:var(--gold-dim);}
+.c-cat{font-family:var(--font-mono);font-size:0.6rem;color:var(--gold-dim);letter-spacing:0.15em;text-transform:uppercase;margin-top:0.15rem;}
 .c-subject{font-size:0.92rem;color:var(--text-secondary);margin-top:0.5rem;line-height:1.5;font-style:italic;}
 .c-exchange{font-family:var(--font-mono);font-size:0.68rem;color:var(--gold-dim);letter-spacing:0.1em;margin-top:0.5rem;padding-top:0.5rem;border-top:1px dashed rgba(201,165,90,0.1);}
 
@@ -85,7 +98,7 @@ a:hover{color:var(--gold-light);border-bottom-color:var(--gold-light);}
   <div class="preamble">The Nachlass</div>
   <h1>The <em>Correspondents</em></h1>
   <p class="lede">Lewin wrote to the world. The world wrote back.</p>
-  <p class="note">This directory indexes every correspondent identified in the Nachlass Louis Lewin at the Staatsbibliothek zu Berlin, drawn from the surviving incoming letters (Lewin's outgoing correspondence does not survive as a collection). Entries vary in completeness as transcription and research continue; every named correspondent is included, even where biographical details are fragmentary. Filters below allow browsing by country, profession, and decade. A searchable name field appears at left.</p>
+  <p class="note">This directory indexes every correspondent identified in the Nachlass Louis Lewin at the Staatsbibliothek zu Berlin, drawn from the surviving incoming letters (Lewin's outgoing correspondence does not survive as a collection). Entries vary in completeness as transcription and research continue. Category filters distinguish general scientific correspondence from letters concerning <em>Phantastica</em> and intoxication research, colonial botany and arrow poisons, pharmaceutical networks, industrial toxicology, and narcotics regulation.</p>
 </div>
 
 <div class="controls">
@@ -94,6 +107,8 @@ a:hover{color:var(--gold-light);border-bottom-color:var(--gold-light);}
   <select id="f-decade" class="filter-sel"><option value="">All decades</option></select>
   <div class="count-display" id="count">—</div>
 </div>
+
+<div class="cat-chips" id="cat-chips"></div>
 
 <div class="results" id="results"></div>
 
@@ -105,8 +120,19 @@ a:hover{color:var(--gold-light);border-bottom-color:var(--gold-light);}
 let DATA = [];
 let COUNTRIES = new Set();
 let DECADES = new Set();
+let CATEGORIES = new Set();
+let activeCat = 'all';
 
-// Extract a decade string from the years field (e.g., "1884-1933" -> ["1880s","1890s","1900s","1910s","1920s","1930s"])
+const CAT_LABELS = {
+  correspondence: 'General',
+  phantastica: 'Phantastica',
+  colonial: 'Colonial',
+  pharma: 'Pharma',
+  industrial: 'Industrial',
+  pfeilgifte: 'Pfeilgifte',
+  narcotics: 'Narcotics'
+};
+
 function decadesFromYears(y){
   if(!y) return [];
   const nums = y.match(/\d{4}/g);
@@ -128,8 +154,10 @@ async function loadData(){
     DATA.forEach(r => {
       if(r.country) r.country.split(',').forEach(c => COUNTRIES.add(c.trim()));
       decadesFromYears(r.years).forEach(d => DECADES.add(d));
+      if(r.category) CATEGORIES.add(r.category);
     });
     populateFilters();
+    populateCategoryChips();
     render();
   } catch(e){
     document.getElementById('results').innerHTML = '<div class="empty">Could not load correspondence data.</div>';
@@ -147,7 +175,33 @@ function populateFilters(){
   });
 }
 
+function populateCategoryChips(){
+  const chips = document.getElementById('cat-chips');
+  const allBtn = document.createElement('button');
+  allBtn.className = 'cat-chip active';
+  allBtn.dataset.cat = 'all';
+  allBtn.textContent = 'All categories';
+  chips.appendChild(allBtn);
+  const cats = [...CATEGORIES].sort();
+  cats.forEach(c => {
+    const b = document.createElement('button');
+    b.className = 'cat-chip';
+    b.dataset.cat = c;
+    b.textContent = CAT_LABELS[c] || c;
+    chips.appendChild(b);
+  });
+  chips.addEventListener('click', e => {
+    if(e.target.classList.contains('cat-chip')){
+      activeCat = e.target.dataset.cat;
+      document.querySelectorAll('.cat-chip').forEach(x => x.classList.remove('active'));
+      e.target.classList.add('active');
+      render();
+    }
+  });
+}
+
 function matches(r, q, country, decade){
+  if(activeCat !== 'all' && r.category !== activeCat) return false;
   if(country){
     if(!r.country || !r.country.toLowerCase().includes(country.toLowerCase())) return false;
   }
@@ -156,7 +210,7 @@ function matches(r, q, country, decade){
     if(!ds.includes(decade)) return false;
   }
   if(q){
-    const hay = [r.name, r.job, r.city, r.country, r.subject, r.exchange, r.years].filter(Boolean).join(' ').toLowerCase();
+    const hay = [r.name, r.job, r.city, r.country, r.subject, r.exchange, r.years, r.category].filter(Boolean).join(' ').toLowerCase();
     if(!hay.includes(q.toLowerCase())) return false;
   }
   return true;
@@ -175,7 +229,6 @@ function render(){
     return;
   }
 
-  // Group by first letter of surname
   const groups = {};
   filtered.forEach(r => {
     const parts = r.name.replace(',', ' ').trim().split(/\s+/);
@@ -190,9 +243,11 @@ function render(){
   letters.forEach(L => {
     html += '<div class="letter-group"><h2>' + L + '</h2><div class="c-grid">';
     groups[L].forEach(r => {
-      html += '<div class="c-card">';
+      const catClass = r.category ? 'cat-' + r.category : '';
+      html += '<div class="c-card ' + catClass + '">';
       html += '<div class="c-name">' + escapeHtml(r.name) + '</div>';
       if(r.job) html += '<div class="c-job">' + escapeHtml(r.job) + '</div>';
+      if(r.category) html += '<div class="c-cat">' + escapeHtml(CAT_LABELS[r.category] || r.category) + '</div>';
       const metaParts = [];
       if(r.years) metaParts.push('<span class="tag tag-year">' + escapeHtml(r.years) + '</span>');
       if(r.city) metaParts.push('<span class="tag">' + escapeHtml(r.city) + '</span>');
