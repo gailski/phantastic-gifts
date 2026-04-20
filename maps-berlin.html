@@ -68,10 +68,10 @@ body{background:var(--bg);color:var(--txt);font-family:var(--ff-b);font-size:1.0
 <header class="page-header">
   <div>
     <h1><em>Phantastic</em> Gifts &mdash; Lewin's Berlin</h1>
-    <a href="exhibition.html" class="header-link">&larr; Return to Exhibition</a>
+    <div style="margin-top:0.5rem;"><a href="index.html" class="header-link">&larr; Home</a> &nbsp; <a href="exhibition.html" class="header-link">Exhibition</a> &nbsp; <a href="correspondence.html" class="header-link">Correspondents</a> &nbsp; <a href="maps-correspondence.html" class="header-link">World Map</a> &nbsp; <a href="about.html" class="header-link">About</a></div>
   </div>
   <div class="header-meta">
-    Chapter 1: Memory, Space, and the Making of a Mensch<br>
+    Memory, Space, and the Making of a Mensch<br>
     Abigail Trozenski &middot; Vanderbilt University &middot; 2026
   </div>
 </header>
@@ -199,7 +199,7 @@ window.addEventListener('load', function(){
     el.innerHTML = '<div class="site-num">SITE '+s.num+'</div>'
       +'<div class="site-name">'+s.name+'</div>'
       +'<div class="site-addr">'+s.addr+'</div>'
-      +'<div class="site-desc">'+s.desc.substring(0,120)+'...</div>'
+      +'<div class="site-desc">'+s.desc+'</div>'
       +'<span class="site-status status-'+s.status+'">'+s.statusLabel+'</span>';
     el.addEventListener('click', function(){
       map.setView([s.lat, s.lng], 15, {animate:true});
@@ -217,7 +217,7 @@ window.addEventListener('load', function(){
       iconSize:[14,14], iconAnchor:[7,7]
     });
     var m = L.marker([s.lat, s.lng], {icon:icon}).addTo(map);
-    m.bindPopup('<strong style="font-family:Playfair Display,serif;font-size:1rem;">'+s.name+'</strong><br><span style="font-family:JetBrains Mono,monospace;font-size:0.65rem;color:#8a7340;">'+s.addr+'</span><br><br>'+s.desc.substring(0,200)+'...<br><br><span style="font-family:JetBrains Mono,monospace;font-size:0.6rem;color:'+color+';">'+s.statusLabel+'</span>', {maxWidth:320});
+    m.bindPopup('<strong style="font-family:Playfair Display,serif;font-size:1rem;">'+s.name+'</strong><br><span style="font-family:JetBrains Mono,monospace;font-size:0.65rem;color:#8a7340;">'+s.addr+'</span><br><br>'+s.desc+'<br><br><span style="font-family:JetBrains Mono,monospace;font-size:0.6rem;color:'+color+';">'+s.statusLabel+'</span>', {maxWidth:380});
     m.on('click', function(){
       document.querySelectorAll('.site-item').forEach(function(x){x.classList.remove('active');});
       document.getElementById('site-'+i).classList.add('active');
