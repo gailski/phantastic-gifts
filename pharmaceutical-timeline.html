@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Pharmaceutical Timeline &mdash; Phantastic Gifts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-deep:       #060606;
+    --bg-primary:    #0e0d0b;
+    --bg-card:       #161412;
+    --bg-elevated:   #1e1b17;
+    --gold:          #c9a55a;
+    --gold-light:    #e0c97f;
+    --gold-dim:      #8a7340;
+    --amber:         #d4a574;
+    --poison-red:    #8b3a3a;
+    --botanical:     #4a6b4a;
+    --text-primary:  #e8e0d4;
+    --text-secondary:#a89e8e;
+    --text-muted:    #6e6458;
+    --text-gold:     #c9a55a;
+    --font-display:  'Playfair Display', Georgia, serif;
+    --font-body:     'Cormorant Garamond', 'Times New Roman', serif;
+    --font-mono:     'JetBrains Mono', 'Courier New', monospace;
+    --section-pad:   clamp(60px, 10vw, 140px);
+    --content-max:   1100px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg-deep);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 18px;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  ::selection { background: var(--gold); color: var(--bg-deep); }
+
+  /* Header */
+  .timeline-header {
+    padding: var(--section-pad) 40px 60px;
+    max-width: var(--content-max);
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: 1px solid rgba(201, 165, 90, 0.15);
+  }
+  .timeline-header .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+  }
+  .timeline-header h1 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: 28px;
+    color: var(--text-primary);
+  }
+  .timeline-header h1 em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+  .timeline-header .intro {
+    max-width: 720px;
+    margin: 0 auto;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+  }
+  .timeline-header .legend {
+    margin-top: 40px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 18px;
+    border: 1px solid rgba(201, 165, 90, 0.3);
+    border-radius: 2px;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+  }
+  .legend-mark {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: var(--gold);
+    border-radius: 50%;
+  }
+
+  /* Timeline layout */
+  .timeline {
+    max-width: var(--content-max);
+    margin: 0 auto;
+    padding: 80px 40px var(--section-pad);
+    position: relative;
+  }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 128px;
+    top: 80px;
+    bottom: var(--section-pad);
+    width: 1px;
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      rgba(201, 165, 90, 0.25) 5%,
+      rgba(201, 165, 90, 0.25) 95%,
+      transparent
+    );
+  }
+
+  /* Era headings */
+  .era {
+    margin: 80px 0 40px;
+    padding-left: 160px;
+    position: relative;
+  }
+  .era:first-child { margin-top: 20px; }
+  .era-years {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+  .era h2 {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: var(--text-primary);
+    line-height: 1.3;
+    max-width: 580px;
+  }
+
+  /* Individual entries */
+  .entry {
+    display: grid;
+    grid-template-columns: 128px 1fr;
+    gap: 32px;
+    padding: 20px 0;
+    position: relative;
+    align-items: baseline;
+  }
+  .entry::before {
+    content: "";
+    position: absolute;
+    left: 125px;
+    top: 30px;
+    width: 7px;
+    height: 7px;
+    background: var(--text-muted);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+  .entry .year {
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    text-align: right;
+    padding-right: 12px;
+    padding-top: 2px;
+    letter-spacing: 0.02em;
+  }
+  .entry .body {
+    padding-left: 28px;
+  }
+  .entry .event {
+    font-size: 1.05rem;
+    line-height: 1.55;
+    color: var(--text-primary);
+  }
+  .entry .event em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+  .entry .people {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-top: 4px;
+    font-style: italic;
+  }
+
+  /* Lewin-connected entries */
+  .entry.lewin::before {
+    background: var(--gold);
+    width: 11px;
+    height: 11px;
+    box-shadow: 0 0 0 3px var(--bg-deep), 0 0 14px 2px rgba(201, 165, 90, 0.5);
+  }
+  .entry.lewin .year {
+    color: var(--gold-light);
+    font-weight: 500;
+  }
+  .entry.lewin .body {
+    border-left: 2px solid var(--gold);
+    padding-left: 26px;
+  }
+  .entry.lewin .event {
+    color: var(--text-primary);
+  }
+  .entry.lewin .event strong {
+    color: var(--gold-light);
+    font-weight: 500;
+  }
+
+  /* Regulation entries — subtle red dot */
+  .entry.regulation::before {
+    background: var(--poison-red);
+    width: 9px;
+    height: 9px;
+  }
+
+  /* Footer note */
+  .timeline-footer {
+    max-width: var(--content-max);
+    margin: 0 auto;
+    padding: 0 40px var(--section-pad);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    text-align: center;
+    line-height: 2;
+  }
+  .timeline-footer hr {
+    border: none;
+    border-top: 1px solid rgba(201, 165, 90, 0.15);
+    margin: 0 auto 40px;
+    max-width: 200px;
+  }
+
+  /* Mobile */
+  @media (max-width: 720px) {
+    .timeline::before { left: 60px; }
+    .era { padding-left: 0; margin-top: 60px; }
+    .era h2 { font-size: 1.35rem; }
+    .entry { grid-template-columns: 72px 1fr; gap: 12px; }
+    .entry::before { left: 58px; }
+    .entry .year { font-size: 0.8rem; padding-right: 6px; }
+    .entry .body { padding-left: 16px; }
+    .entry.lewin .body { padding-left: 14px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="timeline-header">
+  <div class="eyebrow">Phantastic Gifts &middot; Supplementary Material</div>
+  <h1>A Pharmaceutical Timeline<br><em>Substances, Laws, and the World Lewin Moved Through</em></h1>
+  <p class="intro">
+    From Sert&uuml;rner&rsquo;s isolation of morphine in 1805 to the United Nations Convention on Psychotropic Substances in 1971, this timeline traces the development, commercialization, and regulation of the substances central to Louis Lewin&rsquo;s toxicological and pharmacological work. Entries marked in gold indicate Lewin&rsquo;s direct involvement; entries marked in red are milestones of drug legislation.
+  </p>
+  <div class="legend">
+    <span class="legend-mark"></span>
+    <span>Lewin&rsquo;s Involvement</span>
+  </div>
+</header>
+
+<main class="timeline">
+
+  <!-- ======================= ERA 1 ======================= -->
+  <section class="era">
+    <div class="era-years">1805 &ndash; 1859</div>
+    <h2>Alkaloid Chemistry and the Birth of Modern Pharmacy</h2>
+  </section>
+
+  <div class="entry">
+    <div class="year">1805</div>
+    <div class="body">
+      <div class="event">Friedrich Sert&uuml;rner isolates morphine from opium in Paderborn, launching the science of alkaloid chemistry.</div>
+      <div class="people">Friedrich Sert&uuml;rner (1783&ndash;1841)</div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="year">1819</div>
+    <div class="body">
+      <div class="event">Friedlieb Ferdinand Runge isolates caffeine from coffee.</div>
+      <div class="people">Friedlieb Ferdinand Runge (1794&ndash;1867)</div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="year">1827</div>
+    <div class="body">
+      <div class="event">Merck, founded as the Engel-Apotheke in Darmstadt, begins commercial manufacture of morphine &mdash; the first industrial-scale alkaloid production.</div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="year">1831</div>
+    <div class="body">
+      <div class="event">Chloroform synthesized independently by Justus von Liebig, Eug&egrave;ne Soubeiran, and Samuel Guthrie.</div>
+      <div class="people">Justus von Liebig (1803&ndash;1873)</div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="year">1832</div>
+    <div class="body">
+      <div class="event">Justus von Liebig discovers chloral hydrate at Gie&szlig;en; its sedative potential will be recognized decades later.</div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="year">1847</div>
+    <div class="body">
+      <div class="event">Rudolf Buchheim founds the world&rsquo;s first pharmacology department at the University of Dorpat, establishing pharmacology as an independent experimental discipline.</div>
+      <div class="people">Rudolf Buchheim (1820&ndash;1879)</div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="year">1848</div>
+    <div class="body">
+      <div class="event">Paraldehyde synthesized by Valentin Weidenbusch in Liebig&rsquo;s laboratory; later adopted as a hypnotic and sedative.</div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="year">1853&ndash;55</div>
+    <div class="body">
+      <div class="event">The hypodermic syringe is developed independently by Alexander Wood in Edinburgh and Charles Pravaz in Lyon. Morphine use expands dramatically in medical practice.</div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="year">1856</div>
+    <div class="body">
+      <div class="event">Friedrich W&ouml;hler asks Austrian explorer Karl Ritter von Scherzer to bring coca leaves from South America aboard the frigate <em>Novara</em> during its circumnavigation.</div>
+      <div class="people">Friedrich W&ouml;hler (1800&ndash;1882) &middot; Karl Ritter von Scherzer (1821&ndash;1903)</div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="year">1859</div>
+    <div class="body">
+      <div class="event">W&ouml;hler receives the coca shipment and passes it to his G&ouml;ttingen student Albert Niemann, who isolates the principal alkaloid and names it cocaine.</div>
+      <div class="people">Albert Niemann (1834&ndash;1861)</div>
+    </div>
+  </div>
+
+  <!-- ======================= ERA 2 ======================= -->
+  <section class="era">
+    <div class="era-years">1861 &ndash; 1897</div>
+    <h2>Regulation, Ethnobotany, and the Rise of Industrial Pharmacy</h2>
+  </section>
+
+  <div class="entry">
+    <div class="year">1861</div>
+    <div class="body">
+      <div class="event">Rudolf Buchheim demonstrates the sedative properties of chloral hydrate, opening the modern hypnotic era.</div>
+    </div>
+  </div>
+
+  <div class="entry regulation">
+    <div class="year">1868</div>
+    <div class="body">
+      <div class="event">The United Kingdom passes the Pharmacy Act &mdash; the first modern legislation restricting the sale of opium and other poisons to licensed pharmacists.</div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="year">1869</div>
+    <div class="body">
+      <div class="event">Oscar Liebreich publishes on the sedative and hypnotic properties of chloral hydrate, popularizing its clinical use.</div>
+      <div class="people">Oscar Liebreich (1839&ndash;1908)</div>
+    </div>
+  </div>
+
+  <div class="entry regulation">
+    <div class="year">1871</div>
+    <div class="body">
+      <div class="event">The Imperial Health Office (<em>Kaiserliches Gesundheitsamt</em>) is established in Berlin, centralizing public-health regulation in the newly unified German Empire.</div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="year">1874</div>
+    <div class="body">
+      <div class="event">C. R. Alder Wright synthesizes diacetylmorphine &mdash; later branded as heroin &mdash; by boiling morphine with acetic anhydride at St. Mary&rsquo;s Hospital, London. His discovery receives little attention at the time.</div>
+      <div class="people">Charles Romley Alder Wright (1844&ndash;1894)</div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="year">1877</div>
+    <div class="body">
+      <div class="event">German chemical industry organizes politically with the founding of the <em>Verein zur Wahrung der Interessen der chemischen Industrie Deutschlands</em>.</div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="year">1880</div>
+    <div class="body">
+      <div class="event">Albert Ladenburg isolates scopolamine (hyoscine), later combined with morphine in surgical anesthesia from 1900 onward.</div>
+      <div class="people">Albert Ladenburg (1842&ndash;1911)</div>
+    </div>
+  </div>
+
+  <div class="entry lewin">
+    <div class="year">1887</div>
+    <div class="body">
+      <div class="event"><strong>Louis Lewin receives peyote &mdash; &ldquo;muscale buttons&rdquo; &mdash;</strong> from the Dallas physician J. R. Briggs, distributed via Parke-Davis during his five-month North American journey. Company records note: <em>&ldquo;Muscale Button given to L. Lewin, Berlin, for investigation.&rdquo;</em></div>
+      <div class="people">Louis Lewin (1850&ndash;1929) &middot; John Raleigh Briggs (1851&ndash;1907)</div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="year">1887</div>
+    <div class="body">
+      <div class="event">Romanian chemist Laz&#259;r Edeleanu synthesizes amphetamine (phenylisopropylamine) at the University of Berlin; its pharmacological potential will go unrecognized for five decades.</div>
+      <div class="people">Laz&#259;r Edeleanu (1861&ndash;1941)</div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="year">1888</div>
+    <div class="body">
+      <div class="event">Sulfonal synthesized by Eugen Baumann; Alfred Kast introduces it into clinical practice as a hypnotic.</div>
+    </div>
+  </div>
+
+  <div class="entry lewin">
+    <div class="year">1888</div>
+    <div class="body">
+      <div class="event">At the Royal Botanical Museum in Berlin, <strong>Paul Hennings formally describes the peyote cactus as <em>Anhalonium lewinii</em></strong>, naming the species in Lewin&rsquo;s honor.</div>
+      <div class="people">Paul Hennings (1841&ndash;1908)</div>
+    </div>
+  </div>
+
+  <div class="entry lewin">
+    <div class="year">1894</div>
+    <div class="body">
+      <div class="event"><strong>Lewin publishes <em>Die Pfeilgifte</em></strong>, his landmark study of arrow poisons. The same year, Merck crystallizes anhalonine from Lewin&rsquo;s peyote material &mdash; the first pure alkaloid isolated from the Cactaceae family.</div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="year">1897</div>
+    <div class="body">
+      <div class="event">Arthur Heffter isolates mescaline from peyote, identifying it as the principal psychoactive alkaloid in <em>Anhalonium lewinii</em>.</div>
+      <div class="people">Arthur Heffter (1859&ndash;1925)</div>
+    </div>
+  </div>
+
+  <!-- ======================= ERA 3 ======================= -->
+  <section class="era">
+    <div class="era-years">1898 &ndash; 1918</div>
+    <h2>Pharmaceutical Modernity and the Expansion of Regulation</h2>
+  </section>
+
+  <div class="entry lewin">
+    <div class="year">1898</div>
+    <div class="body">
+      <div class="event"><strong>Bayer markets heroin</strong> (diamorphine), re-synthesized by Felix Hoffmann, as a cough suppressant and &ldquo;non-addictive&rdquo; morphine substitute. Lewin would become a vocal early critic of the drug&rsquo;s unregulated circulation.</div>
+    </div>
+  </div>
+
+  <div class="entry regulation">
+    <div class="year">1900</div>
+    <div class="body">
+      <div class="event">The <em>Reichsgesundheitsrat</em> is created alongside the <em>Reichsseuchengesetz</em>, consolidating German public-health advisory structures.</div>
+    </div>
+  </div>
+
+  <div class="entry lewin">
+    <div class="year">1902</div>
+    <div class="body">
+      <div class="event">Emil Fischer &mdash; one of Lewin&rsquo;s scientific correspondents &mdash; and Joseph von Mering synthesize Veronal (barbital), the first commercially successful barbiturate.</div>
+      <div class="people">Emil Fischer (1852&ndash;1919) &middot; Joseph von Mering (1849&ndash;1908)</div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="year">1904</div>
+    <div class="body">
+      <div class="event">Bayer commercializes Veronal, inaugurating the barbiturate era of sedatives and hypnotics.</div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="year">1907</div>
+    <div class="body">
+      <div class="event">Knoll AG patents bromural (bromisoval), a mild sedative widely prescribed through the 1930s.</div>
+    </div>
+  </div>
+
+  <div class="entry regulation">
+    <div class="year">1909</div>
+    <div class="body">
+      <div class="event">The United States passes the Smoking Opium Exclusion Act, criminalizing non-medical opium importation &mdash; the beginning of the twentieth-century American war on drugs.</div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="year">1912</div>
+    <div class="body">
+      <div class="event">Merck chemist Anton K&ouml;llisch synthesizes MDMA as an intermediate compound in the preparation of hydrastinine; the firm obtains a patent in 1913. MDMA&rsquo;s psychoactive properties will not be investigated for decades.</div>
+      <div class="people">Anton K&ouml;llisch (1888&ndash;1916)</div>
+    </div>
+  </div>
+
+  <div class="entry regulation">
+    <div class="year">1912</div>
+    <div class="body">
+      <div class="event">The International Opium Convention at The Hague establishes the first multilateral treaty framework on narcotic drugs.</div>
+    </div>
+  </div>
+
+  <div class="entry regulation">
+    <div class="year">1914</div>
+    <div class="body">
+      <div class="event">The United States Harrison Narcotics Tax Act places cocaine and opiates under federal registration and taxation, effectively criminalizing non-medical use.</div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="year">1916</div>
+    <div class="body">
+      <div class="event">Oxycodone synthesized from thebaine at the University of Frankfurt by Martin Freund and Edmund Speyer.</div>
+      <div class="people">Martin Freund (1863&ndash;1920) &middot; Edmund Speyer (1878&ndash;1942)</div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="year">1917</div>
+    <div class="body">
+      <div class="event">Merck introduces oxycodone into clinical use under the trade name Eukodal, marketed as both an analgesic and a cough suppressant.</div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="year">1918</div>
+    <div class="body">
+      <div class="event">Arthur Stoll isolates ergotamine from ergot fungus at Sandoz in Basel, laying the chemical groundwork for later ergoline research.</div>
+      <div class="people">Arthur Stoll (1887&ndash;1971)</div>
+    </div>
+  </div>
+
+  <div class="entry regulation">
+    <div class="year">1918</div>
+    <div class="body">
+      <div class="event">The Kaiserliches Gesundheitsamt is renamed the <em>Reichsgesundheitsamt</em> following the collapse of the Empire.</div>
+    </div>
+  </div>
+
+  <!-- ======================= ERA 4 ======================= -->
+  <section class="era">
+    <div class="era-years">1919 &ndash; 1929</div>
+    <h2><em>Phantastica</em>, Prohibition, and Late-Weimar Drug Control</h2>
+  </section>
+
+  <div class="entry">
+    <div class="year">1919</div>
+    <div class="body">
+      <div class="event">Ernst Sp&auml;th synthesizes mescaline, the first laboratory synthesis of a psychedelic alkaloid. It marks mescaline&rsquo;s entry into the psychiatric research agenda.</div>
+      <div class="people">Ernst Sp&auml;th (1886&ndash;1946)</div>
+    </div>
+  </div>
+
+  <div class="entry regulation">
+    <div class="year">1919&ndash;32</div>
+    <div class="body">
+      <div class="event">Finland enforces national prohibition of alcohol (<em>kieltolaki</em>).</div>
+    </div>
+  </div>
+
+  <div class="entry lewin">
+    <div class="year">1920</div>
+    <div class="body">
+      <div class="event"><strong>Lewin publishes <em>Die Gifte in der Weltgeschichte</em></strong> and <em>Die Kohlenoxydvergiftung</em> with Julius Springer &mdash; the beginning of his major postwar toxicological synthesis.</div>
+    </div>
+  </div>
+
+  <div class="entry regulation">
+    <div class="year">1920&ndash;33</div>
+    <div class="body">
+      <div class="event">The Eighteenth Amendment enacts national alcohol prohibition in the United States.</div>
+    </div>
+  </div>
+
+  <div class="entry lewin">
+    <div class="year">1924</div>
+    <div class="body">
+      <div class="event"><strong>Lewin publishes <em>Phantastica: Die bet&auml;ubenden und erregenden Genu&szlig;mittel</em></strong> with Georg Stilke, introducing his five-group taxonomy of intoxicants: <em>Euphorica, Phantastica, Inebriantia, Hypnotica, Excitantia</em>.</div>
+    </div>
+  </div>
+
+  <div class="entry lewin">
+    <div class="year">1927</div>
+    <div class="body">
+      <div class="event">Kurt Beringer &mdash; Lewin&rsquo;s correspondent on visionary drugs &mdash; publishes <em>Der Meskalinrausch</em>, the standard German-language monograph on mescaline experience.</div>
+      <div class="people">Kurt Beringer (1893&ndash;1949)</div>
+    </div>
+  </div>
+
+  <div class="entry lewin">
+    <div class="year">1928</div>
+    <div class="body">
+      <div class="event"><strong>Lewin publishes his research on <em>Banisteria caapi</em></strong>, identifying its active principle as banisterine. Merck subsequently shows banisterine is identical to harmine and devotes the first nineteen pages of its 1928 <em>Jahresbericht</em> to the compound&rsquo;s therapeutic prospects.</div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="year">1928</div>
+    <div class="body">
+      <div class="event">Merck introduces SEE (renamed Scophedal in 1942), a combination analgesic of scopolamine, oxycodone (Eukodal), and ephedrine.</div>
+    </div>
+  </div>
+
+  <div class="entry lewin regulation">
+    <div class="year">1929</div>
+    <div class="body">
+      <div class="event"><strong>Lewin and the Berlin jurist Wenzel Goldbaum co-author a commentary on the German <em>Opiumgesetz</em></strong> &mdash; the country&rsquo;s first comprehensive drug-control law &mdash; in its final legislative phase. Lewin dies in Berlin on December 1.</div>
+      <div class="people">Wenzel Goldbaum (1881&ndash;1970)</div>
+    </div>
+  </div>
+
+  <!-- ======================= ERA 5 ======================= -->
+  <section class="era">
+    <div class="era-years">1933 &ndash; 1971</div>
+    <h2>Postwar Rediscovery and the International Control Regime</h2>
+  </section>
+
+  <div class="entry">
+    <div class="year">1933</div>
+    <div class="body">
+      <div class="event">Working at Sandoz in Basel on ergoline derivatives, Albert Hofmann first synthesizes LSD-25; its psychoactive properties are accidentally discovered in 1943.</div>
+      <div class="people">Albert Hofmann (1906&ndash;2008)</div>
+    </div>
+  </div>
+
+  <div class="entry regulation">
+    <div class="year">1952</div>
+    <div class="body">
+      <div class="event">The <em>Bundesgesundheitsamt</em> (BGA) is founded as the successor to the Reichsgesundheitsamt, resuming centralized public-health oversight in the Federal Republic.</div>
+    </div>
+  </div>
+
+  <div class="entry regulation">
+    <div class="year">1961</div>
+    <div class="body">
+      <div class="event">The United Nations Single Convention on Narcotic Drugs consolidates earlier treaties into a unified international control regime covering opiates and cocaine.</div>
+    </div>
+  </div>
+
+  <div class="entry regulation">
+    <div class="year">1967</div>
+    <div class="body">
+      <div class="event">LSD is made illegal in the United States under California state law (followed by federal scheduling in 1968).</div>
+    </div>
+  </div>
+
+  <div class="entry regulation">
+    <div class="year">1971</div>
+    <div class="body">
+      <div class="event">The UN Convention on Psychotropic Substances extends international control to synthetic drugs including amphetamines and LSD. Germany passes the <em>Bet&auml;ubungsmittelgesetz</em> (BtMG), its modern narcotics law, the same year.</div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="timeline-footer">
+  <hr>
+  <div>Compiled for Phantastic Gifts</div>
+  <div>A Digital Exhibition on Louis Lewin (1850&ndash;1929)</div>
+</footer>
+
+</body>
+</html>
